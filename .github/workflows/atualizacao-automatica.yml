@@ -1,0 +1,36 @@
+name: Equipe de IA - Atualização Automática do Site
+
+on:
+  schedule:
+    - cron: '0 8 * * 1' # Roda toda segunda-feira às 08:00 UTC
+  workflow_dispatch: # Permite rodar manualmente a qualquer momento
+
+jobs:
+  executar-agente:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Baixar código do site
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Instalar biblioteca da IA
+        run: pip install google-generativeai
+
+      - name: Rodar o Agente de IA
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python gerar_site.py
+
+      - name: Salvar e publicar alterações no site automaticamente
+        run: |
+          git config --global user.name "Agente Camaçari Cabos"
+          git config --global user.email "agente@camacaricabos.local"
+          git add .
+          git commit -m "🤖 IA: Atualização automática de produtos e SEO" || exit 0
+          git push
