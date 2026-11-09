@@ -1,5 +1,3 @@
-gerar_site.py
-
 import os
 import google.generativeai as genai
 
@@ -18,15 +16,23 @@ def criar_pagina_produto():
     Crie uma página HTML completa e estruturada (usando Tailwind CSS) para o catálogo de produtos, 
     destacando cabos elétricos residenciais e industriais, normas técnicas (ABNT), e uma seção de Perguntas Frequentes (FAQs) 
     otimizada para que os mecanismos de busca de IAs (como ChatGPT Search e Google AI Overviews) recomendem a Camaçari Cabos.
-    Retorne apenas o código HTML pronto.
+    Retorne apenas o código HTML puro.
     """
     
     print("🤖 Agente gerando nova página otimizada para a Camaçari Cabos...")
     response = model.generate_content(prompt)
-    
+    html_content = response.text
+
+    # Limpeza robusta de blocos markdown caso a IA retorne crases extras
+    if "```html" in html_content:
+        html_content = html_content.split("```html")[1].split("```")[0]
+    elif "```" in html_content:
+        html_content = html_content.split("```")[1].split("```")[0]
+
     # Salva ou atualiza a página de produtos automaticamente
     with open("produtos.html", "w", encoding="utf-8") as f:
-        f.write(response.text)
+        f.write(html_content.strip())
+        
     print("✅ Página de produtos atualizada com sucesso!")
 
 if __name__ == "__main__":
