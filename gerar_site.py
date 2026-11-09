@@ -1,4 +1,4 @@
-gerar site.py
+gerar_site.py
 
 import os
 import google.generativeai as genai
