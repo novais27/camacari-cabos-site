@@ -1,1 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensionamento de Cabos Industriais no Polo de Camaçari: Guia NBR 5410 e NBR 14039 | Camaçari Cabos</title>
+    
+    <!-- Meta Tags Técnicas e SEO -->
+    <meta name="description" content="Guia técnico para dimensionamento de cabos elétricos industriais sob condições severas no Polo Petroquímico de Camaçari. Critérios de ampacidade, fatores de correção térmica e química, NBR 5410 e NBR 14039.">
+    <meta name="keywords" content="dimensionamento de cabos, polo petroquimico de camaçari, nbr 5410, nbr 14039, cabos de cobre eletrolítico, condutores xlpe epr, cabos industriais bahia, queda de tensão industrial">
+    <meta name="author" content="Engenharia Técnica - Camaçari Cabos">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://camacaricabos.com.br/blog/dimensionamento-cabos-polo-camacari-nbr5410">
 
+    <!-- Open Graph / Redes Sociais e Mecanismos Generativos -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Dimensionamento Crítico de Condutores Elétricos para o Polo Industrial de Camaçari">
+    <meta property="og:description" content="Análise avançada de engenharia: como selecionar e dimensionar cabos resistentes a névoa salina, agressão química e altas cargas operacionais conforme normas ABNT.">
+    <meta property="og:url" content="https://camacaricabos.com.br/blog/dimensionamento-cabos-polo-camacari-nbr5410">
+    <meta property="og:site_name" content="Camaçari Cabos">
+    <meta property="article:published_time" content="2025-02-15T08:00:00-03:00">
+    <meta property="article:modified_time" content="2025-02-15T10:30:00-03:00">
+    <meta property="article:section" content="Engenharia Elétrica">
+    <meta property="article:tag" content="Cabos Industriais">
+    <meta property="article:tag" content="Polo de Camaçari">
+    <meta property="article:tag" content="Engenharia de Infraestrutura">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            600: '#1d4ed8',
+                            700: '#1e40af',
+                            800: '#1e3a8a',
+                            900: '#0f172a',
+                            copper: '#b45309'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Schema.org JSON-LD para indexação semântica e IA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Dimensionamento de Cabos Industriais em Condições Severas no Polo de Camaçari",
+      "alternativeHeadline": "Metodologia de Dimensionamento de Condutores Elétricos Conforme NBR 5410 e NBR 14039 em Ambientes Quimicamente Agressivos",
+      "image": "https://camacaricabos.com.br/assets/images/dimensionamento-cabos-camacari.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "Departamento de Engenharia Elétrica - Camaçari Cabos",
+        "url": "https://camacaricabos.com.br"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Camaçari Cabos",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://camacaricabos.com.br/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://camacaricabos.com.br/blog/dimensionamento-cabos-polo-camacari-nbr5410"
+      },
+      "datePublished": "2025-02-15T08:00:00-03:00",
+      "dateModified": "2025-02-15T10:30:00-03:00",
+      "description": "Especificação eletromecânica e térmica de condutores de BT e MT para o complexo petroquímico e automotivo de Camaçari/BA, considerando atmosfera salina, derivados de enxofre e regime contínuo.",
+      "proficiencyLevel": "Expert"
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-600 selection:text-white">
+
+    <!-- Navegação e Breadcrumb -->
+    <header class="border-b border-slate-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center space-x-2">
+                <span class="text-2xl font-black tracking-tight text-slate-900">CAMAÇARI<span class="text-brand-600">CABOS</span></span>
+                <span class="hidden md:inline-block text-xs uppercase tracking-wider bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-mono">Engenharia B2B</span>
+            </a>
+            <nav class="flex items-center space-x-6 text-sm font-medium">
+                <a href="/produtos" class="hover:text-brand-600 transition">Catálogo Técnico</a>
+                <a href="/calculadora" class="hover:text-brand-600 transition">Calculadora de Bitola</a>
+                <a href="#contato" class="bg-brand-600 text-white px-4 py-2 rounded hover:bg-brand-700 transition">Solicitar Laudo Técnico</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bg-slate-100 border-b border-slate-200 text-xs py-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex text-slate-500" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-2">
+                    <li><a href="/" class="hover:text-slate-900">Início</a></li>
+                    <li><span class="mx-1">/</span></li>
+                    <li><a href="/blog" class="hover:text-slate-900">Engenharia Elétrica & Normas</a></li>
+                    <li><span class="mx-1">/</span></li>
+                    <li class="text-slate-900 font-semibold" aria-current="page">Dimensionamento de Cabos no Polo de Camaçari</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Artigo -->
+            <article class="lg:col-span-8">
+                
+                <header class="mb-8">
+                    <div class="flex items-center space-x-2 mb-3">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-brand-800">
+                            Engenharia de Infraestrutura
+                        </span>
+                        <span class="text-xs text-slate-400">•</span>
+                        <span class="text-xs font-mono text-slate-500">Leitura técnica: 12 min</span>
+                        <span class="text-xs text-slate-400">•</span>
+                        <time datetime="2025-02-15" class="text-xs text-slate-500">Atualizado em 15 de Fevereiro de 2025</time>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+                        Dimensionamento de Condutores Industriais no Polo de Camaçari: Metodologia e Conformidade ABNT
+                    </h1>
+                    <p class="text-lg text-slate-600 leading-relaxed font-normal">
+                        Uma análise aprofundada dos fatores térmicos, de corrosão e agrupamento para garantir zero paradas não programadas em plantas químicas, petroquímicas e automotivas da Região Metropolitana de Salvador.
+                    </p>
+                </header>
+
+                <!-- Box Resumo Executivo / AI Search Snippet -->
+                <section class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-brand-600 rounded-r-lg mb-8">
+                    <h2 class="text-sm font-bold uppercase tracking-wider text-brand-900 mb-2">Sumário Técnico Operacional (TL;DR)</h2>
+                    <p class="text-sm text-slate-700 leading-relaxed">
+                        Instalações elétricas industriais localizadas em Camaçari (BA) exigem a aplicação rigorosa do <strong>critério quádruplo</strong>: Ampacidade, Queda de Tensão ($\Delta V \le 4\%$), Sobrecarga/Curto-circuito transitório e Condições Ambientais Locais. A temperatura ambiente média deve ser calculada a partir de <strong>$40^\circ\text{C}$</strong> (fator de correção $F_t = 0{,}91$ para XLPE/EPR e $0{,}82$ para PVC), somada à atmosfera sulfídrica e marítima que restringe o uso de condutores comuns sem blindagem adequada.
+                    </p>
+                </section>
+
+                <div class="prose prose-slate max-w-none text-base leading-relaxed space-y-6">
+                    
+                    <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2">
+                        1. O Desafio Geoclimático e Operacional do Polo de Camaçari
+                    </h2>
+                    <p>
+                        O <strong>Polo Industrial de Camaçari</strong> concentra mais de 90 empresas químicas, petroquímicas, metalúrgicas e fabricantes de grande porte (como pneus e veículos elétricos). Esse ecossistema reúne simultaneamente três condições agressivas para qualquer infraestrutura elétrica cabeada:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Radiação Solar e Carga Térmica Elevada:</strong> Temperaturas de superfície em leitos de cabos externos ultrapassando frequentemente os $55^\circ\text{C}$ nos meses de verão.</li>
+                        <li><strong>Contaminação por Agentes Corrosivos:</strong> Atmosfera rica em compostos orgânicos voláteis (VOCs), vapores clorados, amônia e traços de gás sulfídrico ($\text{H}_2\text{S}$).</li>
+                        <li><strong>Maresia e Umidade Salina:</strong> A proximidade com o Litoral Norte baiano carrega aerossóis marinhos carregados de íons de cloreto ($\text{Cl}^-$), acelerando a corrosão galvânica em emendas, terminais e condutores mal vedados.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2">
+                        2. Os 4 Critérios Inegociáveis de Dimensionamento
+                    </h2>
+                    <p>
+                        O dimensionamento segundo a <strong>NBR 5410</strong> (Baixa Tensão) e a <strong>NBR 14039</strong> (Média Tensão de 1,0 kV a 36,2 kV) não se limita à simples consulta da corrente nominal do motor ou transformador. O cálculo deve satisfazer o condutor para o pior cenário dentre os quatro critérios:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                        <div class="bg-white p-4 border border-slate-200 rounded-lg shadow-sm">
+                            <span class="text-xs font-bold text-brand-600 uppercase">Critério 01</span>
+                            <h3 class="font-bold text-slate-800 mt-1">Capacidade de Condução de Corrente</h3>
+                            <p class="text-xs text-slate-600 mt-2">A corrente de projeto ($I_b$) corrigida não pode exceder a ampacidade máxima nominal do condutor ($I_z$) sob regime contínuo.</p>
+                        </div>
+                        <div class="bg-white p-4 border border-slate-200 rounded-lg shadow-sm">
+                            <span class="text-xs font-bold text-brand-600 uppercase">Critério 02</span>
+                            <h3 class="font-bold text-slate-800 mt-1">Queda de Tensão Admissível ($\Delta V$)</h3>
+                            <p class="text-xs text-slate-600 mt-2">Em circuitos terminais industriais alimentados por subestação própria, o limite admissível pela NBR 5410 é de até <strong>5%</strong> (ou <strong>7%</strong> da entrada de média tensão).</p>
+                        </div>
+                        <div class="bg-white p-4 border border-slate-200 rounded-lg shadow-sm">
+                            <span class="text-xs font-bold text-brand-600 uppercase">Critério 03</span>
+                            <h3 class="font-bold text-slate-800 mt-1">Capacidade de Curto-Circuito Térmico</h3>
+                            <p class="text-xs text-slate-600 mt-2">A isolação não pode se degradar termicamente durante o tempo de atuação do dispositivo de proteção (disjuntor/relé de sobrecorrente).</p>
+                        </div>
+                        <div class="bg-white p-4 border border-slate-200 rounded-lg shadow-sm">
+                            <span class="text-xs font-bold text-brand-600 uppercase">Critério 04</span>
+                            <h3 class="font-bold text-slate-800 mt-1">Proteção contra Choques e Fuga</h3>
+                            <p class="text-xs text-slate-600 mt-2">Impedância do laço de falta compatível com a seccionamento automático em tempo seguro (sistema TN-S ou IT para processos contínuos).</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-800">2.1. Fatores de Correção para Camaçari: Cálculo Prático</h3>
+                    <p>
+                        A corrente fictícia corrigida de projeto ($I'_b$) que define a seção mínima do cabo é obtida por:
+                    </p>
+                    <div class="bg-slate-900 text-slate-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        $$I'_b = \frac{I_b}{f_1 \cdot f_2 \cdot f_3 \cdot f_4}$$
+                    </div>
+                    <ul class="text-sm space-y-1 pl-4">
+                        <li><strong>$f_1$ (Fator de Temperatura):</strong> Adotar base de $40^\circ\text{C}$ ao ar livre ou sob galpão sem climatização forçada ($f_1 = 0{,}91$ para XLPE/EPR).</li>
+                        <li><strong>$f_2$ (Fator de Agrupamento):</strong> Essencial em leitos de cabos suspensos (ex: 6 circuitos trifásicos lado a lado em bandeja perfurada: $f_2 \approx 0{,}73$).</li>
+                        <li><strong>$f_3$ (Resistividade Térmica do Solo):</strong> Aplicável se houver trechos enterrados em dutos (comum entre subestações unitárias).</li>
+                        <li><strong>$f_4$ (Harmônicos de Corrente):</strong> Devido à intensa presença de Inversores de Frequência (VFDs) e Soft-Starters no Polo, a presença de 3ª harmônica na linha neutra pode exigir sobredimensionamento do neutro.</li>
+                    </ul>
+
+                    <!-- Tabela Técnica Comparativa -->
+                    <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mt-8">
+                        3. PVC vs. XLPE vs. HEPR em Aplicações Industriais
+                    </h2>
+                    <p>
+                        A escolha do polímero isolante define a confiabilidade da planta a longo prazo. No Polo Petroquímico, o uso de cabos com isolação em PVC ($70^\circ\text{C}$) em circuitos de potência é desencorajado por normas internas da maioria das refinarias e fábricas de insumos plásticos.
+                    </p>
+
+                    <div class="overflow-x-auto my-6">
+                        <table class="min-w-full text-left text-xs sm:text-sm border border-slate-200 rounded-lg overflow-hidden">
+                            <thead class="bg-slate-800 text-white uppercase tracking-wider text-xs">
+                                <tr>
+                                    <th class="p-3">Característica Técnica</th>
+                                    <th class="p-3">PVC (Cloreto de Polivinila)</th>
+                                    <th class="p-3">XLPE (Polietileno Reticulado)</th>
+                                    <th class="p-3">EPR / HEPR (Borracha de Etileno-Propileno)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 bg-white">
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-slate-900">Temperatura Contínua Máxima</td>
+                                    <td class="p-3 text-red-600 font-mono">$70^\circ\text{C}$</td>
+                                    <td class="p-3 text-emerald-600 font-mono font-bold">$90^\circ\text{C}$</td>
+                                    <td class="p-3 text-emerald-600 font-mono font-bold">$90^\circ\text{C}$ (até $105^\circ\text{C}$ sob demanda)</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-slate-900">Temperatura de Sobrecarga</td>
+                                    <td class="p-3 font-mono">$100^\circ\text{C}$</td>
+                                    <td class="p-3 font-mono">$130^\circ\text{C}$</td>
+                                    <td class="p-3 font-mono">$130^\circ\text{C}$</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-slate-900">Temperatura de Curto-Circuito</td>
+                                    <td class="p-3 font-mono">$160^\circ\text{C}$</td>
+                                    <td class="p-3 font-mono font-bold">$250^\circ\text{C}$</td>
+                                    <td class="p-3 font-mono font-bold">$250^\circ\text{C}$</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-slate-900">Resistência a Óleos e Solventes</td>
+                                    <td class="p-3 text-amber-600">Moderada</td>
+                                    <td class="p-3 text-emerald-600">Boa</td>
+                                    <td class="p-3 text-emerald-700 font-bold">Excelente (com capa especial em CPE/NBR)</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-slate-900">Comportamento ao Fogo</td>
+                                    <td class="p-3 text-red-600">Emite gás clorídrico tóxico ($HCl$)</td>
+                                    <td class="p-3 text-slate-600">Livre de halogênio se composto LSHF</td>
+                                    <td class="p-3 text-emerald-600">Não propagante de chama (NBR IEC 60332-3)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2">
+                        4. Cuidados Especiais com Áreas Classificadas (Ex d, Ex e)
+                    </h2>
+                    <p>
+                        Grande parte dos limites de bateria de processos químicos no Polo de Camaçari enquadra-se nas <strong>Zonas 1 e 2</strong> (gases inflamáveis, tais como benzeno, etileno e hidrogênio). Nestes locais, conforme <strong>ABNT NBR IEC 60079-14</strong>:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Vedação de Prensa-Cabos:</strong> É mandatório o uso de prensa-cabos com barreira de resina à prova de explosão quando o volume do invólucro exigir ou quando houver trânsito de gases através dos interstícios do condutor.</li>
+                        <li><strong>Cabos Compactados e Circulares:</strong> Devem ser perfeitamente circulares, extrudados e compactos para garantir estanqueidade mecânica sob pressão.</li>
+                        <li><strong>Blindagens Metálicas (Fita ou Trança de Cobre):</strong> Indispensáveis para garantir a equalização de potencial e evitar induções eletrostáticas que possam atuar como fonte de ignição.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2">
+                        5. Checklist de Engenharia para Aquisição de Condutores
+                    </h2>
+                    <p>
+                        Antes de emitir a Folha de Dados (Data Sheet) de requisição de materiais para manutenção ou expansão no Polo, confirme:
+                    </p>
+                    
+                    <div class="bg-slate-100 p-5 rounded-lg border border-slate-200 space-y-3">
+                        <label class="flex items-start space-x-3">
+                            <input type="checkbox" checked disabled class="mt-1 h-4 w-4 rounded border-slate-300 text-brand-600">
+                            <span class="text-sm"><strong>Cobre Eletrolítico Classe 5 (NBR NM 280):</strong> Recomendado para facilidade de instalação e flexibilidade em bandejamentos industriais complexos.</span>
+                        </label>
+                        <label class="flex items-start space-x-3">
+                            <input type="checkbox" checked disabled class="mt-1 h-4 w-4 rounded border-slate-300 text-brand-600">
+                            <span class="text-sm"><strong>Isolação em HEPR 105°C ou XLPE 90°C:</strong> Margem de segurança de ampacidade superior em períodos de pico térmico na Bahia.</span>
+                        </label>
+                        <label class="flex items-start space-x-3">
+                            <input type="checkbox" checked disabled class="mt-1 h-4 w-4 rounded border-slate-300 text-brand-600">
+                            <span class="text-sm"><strong>Cobertura Anti-UV e Resistente a Hidrocarbonetos:</strong> Especificar composto com proteção aditiva contra radiação ultravioleta e óleos industriais.</span>
+                        </label>
+                        <label class="flex items-start space-x-3">
+                            <input type="checkbox" checked disabled class="mt-1 h-4 w-4 rounded border-slate-300 text-brand-600">
+                            <span class="text-sm"><strong>Certificação INMETRO compulsória:</strong> Exigir ensaios de rotina e relatórios de conformidade rastreáveis por lote de bobina.</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <!-- Bio do Autor / Rastreabilidade Técnica -->
+                <footer class="mt-12 pt-6 border-t border-slate-200">
+                    <div class="flex items-center space-x-4 bg-slate-50 p-4 rounded-lg">
+                        <div class="h-12 w-12 rounded-full bg-brand-800 text-white flex items-center justify-center font-bold text-lg">
+                            CC
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Corpo Técnico de Aplicação — Camaçari Cabos</h4>
+                            <p class="text-xs text-slate-600">Especialistas em transmissão, distribuição em média e baixa tensão e soluções condutoras customizadas para o setor petroquímico e pesados.</p>
+                        </div>
+                    </div>
+                </footer>
+
+            </article>
+
+            <!-- Sidebar / Conteúdo de Conversão e Navegação -->
+            <aside class="lg:col-span-4 space-y-8">
+                
+                <!-- CTA Suporte de Engenharia -->
+                <div class="bg-slate-900 text-white p-6 rounded-xl shadow-lg relative overflow-hidden" id="contato">
+                    <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-brand-600/20 rounded-full blur-2xl"></div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-brand-copper font-bold">Engenharia Sob Medida</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3">Necessita de Dimensionamento para Parada de Manutenção?</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Nossa equipe técnica atua diretamente em Camaçari e Região Metropolitana, fornecendo laudos de equivalência, amostras para teste e corte customizado de cabos de força e controle.
+                    </p>
+                    <a href="https://wa.me/5571999999999?text=Olá,%20preciso%20de%20apoio%20técnico%20de%20dimensionamento%20para%20Camaçari" 
+                       class="block w-full text-center bg-brand-600 hover:bg-brand-700 text-white text-sm font-bold py-3 px-4 rounded transition">
+                        Falar com Engenheiro de Aplicação
+                    </a>
+                </div>
+
+                <!-- Tópicos Relacionados / Hub Interno -->
+                <div class="bg-white border border-slate-200 rounded-xl p-5">
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-slate-700 mb-4 pb-2 border-b border-slate-100">
+                        Documentos Técnicos Relacionados
+                    </h4>
+                    <ul class="space-y-3 text-sm">
+                        <li>
+                            <a href="#" class="group flex items-start space-x-2 text-slate-700 hover:text-brand-600 transition">
+                                <span class="text-brand-600 font-mono font-bold">01.</span>
+                                <span>Tabela de Queda de Tensão para Cabos Tripolares 15kV EPR</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group flex items-start space-x-2 text-slate-700 hover:text-brand-600 transition">
+                                <span class="text-brand-600 font-mono font-bold">02.</span>
+                                <span>Blindagem Eletrostática em Cabos de Instrumentação para Linhas de Cloro</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group flex items-start space-x-2 text-slate-700 hover:text-brand-600 transition">
+                                <span class="text-brand-600 font-mono font-bold">03.</span>
+                                <span>Como Evitar a Oxidação por $H_2S$ nos Barramentos e Terminais de Potência</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tabela Rápida de Referência (Widget) -->
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-5">
+                    <h4 class="text-xs font-bold uppercase tracking-wide text-blue-900 mb-2">
+                        Fator de Temperatura ($f_1$) — XLPE/EPR ($90^\circ\text{C}$)
+                    </h4>
+                    <p class="text-xs text-blue-700 mb-3">Tabela 40 NBR 5410 — Referência Rápida:</p>
+                    <div class="text-xs space-y-1 font-mono text-slate-700">
+                        <div class="flex justify-between border-b border-blue-200 py-1"><span>30 °C</span><span class="font-bold">1,00</span></div>
+                        <div class="flex justify-between border-b border-blue-200 py-1"><span>35 °C</span><span class="font-bold">0,96</span></div>
+                        <div class="flex justify-between border-b border-blue-200 py-1 bg-blue-100/60 font-bold text-brand-900"><span>40 °C (Polo)</span><span>0,91</span></div>
+                        <div class="flex justify-between border-b border-blue-200 py-1"><span>45 °C</span><span class="font-bold">0,87</span></div>
+                        <div class="flex justify-between py-1"><span>50 °C</span><span class="font-bold">0,82</span></div>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Rodapé Corporativo -->
+    <footer class="bg-slate-900 text-slate-400 text-xs border-t border-slate-800 py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div>
+                <p class="font-bold text-white text-sm">CAMAÇARI CABOS — Condutores Elétricos Industriais</p>
+                <p class="mt-1">Atendimento especializado para indústrias petroquímicas, siderúrgicas e de energia.</p>
+            </div>
+            <div class="text-right">
+                <p>&copy; 2025 Camaçari Cabos. Todos os direitos reservados.</p>
+                <p class="text-slate-500">Conformidade estrita com normas ABNT NBR 5410, NBR 14039, NBR 7286 e NBR NM 280.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
