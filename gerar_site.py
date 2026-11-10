@@ -1,5 +1,7 @@
 import os
+import time
 from google import genai
+from google.genai.errors import ServerError
 
 # Pega a chave secreta configurada no GitHub Actions
 api_key = os.environ.get("GEMINI_API_KEY")
@@ -31,19 +33,31 @@ def limpar_html(texto):
         texto = texto.split("```")[1].split("```")[0]
     return texto.strip()
 
-def gerar_pagina(nome_arquivo, prompt_especifico):
+def gerar_pagina_com_tentativas(nome_arquivo, prompt_especifico, max_tentativas=5):
     print(f"🤖 Gerando {nome_arquivo}...")
-    # Utilizando o modelo correto e recomendado gemini-3.8-flash
-    response = client.models.generate_content(
-        model='gemini-3.8-flash',
-        contents=f"{CONTEXTO_EMPRESA}\n\n{prompt_especifico}"
-    )
-    html_limpo = limpar_html(response.text)
-    with open(nome_arquivo, "w", encoding="utf-8") as f:
-        f.write(html_limpo)
-    print(f"✅ {nome_arquivo} gerado com sucesso!")
+    tentativa = 0
+    
+    while tentativa < max_tentativas:
+        try:
+            # Tenta gerar o conteúdo com o modelo recomendado
+            response = client.models.generate_content(
+                model='gemini-3.8-flash',
+                contents=f"{CONTEXTO_EMPRESA}\n\n{prompt_especifico}"
+            )
+            html_limpo = limpar_html(response.text)
+            with open(nome_arquivo, "w", encoding="utf-8") as f:
+                f.write(html_limpo)
+            print(f"✅ {nome_arquivo} gerado com sucesso!")
+            return
+            
+        except ServerError as e:
+            tentativa += 1
+            print(f"⚠️ Servidor ocupado (Erro 503). Tentativa {tentativa} de {max_tentativas} para {nome_arquivo}. Aguardando 10 segundos...")
+            if tentativa >= max_tentativas:
+                raise e
+            time.sleep(10) # Pausa de 10 segundos antes de tentar novamente
 
 if __name__ == "__main__":
-    gerar_pagina("index.html", "Crie a página inicial (index.html) completa utilizando Tailwind CSS, destacando o banner principal, o Polo Industrial e links de navegação.")
-    gerar_pagina("produtos.html", "Crie a página de catálogo de produtos (produtos.html) com listagem detalhada de cabos industriais, disjuntores e Padrão Coelba.")
-    gerar_pagina("blog.html", "Crie a página do blog técnico (blog.html) com artigos focados em normas ABNT e engenharia elétrica para indústrias.")
+    gerar_pagina_com_tentativas("index.html", "Crie a página inicial (index.html) completa utilizando Tailwind CSS, destacando o banner principal, o Polo Industrial e links de navegação.")
+    gerar_pagina_com_tentativas("produtos.html", "Crie a página de catálogo de produtos (produtos.html) com listagem detalhada de cabos industriais, disjuntores e Padrão Coelba.")
+    gerar_pagina_com_tentativas("blog.html", "Crie a página do blog técnico (blog.html) com artigos focados em normas ABNT e engenharia elétrica para indústrias.")
