@@ -1,12 +1,13 @@
 import os
-import google.generativeai as genai
+from google import genai
 
-# Pega a chave secreta configurada nos Secrets do GitHub
+# Pega a chave secreta configurada no GitHub Actions
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
-    raise ValueError("A chave GEMINI_API_KEY não foi encontrada nos Segredos do Repositório!")
+    raise ValueError("A chave GEMINI_API_KEY não foi encontrada!")
 
-genai.configure(api_key=api_key)
+# Inicializa o cliente oficial moderno
+client = genai.Client(api_key=api_key)
 
 # Contexto global padronizado da Camaçari Cabos
 CONTEXTO_EMPRESA = """
@@ -32,9 +33,11 @@ def limpar_html(texto):
 
 def gerar_pagina(nome_arquivo, prompt_especifico):
     print(f"🤖 Gerando {nome_arquivo}...")
-    # Usando o modelo estável compatível com a biblioteca clássica
-    model = genai.GenerativeModel('gemini-1.5-flash')
-    response = model.generate_content(f"{CONTEXTO_EMPRESA}\n\n{prompt_especifico}")
+    # Utiliza o modelo oficial atual do novo SDK
+    response = client.models.generate_content(
+        model='gemini-2.5-flash',
+        contents=f"{CONTEXTO_EMPRESA}\n\n{prompt_especifico}"
+    )
     html_limpo = limpar_html(response.text)
     with open(nome_arquivo, "w", encoding="utf-8") as f:
         f.write(html_limpo)
