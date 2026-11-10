@@ -33,9 +33,9 @@ def limpar_html(texto):
 
 def gerar_pagina(nome_arquivo, prompt_especifico):
     print(f"🤖 Gerando {nome_arquivo}...")
-    # Utiliza o modelo oficial atual do novo SDK
+    # Utilizando o modelo correto e recomendado gemini-3.8-flash
     response = client.models.generate_content(
-        model='gemini-2.5-flash',
+        model='gemini-3.8-flash',
         contents=f"{CONTEXTO_EMPRESA}\n\n{prompt_especifico}"
     )
     html_limpo = limpar_html(response.text)
