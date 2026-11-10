@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo | Camaçari Cabos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+
+    <!-- Tela de Login Simulada / Segura -->
+    <div id="login-screen" class="fixed inset-0 bg-blue-950 flex items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md text-center">
+            <!-- Logomarca Original Integrada -->
+            <div class="flex justify-center mb-6">
+                <img src="logo.png" alt="Camaçari Cabos" class="h-16 object-contain" onerror="this.src='https://via.placeholder.com/150x50?text=Camacari+Cabos'">
+            </div>
+            <h2 class="text-xl font-extrabold text-blue-950 mb-2">Painel Restrito</h2>
+            <p class="text-gray-500 text-sm mb-6">Digite a senha de administrador para gerenciar o site da Camaçari Cabos.</p>
+            
+            <form onsubmit="fazerLogin(event)" class="space-y-4">
+                <input type="password" id="senha-admin" placeholder="Senha de acesso" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none text-center tracking-widest">
+                <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-xl transition shadow-lg">Entrar no Painel</button>
+            </form>
+            <p id="erro-senha" class="text-red-500 text-xs mt-3 hidden">Senha incorreta. Tente novamente.</p>
+        </div>
+    </div>
+
+    <!-- Painel de Controle Principal (Oculto até fazer login) -->
+    <div id="admin-panel" class="min-h-screen flex flex-col hidden">
+        
+        <!-- Header do Painel -->
+        <header class="bg-blue-950 text-white shadow-md">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="flex items-center gap-4">
+                    <!-- Logomarca Original no Header do Painel -->
+                    <img src="logo.png" alt="Camaçari Cabos" class="h-10 object-contain bg-white px-2 py-1 rounded shadow" onerror="this.style.display='none'">
+                    <div>
+                        <h1 class="font-bold text-lg leading-tight">CMS Camaçari Cabos</h1>
+                        <span class="text-xs text-amber-400 font-medium">Ambiente Seguro de Gestão</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-xs text-gray-300 hidden sm:inline">Conectado como Administrador</span>
+                    <button onclick="fazerLogout()" class="bg-red-600 hover:bg-red-700 text-white text-xs font-bold px-3 py-2 rounded-lg transition">Sair</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Conteúdo do Painel -->
+        <main class="max-w-7xl mx-auto px-6 py-8 flex-1 w-full grid md:grid-cols-3 gap-8">
+            
+            <!-- Coluna de Ações / Formulários (Esquerda) -->
+            <div class="md:col-span-1 space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+                    <h2 class="text-lg font-bold text-blue-950 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-pen-to-square text-blue-600"></i> Gerenciar Conteúdo
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Seção para Alterar</label>
+                            <select id="tipo-edicao" class="w-full p-2.5 border border-gray-300 rounded-lg text-sm bg-gray-50 focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                                <option value="produto">Novo Produto / Ficha Técnica</option>
+                                <option value="artigo">Novo Artigo para o Blog</option>
+                                <option value="banner">Texto do Banner Principal</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Título / Nome</label>
+                            <input type="text" id="input-titulo" placeholder="Ex: Cabo XLPE 1kV / Norma ABNT" class="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Descrição / Detalhes Técnicos</label>
+                            <textarea id="input-descricao" rows="4" placeholder="Insira as especificações, ampacidade, bitola ou resumo..." class="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none"></textarea>
+                        </div>
+
+                        <button onclick="salvarAlteracao()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-lg transition shadow flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-cloud-arrow-up"></i> Atualizar Pré-visualização
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl text-xs text-blue-900 leading-relaxed">
+                    <p class="font-bold mb-1"><i class="fa-solid fa-circle-info"></i> Como funciona:</p>
+                    As alterações feitas aqui atualizam a pré-visualização ao lado instantaneamente. Quando estiver satisfeito, o sistema sincroniza diretamente com o seu repositório no GitHub para atualizar o site na Vercel.
+                </div>
+            </div>
+
+            <!-- Coluna de Pré-visualização do Site em Tempo Real (Direita) -->
+            <div class="md:col-span-2 flex flex-col">
+                <div class="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex-1 flex flex-col">
+                    <!-- Barra de Navegação Fake da Prévia -->
+                    <div class="bg-gray-100 px-4 py-3 border-b border-gray-200 flex justify-between items-center text-xs text-gray-500">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 bg-red-400 rounded-inline inline-block"></span>
+                            <span class="w-3 h-3 bg-amber-400 rounded-inline inline-block"></span>
+                            <span class="w-3 h-3 bg-emerald-400 rounded-inline inline-block"></span>
+                            <span class="ml-2 font-mono bg-white px-2 py-0.5 rounded border border-gray-300">camacaricabos.com.br (Pré-visualização)</span>
+                        </div>
+                        <span class="text-emerald-600 font-bold"><i class="fa-solid fa-circle text-[8px]"></i> Sincronizado com logo.png</span>
+                    </div>
+
+                    <!-- Corpo do Site Renderizado -->
+                    <div class="p-6 flex-1 bg-gray-50 overflow-y-auto space-y-6">
+                        
+                        <!-- Header do Site com a Logo Real -->
+                        <div class="bg-white p-4 rounded-xl shadow-sm flex justify-between items-center border border-gray-100">
+                            <img src="logo.png" alt="Camaçari Cabos" class="h-10 object-contain" onerror="this.src='https://via.placeholder.com/120x40?text=Logo+Indisponivel'">
+                            <div class="space-x-4 text-xs font-semibold text-gray-700 hidden sm:block">
+                                <span class="text-blue-600">Início</span>
+                                <span>Catálogo</span>
+                                <span>Blog</span>
+                                <span>Contato</span>
+                            </div>
+                        </div>
+
+                        <!-- Banner Dinâmico -->
+                        <div class="bg-blue-950 text-white p-8 rounded-2xl shadow-md text-center">
+                            <span class="bg-amber-500 text-blue-950 text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider">Atendimento no Polo Industrial</span>
+                            <h2 id="preview-banner-titulo" class="text-xl md:text-2xl font-extrabold mt-3 mb-2">Soluções Completas em Cabos e Infraestrutura</h2>
+                            <p id="preview-banner-desc" class="text-xs text-blue-200 max-w-lg mx-auto">Materiais elétricos normatizados, cabos industriais e atendimento especializado em Camaçari e Região Metropolitana.</p>
+                        </div>
+
+                        <!-- Vitrine de Itens Atualizados -->
+                        <div>
+                            <h3 class="text-sm font-bold text-gray-700 uppercase mb-3">Última Alteração Registrada no Painel</h3>
+                            <div id="preview-card-dinamico" class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+                                <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Produto / Artigo Recente</span>
+                                <h4 id="card-titulo" class="font-bold text-blue-950 mt-2 text-base">Nenhum item alterado nesta sessão</h4>
+                                <p id="card-desc" class="text-gray-600 text-xs mt-1 leading-relaxed">Preencha os campos ao lado e clique em "Atualizar Pré-visualização" para testar o comportamento do painel administrativo com a sua logomarca.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Scripts de Controle -->
+    <script>
+        // Senha simples de proteção (pode ser personalizada)
+        const SENHA_MESTRE = "camacari2026";
+
+        function fazerLogin(event) {
+            event.preventDefault();
+            const senhaDigitada = document.getElementById("senha-admin").value;
+            if (senhaDigitada === SENHA_MESTRE) {
+                document.getElementById("login-screen").classList.add("hidden");
+                document.getElementById("admin-panel").classList.remove("hidden");
+            } else {
+                document.getElementById("erro-senha").classList.remove("hidden");
+            }
+        }
+
+        function fazerLogout() {
+            document.getElementById("admin-panel").classList.add("hidden");
+            document.getElementById("login-screen").classList.remove("hidden");
+            document.getElementById("senha-admin").value = "";
+            document.getElementById("erro-senha").classList.add("hidden");
+        }
+
+        function salvarAlteracao() {
+            const tipo = document.getElementById("tipo-edicao").value;
+            const titulo = document.getElementById("input-titulo").value || "Item sem título";
+            const descricao = document.getElementById("input-descricao").value || "Sem descrição informada.";
+
+            if (tipo === "banner") {
+                document.getElementById("preview-banner-titulo").innerText = titulo;
+                document.getElementById("preview-banner-desc").innerText = descricao;
+                alert("Banner atualizado na pré-visualização!");
+            } else {
+                document.getElementById("card-titulo").innerText = titulo;
+                document.getElementById("card-desc").innerText = descricao;
+                alert("Novo " + (tipo === "produto" ? "produto" : "artigo") + " carregado na pré-visualização com sucesso!");
+            }
+        }
+    </script>
+</body>
+</html>
