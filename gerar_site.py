@@ -17,7 +17,7 @@ Dados Oficiais da Empresa:
 - Telefones / WhatsApp: (71) 99666-0988 / (71) 2136-4416.
 - Atuação: Fornecimento de cabos elétricos (atacado e varejo), plugs e tomadas industriais, disjuntores, refletores, luminárias, fitas de LED, Padrões Coelha, eletrocalhas, perfilados, eletrodutos e suprimentos industriais para Camaçari, Salvador, Lauro de Freitas, Simões Filho, Dias d'Ávila e Mata de São João.
 
-DIRETRIZ DE DESIGN:
+DIRETRIZ DE DESIGN E PADRONIZAÇÃO (PADRÃO PÁGINA SOBRE):
 - Siga rigorosamente um layout profissional corporativo em Tailwind CSS (tons de azul profundo, branco e detalhes em âmbar).
 - A logomarca oficial '<img src="logo.png" alt="Camaçari Cabos" class="h-10 object-contain">' deve estar no canto superior esquerdo de todas as páginas.
 - DIRETRIZ DE ESCRITA: NUNCA use sintaxe LaTeX ($...$). Use texto limpo (ex: Queda de Tensão <= 4%).
@@ -32,8 +32,8 @@ def limpar_html(texto):
 
 def gerar_pagina(nome_arquivo, prompt_especifico):
     print(f"🤖 Gerando {nome_arquivo}...")
-    # Usando o modelo estável
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    # Usando o modelo universal e estável 'gemini-pro'
+    model = genai.GenerativeModel('gemini-pro')
     response = model.generate_content(f"{CONTEXTO_EMPRESA}\n\n{prompt_especifico}")
     html_limpo = limpar_html(response.text)
     with open(nome_arquivo, "w", encoding="utf-8") as f:
