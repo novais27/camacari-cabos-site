@@ -1,7 +1,10 @@
 name: Painel e Manutenção Manual
 
 on:
-  workflow_dispatch: # Roda apenas quando você clicar manualmente no botão do GitHub
+  workflow_dispatch: # Roda apenas quando você clica manualmente
+
+permissions:
+  contents: write  # <--- ISSO DA PERMISSÃO PARA O BOT SALVAR OS ARQUIVOS NO REPOSITÓRIO
 
 jobs:
   build:
