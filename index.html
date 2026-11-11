@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camaçari Cabos | Materiais Elétricos e Suprimentos Industriais</title>
-    <meta name="description" content="Fornecimento de cabos elétricos, plugs industriais, eletrocalhas, disjuntores e padrão Coelba em Camaçari e Região Metropolitana. Desde 2014.">
+    <title>Camaçari Cabos | Materiais Elétricos Industriais e Comerciais</title>
+    <meta name="description" content="Distribuidora de materiais elétricos e cabos para o Polo Industrial de Camaçari, Salvador e RMS. Cabos de potência, eletrocalhas, disjuntores e padrão Coelba.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,508 +12,455 @@
             theme: {
                 extend: {
                     colors: {
-                        corporate: {
-                            navy: '#0A192F',
-                            blue: '#1E3A8A',
-                            lightBlue: '#2563EB',
-                            amber: '#D97706',
-                            amberLight: '#F59E0B',
-                            slate: '#F8FAFC'
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#0f172a'
+                        },
+                        amber: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706'
                         }
                     }
                 }
             }
         }
     </script>
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-corporate-slate text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
 
-    <!-- Topbar Corporativo -->
-    <div class="bg-corporate-navy text-slate-300 text-xs border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col md:flex-row justify-between items-center gap-2">
-            <div class="flex flex-wrap items-center gap-4 text-center md:text-left">
-                <span><i class="fa-solid fa-location-dot text-corporate-amber mr-1"></i> Rua Centro, 249, Camaçari - BA (CEP 42800-029)</span>
-                <span class="hidden md:inline text-slate-600">|</span>
-                <span><i class="fa-solid fa-clock text-corporate-amber mr-1"></i> Seg - Sex: 07h30 às 17h30 | Sáb: 08h às 12h</span>
+    <!-- BARRA SUPERIOR DE CONTATO -->
+    <div class="bg-slate-950 text-slate-300 text-xs sm:text-sm border-b border-slate-800 py-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-location-dot text-amber-500"></i>
+                    Rua Centro, 249, Camaçari - BA
+                </span>
+                <span class="hidden md:flex items-center gap-1.5">
+                    <i class="fa-solid fa-clock text-amber-500"></i>
+                    Segunda a Sexta: 07:30 às 17:30
+                </span>
             </div>
-            <div class="flex items-center gap-4">
-                <a href="tel:7121364416" class="hover:text-corporate-amber transition-colors">
-                    <i class="fa-solid fa-phone text-corporate-amber mr-1"></i> (71) 2136-4416
+            <div class="flex items-center space-x-4">
+                <a href="tel:7121364416" class="hover:text-amber-400 transition-colors flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-amber-500"></i> (71) 2136-4416
                 </a>
-                <a href="https://wa.me/5571996660988" target="_blank" class="hover:text-corporate-amber transition-colors font-medium text-white">
-                    <i class="fa-brands fa-whatsapp text-green-500 mr-1"></i> (71) 99666-0988
+                <a href="https://wa.me/5571996660988" target="_blank" class="hover:text-amber-400 transition-colors flex items-center gap-1 text-emerald-400 font-medium">
+                    <i class="fa-brands fa-whatsapp"></i> (71) 99666-0988
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Navegação Principal -->
-    <header class="bg-white sticky top-0 z-50 shadow-md border-b border-slate-100">
+    <!-- CABEÇALHO / NAVBAR PADRÃO -->
+    <header class="bg-slate-900 sticky top-0 z-50 shadow-lg border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logomarca Oficial Obrigatória -->
+            <div class="flex items-center justify-between h-20">
+                <!-- LOGOMARCA -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="flex items-center gap-3">
                         <img src="logo.png" alt="Camaçari Cabos" class="h-10 object-contain">
                     </a>
                 </div>
 
-                <!-- Links Desktop -->
-                <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide text-corporate-navy">
-                    <a href="#inicio" class="text-corporate-lightBlue transition-colors">Início</a>
-                    <a href="#polo-industrial" class="hover:text-corporate-lightBlue transition-colors">Polo Industrial</a>
-                    <a href="#produtos" class="hover:text-corporate-lightBlue transition-colors">Produtos</a>
-                    <a href="#regioes" class="hover:text-corporate-lightBlue transition-colors">Regiões Atendidas</a>
-                    <a href="#sobre" class="hover:text-corporate-lightBlue transition-colors">Sobre Nós</a>
+                <!-- MENU DESKTOP -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-amber-400 font-semibold text-sm tracking-wide uppercase">Início</a>
+                    <a href="produtos.html" class="text-slate-200 hover:text-amber-400 font-medium text-sm tracking-wide uppercase transition-colors">Produtos</a>
+                    <a href="blog.html" class="text-slate-200 hover:text-amber-400 font-medium text-sm tracking-wide uppercase transition-colors">Blog Técnico</a>
+                    <a href="sobre.html" class="text-slate-200 hover:text-amber-400 font-medium text-sm tracking-wide uppercase transition-colors">Sobre Nós</a>
                 </nav>
 
-                <!-- Botão Cotação Rápida -->
+                <!-- BOTÃO COTAÇÃO RÁPIDA -->
                 <div class="hidden lg:flex items-center">
-                    <a href="https://wa.me/5571996660988?text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação%20de%20materiais%20elétricos." 
-                       target="_blank"
-                       class="bg-corporate-amber hover:bg-corporate-amberLight text-white px-5 py-2.5 rounded-md font-semibold text-sm transition-all shadow-sm flex items-center gap-2">
-                        <i class="fa-solid fa-file-invoice"></i> Solicitar Orçamento
+                    <a href="https://wa.me/5571996660988?text=Olá!%20Gostaria%20de%20solicitar%20uma%20cotação." target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 rounded bg-amber-500 text-slate-950 font-bold text-sm hover:bg-amber-400 transition-all shadow-md hover:shadow-amber-500/20">
+                        <i class="fa-solid fa-file-invoice mr-2"></i> Solicitar Cotação
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="flex items-center md:hidden">
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-corporate-navy focus:outline-none p-2">
-                        <i class="fa-solid fa-bars text-xl"></i>
+                <!-- BOTÃO HAMBÚRGUER MOBILE -->
+                <div class="flex md:hidden">
+                    <button type="button" id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none p-2" aria-label="Abrir menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Menu Mobile Retrátil -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-50 border-t border-slate-200 px-4 pt-3 pb-5 space-y-3">
-            <a href="#inicio" class="block py-2 text-base font-medium text-corporate-navy hover:text-corporate-lightBlue">Início</a>
-            <a href="#polo-industrial" class="block py-2 text-base font-medium text-corporate-navy hover:text-corporate-lightBlue">Polo Industrial</a>
-            <a href="#produtos" class="block py-2 text-base font-medium text-corporate-navy hover:text-corporate-lightBlue">Produtos</a>
-            <a href="#regioes" class="block py-2 text-base font-medium text-corporate-navy hover:text-corporate-lightBlue">Regiões Atendidas</a>
-            <a href="#sobre" class="block py-2 text-base font-medium text-corporate-navy hover:text-corporate-lightBlue">Sobre Nós</a>
-            <a href="https://wa.me/5571996660988" target="_blank" class="w-full text-center bg-corporate-amber text-white px-4 py-2.5 rounded-md font-medium block">
-                Solicitar Orçamento
-            </a>
+        <!-- MENU MOBILE -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-950 border-t border-slate-800 px-4 pt-3 pb-6 space-y-3">
+            <a href="index.html" class="block py-2 text-amber-400 font-semibold text-base border-b border-slate-800">Início</a>
+            <a href="produtos.html" class="block py-2 text-slate-200 hover:text-amber-400 font-medium text-base border-b border-slate-800">Produtos</a>
+            <a href="blog.html" class="block py-2 text-slate-200 hover:text-amber-400 font-medium text-base border-b border-slate-800">Blog Técnico</a>
+            <a href="sobre.html" class="block py-2 text-slate-200 hover:text-amber-400 font-medium text-base border-b border-slate-800">Sobre Nós</a>
+            <div class="pt-2">
+                <a href="https://wa.me/5571996660988?text=Olá!%20Gostaria%20de%20solicitar%20uma%20cotação." target="_blank" class="w-full flex items-center justify-center py-3 bg-amber-500 text-slate-950 font-bold rounded">
+                    <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Cotação via WhatsApp
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Banner Principal / Hero -->
-    <section id="inicio" class="relative bg-corporate-navy text-white overflow-hidden py-16 lg:py-24 border-b-4 border-corporate-amber">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#2563EB_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-corporate-amber">
-                        <i class="fa-solid fa-shield-halved"></i> Desde 2014 em Camaçari - BA
-                    </div>
-                    
-                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-                        Cabos Elétricos e Suprimentos Industriais de Alta Performance
-                    </h1>
-                    
-                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
-                        Fornecimento ágil para indústrias, instaladores e construção civil. Atendimento especializado em atacado e varejo com rigoroso padrão técnico e conformidade com as normas ABNT.
-                    </p>
-
-                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
-                        <a href="https://wa.me/5571996660988" target="_blank" 
-                           class="inline-flex justify-center items-center gap-2 bg-corporate-amber hover:bg-corporate-amberLight text-white font-bold px-7 py-3.5 rounded-md shadow-lg transition-all text-sm tracking-wide">
-                            <i class="fa-brands fa-whatsapp text-lg"></i> Cotação com Especialista
-                        </a>
-                        <a href="#produtos" 
-                           class="inline-flex justify-center items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-7 py-3.5 rounded-md transition-all text-sm tracking-wide">
-                            Ver Linha de Produtos
-                        </a>
-                    </div>
-
-                    <!-- Indicadores de Confiança -->
-                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-800 text-left">
-                        <div>
-                            <span class="block text-2xl font-black text-white">10+ Anos</span>
-                            <span class="text-xs text-slate-400">Solidez de Mercado</span>
+    <main class="flex-grow">
+        <!-- HERO SECTION: FOCO NO POLO INDUSTRIAL DE CAMAÇARI -->
+        <section class="relative bg-gradient-to-r from-slate-950 via-slate-900 to-blue-950 text-white py-20 lg:py-28 overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/60 border border-amber-500/40 text-amber-400 text-xs font-semibold tracking-wider uppercase">
+                            <i class="fa-solid fa-industry"></i> Hub de Fornecimento Eletroindustrial
                         </div>
-                        <div>
-                            <span class="block text-2xl font-black text-corporate-amber">Pronta Entrega</span>
-                            <span class="text-xs text-slate-400">Estoque Local Amplo</span>
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                            Potência e Confiabilidade para o <span class="text-amber-400">Polo Industrial</span> de Camaçari e Região.
+                        </h1>
+                        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+                            Desde 2014 fornecendo cabos elétricos de alta performance, infraestrutura de eletrocondução, disjuntores e padrões Coelba homologados para indústrias, construtoras e instaladores em toda a RMS.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                            <a href="produtos.html" class="inline-flex items-center justify-center px-7 py-3.5 rounded bg-amber-500 text-slate-950 font-bold hover:bg-amber-400 transition-colors shadow-lg shadow-amber-500/20">
+                                Catálogo de Produtos <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                            <a href="https://wa.me/5571996660988" target="_blank" class="inline-flex items-center justify-center px-7 py-3.5 rounded bg-slate-800 text-white font-semibold border border-slate-700 hover:bg-slate-700 transition-colors">
+                                <i class="fa-brands fa-whatsapp mr-2 text-emerald-400"></i> Plantão B2B: (71) 99666-0988
+                            </a>
                         </div>
-                        <div>
-                            <span class="block text-2xl font-black text-white">100% NBR</span>
-                            <span class="text-xs text-slate-400">Conformidade e Laudos</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Box de Destaque / Resumo Rápido -->
-                <div class="lg:col-span-5">
-                    <div class="bg-white rounded-lg p-6 sm:p-8 text-slate-800 shadow-2xl border-t-4 border-corporate-lightBlue">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-corporate-lightBlue">
-                                <i class="fa-solid fa-bolt-lightning text-lg"></i>
+                        <!-- Métricas Rápidas -->
+                        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800">
+                            <div>
+                                <span class="block text-2xl font-black text-amber-400">+10 Anos</span>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider">Tradição Local</span>
                             </div>
                             <div>
-                                <h2 class="text-lg font-bold text-corporate-navy">Atendimento Corporativo B2B</h2>
-                                <p class="text-xs text-slate-500">Agilidade no faturamento para empresas</p>
+                                <span class="block text-2xl font-black text-amber-400">NBR / Inmetro</span>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider">100% Normatizado</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl font-black text-amber-400">Atacado & Varejo</span>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider">Pronta Entrega</span>
                             </div>
                         </div>
-
-                        <ul class="space-y-3.5 text-sm text-slate-600 mb-6">
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-green-600 mt-0.5"></i>
-                                <span>Cotações com envio de planilhas e projetos técnicos</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-green-600 mt-0.5"></i>
-                                <span>Faturamento flexível para empresas cadastradas</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-green-600 mt-0.5"></i>
-                                <span>Logística expressa para plantas industriais</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-green-600 mt-0.5"></i>
-                                <span>Padrões de medição homologados Coelba</span>
-                            </li>
-                        </ul>
-
-                        <div class="bg-slate-50 p-4 rounded border border-slate-200 text-center">
-                            <p class="text-xs text-slate-500 mb-1">Central de Atendimento Direto</p>
-                            <p class="text-lg font-bold text-corporate-navy">(71) 2136-4416 / (71) 99666-0988</p>
+                    </div>
+                    
+                    <!-- CARD LATERAL INFORMATIVO -->
+                    <div class="lg:col-span-5">
+                        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 sm:p-8 backdrop-blur shadow-2xl relative">
+                            <div class="absolute -top-3 -right-3 bg-amber-500 text-slate-950 text-xs font-black px-3 py-1 rounded shadow">
+                                LOGÍSTICA EXPRESSA
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                                <i class="fa-solid fa-truck-fast text-amber-400"></i> Despacho Imediato RMS
+                            </h3>
+                            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                                Atendemos demandas pontuais de manutenção (paradas de fábrica) e grandes lotes estruturais com entrega prioritária:
+                            </p>
+                            <ul class="space-y-3 text-sm text-slate-200">
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-check text-amber-400"></i> Polo Petroquímico e Automotivo de Camaçari
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-check text-amber-400"></i> Salvador, Simões Filho e Lauro de Freitas
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-check text-amber-400"></i> Dias d'Ávila e Mata de São João
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-check text-amber-400"></i> Faturamento B2B com condições especiais
+                                </li>
+                            </ul>
+                            <div class="mt-6 pt-6 border-t border-slate-800">
+                                <a href="produtos.html" class="text-amber-400 font-semibold text-sm hover:underline flex items-center justify-between">
+                                    <span>Consulte estoque para paradas industriais</span>
+                                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Destaque: Polo Industrial de Camaçari -->
-    <section id="polo-industrial" class="py-16 bg-white border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-slate-900 to-corporate-blue rounded-xl p-8 lg:p-12 text-white shadow-xl">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-8 space-y-4">
-                        <span class="inline-block bg-corporate-amber text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded">
-                            Setor Crítico & Manutenção
-                        </span>
-                        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
-                            Parceiro Estratégico do Polo Industrial de Camaçari
-                        </h2>
-                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                            A proximidade física com o maior complexo industrial integrado do Hemisfério Sul garante que a Camaçari Cabos entregue paradas de manutenção (turnaround), ampliações fabris e manutenções preditivas e corretivas com máxima prontidão e sem atrasos na cadeia produtiva.
-                        </p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-200 pt-2">
-                            <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-industry text-corporate-amber"></i> Cabos de Força, Controle e Instrumentação
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-plug-circle-bolt text-corporate-amber"></i> Linha Industrial e Tomadas em Conformidade IEC 60309
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-network-wired text-corporate-amber"></i> Infraestrutura Reforçada (Eletrocalhas e Perfilados)
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-truck-fast text-corporate-amber"></i> Despacho Emergencial para Portaria de Fábrica
-                            </div>
+        <!-- CARDS DE DESTAQUES PRINCIPAIS -->
+        <section class="py-16 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-blue-900 mb-2">Linha Completa de Suprimentos</h2>
+                    <p class="text-3xl font-extrabold text-slate-900 tracking-tight">Soluções Elétricas Robustas para Cada Demanda</p>
+                    <p class="mt-3 text-slate-600 text-sm sm:text-base">Equipamentos e condutores certificados que garantem conformidade técnica, segurança operacional e eficiência energética.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Item 1: Cabos Elétricos -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded bg-blue-900 text-amber-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-bolt"></i>
                         </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Cabos de Potência e Controle</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Cabos flexíveis 750V, cabos isolados HEPR/XLPE 0,6/1kV em cobre e alumínio, resistentes a intempéries e agentes químicos industriais.
+                        </p>
+                        <a href="produtos.html#cabos" class="text-blue-900 hover:text-blue-800 text-sm font-semibold inline-flex items-center">
+                            Especificações técnicas <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                        </a>
                     </div>
-                    <div class="lg:col-span-4 flex flex-col justify-center items-center text-center p-6 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm">
-                        <i class="fa-solid fa-cubes-stacked text-4xl text-corporate-amber mb-3"></i>
-                        <h3 class="font-bold text-lg mb-1">Demanda Industrial?</h3>
-                        <p class="text-xs text-slate-300 mb-4">Envie sua lista de materiais em formato PDF ou Excel para cotação imediata.</p>
-                        <a href="https://wa.me/5571996660988?text=Olá,%20preciso%20de%20cotação%20para%20o%20Polo%20Industrial." 
-                           target="_blank" 
-                           class="w-full bg-white text-corporate-navy font-bold py-2.5 px-4 rounded text-sm hover:bg-slate-100 transition-colors shadow">
-                            Cotar Demanda Industrial
+
+                    <!-- Item 2: Infraestrutura e Eletrocalhas -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded bg-blue-900 text-amber-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Eletrocalhas e Perfilados</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Sistemas de perfilados perfurados e lisos, leitos para cabos pesados, eletrodutos galvanizados e conexões em aço zincado.
+                        </p>
+                        <a href="produtos.html#infraestrutura" class="text-blue-900 hover:text-blue-800 text-sm font-semibold inline-flex items-center">
+                            Ver linha estrutural <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Item 3: Tomadas e Plugs Industriais -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded bg-blue-900 text-amber-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-plug"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Linha Industrial e Plugs CEE</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Tomadas de sobrepor e embutir, acoplamentos e plugs blindados IP44 a IP67 para ambientes agressivos e chão de fábrica.
+                        </p>
+                        <a href="produtos.html#conexoes" class="text-blue-900 hover:text-blue-800 text-sm font-semibold inline-flex items-center">
+                            Conferir blindagens <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Item 4: Proteção e Disjuntores -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded bg-blue-900 text-amber-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Disjuntores e Proteção</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Disjuntores DIN e Caixa Moldada, contatores, relés térmicos e dispositivos DPS para proteção robusta de maquinários.
+                        </p>
+                        <a href="produtos.html#protecao" class="text-blue-900 hover:text-blue-800 text-sm font-semibold inline-flex items-center">
+                            Dimensionar proteção <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Item 5: Padrão Coelba -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded bg-blue-900 text-amber-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Padrão Coelba Homologado</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Caixas de medição individuais e coletivas, kits de aterramento, hastes e armações 100% em conformidade com as normas Neoenergia Coelba.
+                        </p>
+                        <a href="produtos.html#coelba" class="text-blue-900 hover:text-blue-800 text-sm font-semibold inline-flex items-center">
+                            Normas de ligação <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Item 6: Iluminação LED Industrial -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded bg-blue-900 text-amber-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Iluminação LED de Alta Eficiência</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Refletores de alta potência, luminárias herméticas IP65, fitas de LED de grau comercial e painéis para galpões logísticos e pátios.
+                        </p>
+                        <a href="produtos.html#iluminacao" class="text-blue-900 hover:text-blue-800 text-sm font-semibold inline-flex items-center">
+                            Projetos luminotécnicos <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Linhas de Produtos em Destaque -->
-    <section id="produtos" class="py-16 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs font-bold uppercase tracking-wider text-corporate-amber">Soluções Completas</span>
-                <h2 class="text-3xl font-extrabold text-corporate-navy mt-1">Nosso Mix de Materiais Elétricos</h2>
-                <p class="text-slate-600 text-sm sm:text-base mt-2">
-                    Distribuímos produtos dos principais fabricantes nacionais e internacionais, com garantia de qualidade e suporte técnico.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Card 1 -->
-                <div class="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-lg hover:border-corporate-lightBlue transition-all">
-                    <div class="w-12 h-12 bg-blue-50 text-corporate-lightBlue rounded-lg flex items-center justify-center text-2xl mb-4">
-                        <i class="fa-solid fa-arrows-split-up-and-left"></i>
+        <!-- SEÇÃO: POR QUE ESCOLHER A CAMAÇARI CABOS -->
+        <section class="py-16 bg-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Diferenciais Estratégicos</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 mt-2 mb-6">
+                            Parceria Segura para Engenharia, Manutenção e Obras Rápidas
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-900 text-amber-400 flex items-center justify-center text-sm font-bold">1</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-base">Atendimento Especializado B2B e B2C</h4>
+                                    <p class="text-slate-600 text-sm mt-1">Consultoria direta com foco em viabilidade de projetos elétricos, corte de cabos sob medida e cotações ágeis.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-900 text-amber-400 flex items-center justify-center text-sm font-bold">2</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-base">Cálculo de Queda de Tensão Rigoroso</h4>
+                                    <p class="text-slate-600 text-sm mt-1">Nossa equipe auxilia no dimensionamento correto (mantendo Queda de Tensão <= 4% conforme NBR 5410) para evitar perdas de energia e queima de motores.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-900 text-amber-400 flex items-center justify-center text-sm font-bold">3</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-base">Disponibilidade Imediata no Centro de Camaçari</h4>
+                                    <p class="text-slate-600 text-sm mt-1">Localização estratégica próxima às principais rodovias de ligação para o Polo Petroquímico, Via Parafuso (BA-535) e BA-099.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-lg font-bold text-corporate-navy mb-2">Cabos Elétricos</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                        Cabos de baixa e média tensão, cabos flexíveis 750V, cabos de potência 0,6/1kV (HEPR e PVC), cabos de comando, blindados e cabos solares.
-                    </p>
-                    <span class="text-xs font-semibold text-corporate-lightBlue uppercase tracking-wider">Atacado & Varejo</span>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-lg hover:border-corporate-lightBlue transition-all">
-                    <div class="w-12 h-12 bg-amber-50 text-corporate-amber rounded-lg flex items-center justify-center text-2xl mb-4">
-                        <i class="fa-solid fa-plug"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-corporate-navy mb-2">Plugs & Tomadas Industriais</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                        Linha de embutir e sobrepor, acoplamentos e plugs blindados padrão industrial (16A, 32A, 63A, 125A), graus de proteção IP44 e IP67.
-                    </p>
-                    <span class="text-xs font-semibold text-corporate-lightBlue uppercase tracking-wider">Norma IEC 60309</span>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-lg hover:border-corporate-lightBlue transition-all">
-                    <div class="w-12 h-12 bg-blue-50 text-corporate-lightBlue rounded-lg flex items-center justify-center text-2xl mb-4">
-                        <i class="fa-solid fa-toggle-on"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-corporate-navy mb-2">Disjuntores & Proteção</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                        Disjuntores monopolares, bipolares e tripolares (DIN e caixa moldada), interruptores DR, dispositivos DPS e contatores industriais.
-                    </p>
-                    <span class="text-xs font-semibold text-corporate-lightBlue uppercase tracking-wider">Proteção Elétrica Segura</span>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-lg hover:border-corporate-lightBlue transition-all">
-                    <div class="w-12 h-12 bg-blue-50 text-corporate-lightBlue rounded-lg flex items-center justify-center text-2xl mb-4">
-                        <i class="fa-solid fa-layer-group"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-corporate-navy mb-2">Infraestrutura e Encaminhamento</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                        Eletrocalhas perfuradas e lisas, perfilados galvanizados, leitos para cabos, eletrodutos galvanizados a fogo e conexões completas.
-                    </p>
-                    <span class="text-xs font-semibold text-corporate-lightBlue uppercase tracking-wider">Aço Galvanizado & Acessórios</span>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-lg hover:border-corporate-lightBlue transition-all">
-                    <div class="w-12 h-12 bg-amber-50 text-corporate-amber rounded-lg flex items-center justify-center text-2xl mb-4">
-                        <i class="fa-solid fa-lightbulb"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-corporate-navy mb-2">Iluminação LED & Refletores</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                        Refletores de alta potência (50W a 500W IP66), luminárias herméticas, campânulas industriais high-bay, fitas de LED profissionais e fontes.
-                    </p>
-                    <span class="text-xs font-semibold text-corporate-lightBlue uppercase tracking-wider">Eficiência Energética</span>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-lg hover:border-corporate-lightBlue transition-all">
-                    <div class="w-12 h-12 bg-blue-50 text-corporate-lightBlue rounded-lg flex items-center justify-center text-2xl mb-4">
-                        <i class="fa-solid fa-gauge-high"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-corporate-navy mb-2">Padrões Coelba</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                        Caixas de medição individual e agrupamentos (polifásicos e monofásicos), armações, cabos de entrada e kits completos homologados Neoenergia Coelba.
-                    </p>
-                    <span class="text-xs font-semibold text-corporate-lightBlue uppercase tracking-wider">100% Homologado</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Regiões Atendidas -->
-    <section id="regioes" class="py-16 bg-white border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div class="lg:col-span-5">
-                    <span class="text-xs font-bold uppercase tracking-wider text-corporate-amber">Logística Regional</span>
-                    <h2 class="text-3xl font-extrabold text-corporate-navy mt-1 mb-4">Atendimento Ágil em Toda a Região</h2>
-                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                        Com base operacional estrategicamente posicionada em Camaçari, fornecemos suporte contínuo para obras de infraestrutura, comércios e instalações fabris nos principais municípios da Bahia.
-                    </p>
-                    <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-corporate-lightBlue">
-                        <p class="text-xs font-medium text-slate-700">
-                            <strong>Diferencial de Entrega:</strong> Rotas diárias e agendadas para atendimento emergencial de manutenção e compras programadas.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-7">
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <div class="bg-blue-950 text-white rounded-2xl p-8 shadow-xl border border-blue-900">
+                        <h3 class="text-2xl font-bold mb-4 text-white">Central de Cotações Rápidas</h3>
+                        <p class="text-slate-300 text-sm mb-6">Envie sua lista de materiais em formato PDF, planilha ou imagem. Nossa equipe técnica retorna com os melhores preços corporativos.</p>
                         
-                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg text-center hover:bg-blue-50 transition-colors">
-                            <i class="fa-solid fa-location-dot text-corporate-lightBlue mb-2 text-xl"></i>
-                            <h4 class="font-bold text-corporate-navy text-sm">Camaçari</h4>
-                            <p class="text-xs text-slate-500">Sede & Polo</p>
+                        <div class="space-y-4">
+                            <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-800 flex items-center gap-4">
+                                <i class="fa-solid fa-phone-volume text-2xl text-amber-400"></i>
+                                <div>
+                                    <span class="block text-xs text-slate-400 font-semibold uppercase">Linha Direta de Vendas</span>
+                                    <span class="text-base font-bold text-white">(71) 2136-4416</span>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-800 flex items-center gap-4">
+                                <i class="fa-brands fa-whatsapp text-2xl text-emerald-400"></i>
+                                <div>
+                                    <span class="block text-xs text-slate-400 font-semibold uppercase">WhatsApp Corporativo</span>
+                                    <span class="text-base font-bold text-white">(71) 99666-0988</span>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg text-center hover:bg-blue-50 transition-colors">
-                            <i class="fa-solid fa-location-dot text-corporate-lightBlue mb-2 text-xl"></i>
-                            <h4 class="font-bold text-corporate-navy text-sm">Dias d'Ávila</h4>
-                            <p class="text-xs text-slate-500">Atendimento Direto</p>
+                        <div class="mt-8">
+                            <a href="https://wa.me/5571996660988?text=Olá!%20Tenho%20uma%20lista%20de%20materiais%20para%20cotação." target="_blank" class="w-full inline-flex items-center justify-center px-6 py-3.5 rounded bg-amber-500 text-slate-950 font-bold hover:bg-amber-400 transition-colors shadow-lg">
+                                <i class="fa-solid fa-paper-plane mr-2"></i> Enviar Lista de Materiais Agora
+                            </a>
                         </div>
-
-                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg text-center hover:bg-blue-50 transition-colors">
-                            <i class="fa-solid fa-location-dot text-corporate-lightBlue mb-2 text-xl"></i>
-                            <h4 class="font-bold text-corporate-navy text-sm">Simões Filho</h4>
-                            <p class="text-xs text-slate-500">Região Metropolitana</p>
-                        </div>
-
-                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg text-center hover:bg-blue-50 transition-colors">
-                            <i class="fa-solid fa-location-dot text-corporate-lightBlue mb-2 text-xl"></i>
-                            <h4 class="font-bold text-corporate-navy text-sm">Lauro de Freitas</h4>
-                            <p class="text-xs text-slate-500">Litoral Norte & Centro</p>
-                        </div>
-
-                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg text-center hover:bg-blue-50 transition-colors">
-                            <i class="fa-solid fa-location-dot text-corporate-lightBlue mb-2 text-xl"></i>
-                            <h4 class="font-bold text-corporate-navy text-sm">Salvador</h4>
-                            <p class="text-xs text-slate-500">Capital & Obras</p>
-                        </div>
-
-                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg text-center hover:bg-blue-50 transition-colors">
-                            <i class="fa-solid fa-location-dot text-corporate-lightBlue mb-2 text-xl"></i>
-                            <h4 class="font-bold text-corporate-navy text-sm">Mata de São João</h4>
-                            <p class="text-xs text-slate-500">Litoral e Interior</p>
-                        </div>
-
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sobre a Empresa -->
-    <section id="sobre" class="py-16 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-corporate-amber">Nossa História</span>
-                    <h2 class="text-3xl font-extrabold text-corporate-navy">Mais de Uma Década de Tradição e Confiança Técnica</h2>
-                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                        Fundada em 2014 no município de Camaçari - BA, a <strong>Camaçari Cabos Materiais Elétricos</strong> nasceu para preencher a carência de um fornecedor de resposta rápida no setor de condutores e materiais elétricos de infraestrutura pesada.
-                    </p>
-                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                        Combinamos a flexibilidade do varejo de balcão com a robustez operacional exigida pelas maiores indústrias e empreiteiras da Região Metropolitana.
-                    </p>
-                    <div class="pt-2">
-                        <div class="flex items-center gap-3">
-                            <div class="w-3 h-3 rounded-full bg-corporate-amber"></div>
-                            <span class="text-sm font-semibold text-corporate-navy">Atendimento Consultivo Especializado</span>
-                        </div>
-                        <div class="flex items-center gap-3 mt-2">
-                            <div class="w-3 h-3 rounded-full bg-corporate-amber"></div>
-                            <span class="text-sm font-semibold text-corporate-navy">Estoque Regular para Reposição Imediata</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-corporate-navy rounded-xl p-8 text-white relative">
-                    <h3 class="text-xl font-bold mb-4 text-corporate-amber">Dados de Identificação Oficial</h3>
-                    <div class="space-y-3 text-sm text-slate-300">
-                        <p><strong class="text-white">Razão / Nome:</strong> Camaçari Cabos Materiais Elétricos</p>
-                        <p><strong class="text-white">Atividade:</strong> Comércio Atacadista e Varejista de Materiais Elétricos</p>
-                        <p><strong class="text-white">Fundação:</strong> Desde 2014 em Camaçari - BA</p>
-                        <p><strong class="text-white">Localização:</strong> Rua Centro, 249, Centro, Camaçari - BA (CEP 42800-029)</p>
-                        <p><strong class="text-white">Telefones:</strong> (71) 2136-4416 | (71) 99666-0988</p>
-                    </div>
+        <!-- ÁREA GEOGRÁFICA DE ATENDIMENTO -->
+        <section class="py-12 bg-white border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Cobertura Logística Regional</h3>
+                <p class="text-xl font-bold text-slate-900 mb-6">Atendimento Eficiente para Toda a Região Metropolitana</p>
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm font-semibold text-slate-700">
+                    <span class="bg-slate-100 border border-slate-200 px-4 py-2 rounded-full flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-amber-500"></i> Camaçari (Sede & Polo)
+                    </span>
+                    <span class="bg-slate-100 border border-slate-200 px-4 py-2 rounded-full flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-amber-500"></i> Salvador
+                    </span>
+                    <span class="bg-slate-100 border border-slate-200 px-4 py-2 rounded-full flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-amber-500"></i> Lauro de Freitas
+                    </span>
+                    <span class="bg-slate-100 border border-slate-200 px-4 py-2 rounded-full flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-amber-500"></i> Simões Filho
+                    </span>
+                    <span class="bg-slate-100 border border-slate-200 px-4 py-2 rounded-full flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-amber-500"></i> Dias d'Ávila
+                    </span>
+                    <span class="bg-slate-100 border border-slate-200 px-4 py-2 rounded-full flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-amber-500"></i> Mata de São João
+                    </span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Rodapé -->
-    <footer class="bg-corporate-navy text-slate-400 text-sm mt-auto border-t-2 border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                
-                <!-- Coluna 1: Logo & Resumo -->
+    <!-- RODAPÉ CORPORATIVO PADRÃO -->
+    <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Coluna 1: Empresa -->
                 <div class="space-y-4">
-                    <img src="logo.png" alt="Camaçari Cabos" class="h-10 object-contain brightness-0 invert">
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Referência em cabos condutores e suprimentos industriais em Camaçari e Região Metropolitana da Bahia desde 2014.
+                    <img src="logo.png" alt="Camaçari Cabos" class="h-10 object-contain">
+                    <p class="text-xs leading-relaxed text-slate-400">
+                        Fundada em 2014, a Camaçari Cabos Materiais Elétricos é referência no fornecimento de cabos elétricos, sistemas de infraestrutura e materiais de proteção para indústrias, construtoras e instaladores em toda a Bahia.
                     </p>
+                    <div class="flex space-x-3 text-slate-400 pt-2">
+                        <a href="#" class="w-8 h-8 rounded bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-amber-400 hover:border-amber-400 transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-amber-400 hover:border-amber-400 transition-colors">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/5571996660988" target="_blank" class="w-8 h-8 rounded bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-emerald-400 hover:border-emerald-400 transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Coluna 2: Navegação -->
                 <div>
-                    <h4 class="text-white font-bold text-sm mb-3 border-b border-slate-700 pb-1">Navegação</h4>
+                    <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4 border-l-2 border-amber-500 pl-2">Links Rápidos</h4>
                     <ul class="space-y-2 text-xs">
-                        <li><a href="#inicio" class="hover:text-white transition-colors">Início</a></li>
-                        <li><a href="#polo-industrial" class="hover:text-white transition-colors">Polo Industrial</a></li>
-                        <li><a href="#produtos" class="hover:text-white transition-colors">Produtos e Suprimentos</a></li>
-                        <li><a href="#regioes" class="hover:text-white transition-colors">Regiões de Atendimento</a></li>
-                        <li><a href="#sobre" class="hover:text-white transition-colors">Nossa Empresa</a></li>
+                        <li><a href="index.html" class="hover:text-amber-400 transition-colors">Página Inicial</a></li>
+                        <li><a href="produtos.html" class="hover:text-amber-400 transition-colors">Catálogo de Produtos</a></li>
+                        <li><a href="blog.html" class="hover:text-amber-400 transition-colors">Blog Técnico e Normas</a></li>
+                        <li><a href="sobre.html" class="hover:text-amber-400 transition-colors">Sobre Nossa Empresa</a></li>
                     </ul>
                 </div>
 
-                <!-- Coluna 3: Principais Produtos -->
+                <!-- Coluna 3: Principais Categorias -->
                 <div>
-                    <h4 class="text-white font-bold text-sm mb-3 border-b border-slate-700 pb-1">Principais Linhas</h4>
+                    <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4 border-l-2 border-amber-500 pl-2">Linha de Fornecimento</h4>
                     <ul class="space-y-2 text-xs">
-                        <li>Cabos de Cobre e Alumínio</li>
-                        <li>Plugs e Tomadas Industriais</li>
-                        <li>Eletrocalhas e Perfilados</li>
-                        <li>Disjuntores e Contatores</li>
-                        <li>Entradas Padrão Coelba</li>
-                        <li>Iluminação Industrial LED</li>
+                        <li><a href="produtos.html#cabos" class="hover:text-amber-400 transition-colors">Cabos Elétricos de Cobre e Alumínio</a></li>
+                        <li><a href="produtos.html#infraestrutura" class="hover:text-amber-400 transition-colors">Eletrocalhas, Perfilados e Eletrodutos</a></li>
+                        <li><a href="produtos.html#conexoes" class="hover:text-amber-400 transition-colors">Plugs e Tomadas Industriais CEE</a></li>
+                        <li><a href="produtos.html#protecao" class="hover:text-amber-400 transition-colors">Disjuntores DIN e Caixa Moldada</a></li>
+                        <li><a href="produtos.html#coelba" class="hover:text-amber-400 transition-colors">Padrões Coelba Monofásicos e Trifásicos</a></li>
+                        <li><a href="produtos.html#iluminacao" class="hover:text-amber-400 transition-colors">Refletores e Iluminação LED Industrial</a></li>
                     </ul>
                 </div>
 
-                <!-- Coluna 4: Contato Direto -->
+                <!-- Coluna 4: Contato Oficial -->
                 <div>
-                    <h4 class="text-white font-bold text-sm mb-3 border-b border-slate-700 pb-1">Canais Oficiais</h4>
-                    <div class="space-y-2 text-xs">
-                        <p class="flex items-start gap-2">
-                            <i class="fa-solid fa-location-dot text-corporate-amber mt-0.5"></i>
-                            <span>Rua Centro, 249, Camaçari - BA<br>CEP 42800-029</span>
-                        </p>
-                        <p class="flex items-center gap-2">
-                            <i class="fa-solid fa-phone text-corporate-amber"></i>
-                            <span>(71) 2136-4416</span>
-                        </p>
-                        <p class="flex items-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-green-500"></i>
-                            <span>(71) 99666-0988</span>
-                        </p>
-                    </div>
+                    <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4 border-l-2 border-amber-500 pl-2">Dados Oficiais</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot text-amber-500 mt-0.5"></i>
+                            <span>Rua Centro, 249, Centro, Camaçari - BA<br>CEP 42800-029</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-amber-500"></i>
+                            <span>(71) 2136-4416 (Fixo)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <span>(71) 99666-0988 (WhatsApp)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-building text-amber-500"></i>
+                            <span>Desde 2014 em Camaçari - BA</span>
+                        </li>
+                    </ul>
                 </div>
-
             </div>
 
-            <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+            <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
                 <p>&copy; 2014 - 2025 Camaçari Cabos Materiais Elétricos. Todos os direitos reservados.</p>
-                <p class="mt-2 sm:mt-0">Qualidade, Segurança e Rigor Técnico.</p>
+                <p>Fornecimento especializado para o Polo Industrial de Camaçari, Salvador e RMS.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/5571996660988?text=Olá,%20gostaria%20de%20um%20orçamento." 
-       target="_blank" 
-       rel="noopener noreferrer"
-       class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-500 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl z-50 transition-all hover:scale-105"
-       title="Falar no WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <!-- Script de Controle Mobile -->
+    <!-- Script de controle do Menu Mobile -->
     <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Fechar menu ao clicar em links
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
     </script>
 </body>
