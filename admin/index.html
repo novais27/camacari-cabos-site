@@ -3,231 +3,535 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editor Visual CMS | Camaçari Cabos</title>
+    <title>Studio Visual CMS | Camaçari Cabos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .editavel:hover {
-            outline: 2px dashed #2563eb;
-            cursor: pointer;
-            position: relative;
-        }
-        .editavel:hover::after {
-            content: "✏️ Clique para editar";
-            position: absolute;
-            top: -22px;
-            right: 0;
-            background: #2563eb;
-            color: white;
-            font-size: 10px;
-            padding: 2px 6px;
-            border-radius: 4px;
-            z-index: 100;
-        }
-    </style>
 </head>
-<body class="bg-gray-100 font-sans antialiased">
+<body class="bg-slate-900 font-sans antialiased text-white overflow-hidden h-screen flex flex-col">
 
     <!-- Tela de Login -->
     <div id="login-screen" class="fixed inset-0 bg-blue-950 flex items-center justify-center z-50">
-        <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md text-center">
-            <div class="flex justify-center mb-6">
-                <img src="../logo.png" alt="Camaçari Cabos" class="h-16 object-contain" onerror="this.src='https://via.placeholder.com/150x50?text=Camacari+Cabos'">
-            </div>
-            <h2 class="text-xl font-extrabold text-blue-950 mb-2">Editor Visual Restrito</h2>
-            <p class="text-gray-500 text-sm mb-6">Digite sua senha para desbloquear a edição direta do site.</p>
-            
+        <div class="bg-white text-slate-900 p-8 rounded-2xl shadow-2xl w-full max-w-md text-center">
+            <img src="../logo.png" alt="Camaçari Cabos" class="h-14 mx-auto mb-4 object-contain" onerror="this.style.display='none'">
+            <h2 class="text-xl font-extrabold text-blue-950 mb-1">Studio Visual Camaçari Cabos</h2>
+            <p class="text-gray-500 text-xs mb-6">Edição direta em tempo real (Deploy em 15s)</p>
             <form onsubmit="fazerLogin(event)" class="space-y-4">
-                <input type="password" id="senha-admin" placeholder="Senha de acesso" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none text-center tracking-widest">
-                <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-xl transition shadow-lg">Desbloquear Editor</button>
+                <input type="password" id="senha-admin" placeholder="Digite sua senha" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none text-center tracking-widest">
+                <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-xl transition shadow-lg">Entrar no Studio</button>
             </form>
-            <p id="erro-senha" class="text-red-500 text-xs mt-3 hidden">Senha incorreta. Tente novamente.</p>
-            <p class="text-gray-400 text-[11px] mt-6">Senha padrão inicial: <span class="font-mono text-gray-600">camacari2026</span></p>
+            <p id="erro-senha" class="text-red-500 text-xs mt-3 hidden">Senha incorreta.</p>
         </div>
     </div>
 
-    <!-- Modal de Alteração de Senha -->
-    <div id="modal-senha" class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 hidden">
-        <div class="bg-white p-6 rounded-2xl shadow-2xl w-full max-w-sm">
-            <h3 class="font-bold text-blue-950 text-lg mb-4"><i class="fa-solid fa-key text-blue-600"></i> Alterar Senha de Acesso</h3>
-            <form onsubmit="salvarNovaSenha(event)" class="space-y-3">
+    <!-- Modal de Configuração (Senha + Token GitHub) -->
+    <div id="modal-config" class="fixed inset-0 bg-black/75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white text-slate-900 p-6 rounded-2xl shadow-2xl w-full max-w-md space-y-5">
+            <div class="flex justify-between items-center border-b pb-3">
+                <h3 class="font-bold text-blue-950 text-base"><i class="fa-solid fa-gear text-blue-600 mr-1"></i> Configurações e Segurança</h3>
+                <button onclick="fecharConfig()" class="text-gray-400 hover:text-gray-700"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+
+            <!-- Configuração GitHub API -->
+            <div class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                <h4 class="text-xs font-extrabold uppercase text-blue-900"><i class="fa-brands fa-github mr-1"></i> Conexão Direta GitHub (Deploy 15s)</h4>
                 <div>
-                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Senha Atual</label>
-                    <input type="password" id="senha-atual" required class="w-full p-2.5 border border-gray-300 rounded-lg text-sm">
+                    <label class="block text-[11px] font-semibold text-gray-600 mb-1">Repositório (usuario/nome-do-repo)</label>
+                    <input type="text" id="gh-repo" value="novais27/camacari-cabos-site" class="w-full p-2 border border-gray-300 rounded-lg text-xs font-mono">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nova Senha</label>
-                    <input type="password" id="senha-nova" required class="w-full p-2.5 border border-gray-300 rounded-lg text-sm">
+                    <label class="block text-[11px] font-semibold text-gray-600 mb-1">Personal Access Token (ghp_...)</label>
+                    <input type="password" id="gh-token" placeholder="Cole seu token ghp_ aqui" class="w-full p-2 border border-gray-300 rounded-lg text-xs font-mono">
                 </div>
-                <div class="flex justify-end gap-2 pt-2">
-                    <button type="button" onclick="fecharModalSenha()" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold px-4 py-2 rounded-lg text-xs">Cancelar</button>
-                    <button type="submit" class="bg-blue-900 hover:bg-blue-800 text-white font-bold px-4 py-2 rounded-lg text-xs">Salvar Nova Senha</button>
+                <button onclick="salvarConfigGitHub()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition">Salvar Conexão GitHub</button>
+            </div>
+
+            <!-- Alterar Senha do Painel -->
+            <form onsubmit="salvarNovaSenha(event)" class="space-y-3 pt-2 border-t">
+                <h4 class="text-xs font-extrabold uppercase text-gray-700"><i class="fa-solid fa-key mr-1"></i> Alterar Senha do Painel</h4>
+                <div class="grid grid-cols-2 gap-2">
+                    <input type="password" id="senha-atual" placeholder="Senha Atual" required class="w-full p-2 border border-gray-300 rounded-lg text-xs">
+                    <input type="password" id="senha-nova" placeholder="Nova Senha" required class="w-full p-2 border border-gray-300 rounded-lg text-xs">
                 </div>
+                <button type="submit" class="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-2 rounded-lg text-xs transition">Atualizar Senha</button>
             </form>
         </div>
     </div>
 
-    <!-- Painel / Editor Visual Principal -->
-    <div id="admin-panel" class="min-h-screen flex flex-col hidden">
-        
-        <!-- Barra Superior de Controle -->
-        <header class="bg-blue-950 text-white shadow-md sticky top-0 z-50">
-            <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-                <div class="flex items-center gap-4">
-                    <img src="../logo.png" alt="Camaçari Cabos" class="h-9 object-contain bg-white px-2 py-1 rounded shadow" onerror="this.style.display='none'">
-                    <div>
-                        <h1 class="font-bold text-sm leading-tight">Editor Visual Ativo</h1>
-                        <span class="text-[11px] text-amber-400 font-medium">Clique em qualquer texto ou imagem abaixo para alterar</span>
-                    </div>
+    <!-- Modal de Edição de Imagem / Link -->
+    <div id="modal-midia" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
+        <div class="bg-white text-slate-900 p-6 rounded-2xl shadow-2xl w-full max-w-md space-y-4">
+            <h3 class="font-bold text-blue-950 text-base"><i class="fa-solid fa-image text-amber-500 mr-1"></i> Editar Imagem Selecionada</h3>
+            <div>
+                <label class="block text-xs font-bold text-gray-600 mb-1">URL da Imagem ou Caminho (ex: logo.png ou link https://...)</label>
+                <input type="text" id="img-url-input" class="w-full p-2.5 border border-gray-300 rounded-lg text-xs">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-gray-600 mb-1">Ou envie uma foto do seu computador (Upload direto pro GitHub):</label>
+                <input type="file" id="img-file-input" accept="image/*" class="w-full text-xs text-gray-600 file:mr-3 file:py-2 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-600 mb-1">Largura (ex: 200px ou 100%)</label>
+                    <input type="text" id="img-width-input" placeholder="Auto" class="w-full p-2 border border-gray-300 rounded-lg text-xs">
                 </div>
-                <div class="flex items-center gap-2">
-                    <button onclick="abrirModalSenha()" class="bg-blue-800 hover:bg-blue-700 text-white text-xs font-bold px-3 py-2.5 rounded-lg transition" title="Alterar senha de acesso">
-                        <i class="fa-solid fa-key"></i> Senha
-                    </button>
-                    <button onclick="salvarAlteracoes()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition shadow flex items-center gap-2">
-                        <i class="fa-solid fa-floppy-disk"></i> Salvar e Publicar
-                    </button>
-                    <button onclick="fazerLogout()" class="bg-gray-700 hover:bg-gray-600 text-white text-xs font-bold px-3 py-2.5 rounded-lg transition">Sair</button>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-600 mb-1">Texto Alternativo (SEO)</label>
+                    <input type="text" id="img-alt-input" class="w-full p-2 border border-gray-300 rounded-lg text-xs">
                 </div>
             </div>
-        </header>
+            <div class="flex justify-end gap-2 pt-2">
+                <button onclick="fecharModalMidia()" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold px-4 py-2 rounded-lg text-xs">Cancelar</button>
+                <button onclick="aplicarEdicaoImagem()" id="btn-aplicar-img" class="bg-blue-900 hover:bg-blue-800 text-white font-bold px-4 py-2 rounded-lg text-xs">Aplicar na Página</button>
+            </div>
+        </div>
+    </div>
 
-        <!-- Área de Trabalho: O Site Real Editável -->
-        <main class="flex-1 max-w-7xl w-full mx-auto p-6">
+    <!-- Barra Superior do Construtor Visual -->
+    <header id="studio-header" class="bg-slate-950 border-b border-slate-800 px-4 py-2.5 flex flex-wrap justify-between items-center gap-3 z-40 hidden">
+        <div class="flex items-center gap-3">
+            <span class="bg-amber-500 text-slate-950 font-black text-xs px-2.5 py-1 rounded uppercase tracking-wider">Studio</span>
             
-            <div class="bg-amber-50 border border-amber-200 text-amber-900 p-4 rounded-xl mb-6 text-xs flex items-center justify-between">
-                <div>
-                    <span class="font-bold"><i class="fa-solid fa-wand-magic-sparkles"></i> Modo de Edição Direta:</span> 
-                    Você pode alterar títulos, textos de parágrafos e substituir imagens livremente na estrutura abaixo.
-                </div>
-                <button onclick="adicionarNovoProduto()" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-3 py-1.5 rounded shadow transition text-xs">
-                    + Adicionar Novo Item na Vitrine
-                </button>
+            <!-- Seletor de Página Real do Site -->
+            <div class="flex items-center gap-2 bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1">
+                <i class="fa-regular fa-file-code text-blue-400 text-xs"></i>
+                <select id="seletor-pagina" onchange="carregarPaginaNoCanvas(this.value)" class="bg-transparent text-white text-xs font-bold focus:outline-none cursor-pointer">
+                    <option value="index.html" class="bg-slate-900">Página Inicial (index.html)</option>
+                    <option value="sobre.html" class="bg-slate-900">Sobre a Empresa (sobre.html)</option>
+                    <option value="produtos.html" class="bg-slate-900">Catálogo de Produtos (produtos.html)</option>
+                    <option value="blog.html" class="bg-slate-900">Blog Técnico (blog.html)</option>
+                    <option value="industrial.html" class="bg-slate-900">Linha Industrial (industrial.html)</option>
+                    <option value="residencial.html" class="bg-slate-900">Linha Residencial (residencial.html)</option>
+                    <option value="projetos.html" class="bg-slate-900">Projetos (projetos.html)</option>
+                </select>
             </div>
 
-            <!-- Canvas do Site (Simulando a Home Page da Camaçari Cabos) -->
-            <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
-                
-                <!-- Navbar do Site -->
-                <div class="bg-white border-b border-gray-100 px-8 py-4 flex justify-between items-center">
-                    <img src="../logo.png" alt="Logo" class="h-12 object-contain editavel" contenteditable="false" title="Logomarca Oficial">
-                    <nav class="hidden md:flex space-x-6 text-sm font-semibold text-gray-700">
-                        <span class="editavel text-blue-600" contenteditable="true">Início</span>
-                        <span class="editavel" contenteditable="true">Catálogo Industrial</span>
-                        <span class="editavel" contenteditable="true">Normas ABNT</span>
-                        <span class="editavel" contenteditable="true">Blog Técnico</span>
-                    </nav>
-                    <a href="#" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-xs font-bold">WhatsApp Direto</a>
-                </div>
+            <button onclick="clonarLayoutSobreParaAtual()" class="bg-indigo-600/30 hover:bg-indigo-600 border border-indigo-500/40 text-indigo-200 hover:text-white text-[11px] font-semibold px-3 py-1.5 rounded-lg transition" title="Aplica o cabeçalho e rodapé da página Sobre nesta página">
+                <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Padronizar Topo/Rodapé pelo "Sobre"
+            </button>
+        </div>
 
-                <!-- Hero / Banner Principal Editável -->
-                <section class="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white py-16 px-8 text-center">
-                    <div class="max-w-3xl mx-auto space-y-4">
-                        <span class="bg-amber-500 text-blue-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider editavel inline-block" contenteditable="true">Atendimento no Polo Industrial de Camaçari</span>
-                        <h1 class="text-3xl md:text-5xl font-extrabold editavel leading-tight" contenteditable="true">Soluções Completas em Cabos, Materiais Elétricos e Infraestrutura</h1>
-                        <p class="text-blue-100 text-sm md:text-base editavel font-light" contenteditable="true">Fornecimento especializado para o setor residencial, condomínios e grandes plantas industriais na Bahia com agilidade e rigor técnico.</p>
-                    </div>
-                </section>
+        <!-- Ferramentas do Elemento Selecionado -->
+        <div class="flex items-center gap-1.5 bg-slate-900 px-3 py-1 rounded-lg border border-slate-800">
+            <span class="text-[11px] text-slate-400 mr-1">Item selecionado:</span>
+            <button onclick="moverElemento(-1)" class="hover:bg-slate-800 text-slate-200 px-2 py-1 rounded text-xs" title="Mover para Cima / Esquerda"><i class="fa-solid fa-arrow-up"></i></button>
+            <button onclick="moverElemento(1)" class="hover:bg-slate-800 text-slate-200 px-2 py-1 rounded text-xs" title="Mover para Baixo / Direita"><i class="fa-solid fa-arrow-down"></i></button>
+            <button onclick="duplicarElemento()" class="hover:bg-slate-800 text-emerald-400 px-2 py-1 rounded text-xs" title="Duplicar Bloco/Card"><i class="fa-regular fa-copy"></i> Duplicar</button>
+            <button onclick="inserirImagemLivre()" class="hover:bg-slate-800 text-amber-400 px-2 py-1 rounded text-xs" title="Inserir Nova Imagem"><i class="fa-regular fa-image"></i> +Imagem</button>
+            <button onclick="excluirElemento()" class="hover:bg-slate-800 text-red-400 px-2 py-1 rounded text-xs" title="Apagar Item"><i class="fa-regular fa-trash-can"></i></button>
+        </div>
 
-                <!-- Vitrine de Produtos / Seção Editável -->
-                <section class="py-12 px-8 bg-gray-50">
-                    <h2 class="text-xl font-bold text-blue-950 mb-6 editavel" contenteditable="true">Destaques do Catálogo & Fichas Técnicas</h2>
-                    
-                    <div id="vitrine-produtos" class="grid md:grid-cols-3 gap-6">
-                        <!-- Card 1 -->
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 space-y-3">
-                            <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2.5 py-1 rounded uppercase editavel" contenteditable="true">Média / Baixa Tensão</span>
-                            <h3 class="font-bold text-blue-950 text-base editavel" contenteditable="true">Cabos XLPE e EPR Normatizados</h3>
-                            <p class="text-gray-600 text-xs leading-relaxed editavel" contenteditable="true">Alta resistência térmica e isolamento superior para subestações e linhas industriais pesadas.</p>
-                        </div>
-                        <!-- Card 2 -->
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 space-y-3">
-                            <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2.5 py-1 rounded uppercase editavel" contenteditable="true">Infraestrutura</span>
-                            <h3 class="font-bold text-blue-950 text-base editavel" contenteditable="true">Kits Padrão Coelba / Celpe</h3>
-                            <p class="text-gray-600 text-xs leading-relaxed editavel" contenteditable="true">Conjuntos completos para homologação rápida de entradas de energia comerciais e residenciais.</p>
-                        </div>
-                        <!-- Card 3 -->
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 space-y-3">
-                            <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-1 rounded uppercase editavel" contenteditable="true">Iluminação LED</span>
-                            <h3 class="font-bold text-blue-950 text-base editavel" contenteditable="true">Refletores e Luminárias Fabris</h3>
-                            <p class="text-gray-600 text-xs leading-relaxed editavel" contenteditable="true">Eficiência energética máxima e durabilidade comprovada para galpões e indústrias.</p>
-                        </div>
-                    </div>
-                </section>
+        <!-- Ações de Publicação -->
+        <div class="flex items-center gap-2">
+            <span id="status-msg" class="text-[11px] text-amber-400 font-medium"></span>
+            <button onclick="abrirConfig()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold px-3 py-2 rounded-lg transition" title="Configurar Token GitHub e Senha">
+                <i class="fa-solid fa-gear"></i> Config / Senha
+            </button>
+            <button onclick="publicarNoGitHub()" id="btn-publicar" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2 rounded-lg transition shadow-lg flex items-center gap-1.5">
+                <i class="fa-solid fa-cloud-arrow-up"></i> Publicar Agora (15s)
+            </button>
+            <button onclick="fazerLogout()" class="bg-red-950/60 hover:bg-red-900 text-red-200 text-xs font-bold px-2.5 py-2 rounded-lg transition" title="Sair"><i class="fa-solid fa-power-off"></i></button>
+        </div>
+    </header>
 
-            </div>
+    <!-- Área Central: Iframe com a Página Real Editável -->
+    <main id="studio-main" class="flex-1 bg-slate-800 p-3 overflow-hidden hidden flex flex-col">
+        <div class="bg-white w-full h-full rounded-xl shadow-2xl overflow-hidden border border-slate-700 relative">
+            <iframe id="site-canvas" class="w-full h-full border-0"></iframe>
+        </div>
+    </main>
 
-        </main>
-    </div>
-
-    <!-- Scripts de Controle e Segurança -->
     <script>
-        // Recupera a senha salva no navegador ou usa a padrão "camacari2026"
+        let elementoSelecionado = null;
+        let paginaAtual = "index.html";
+
         function obterSenhaAtual() {
             return localStorage.getItem("admin_senha_camacari") || "camacari2026";
         }
 
-        function fazerLogin(event) {
-            event.preventDefault();
-            const senhaDigitada = document.getElementById("senha-admin").value;
-            if (senhaDigitada === obterSenhaAtual()) {
+        function fazerLogin(e) {
+            e.preventDefault();
+            const digitada = document.getElementById("senha-admin").value;
+            if (digitada === obterSenhaAtual()) {
                 document.getElementById("login-screen").classList.add("hidden");
-                document.getElementById("admin-panel").classList.remove("hidden");
+                document.getElementById("studio-header").classList.remove("hidden");
+                document.getElementById("studio-main").classList.remove("hidden");
+                carregarConfigSalva();
+                carregarPaginaNoCanvas("index.html");
             } else {
                 document.getElementById("erro-senha").classList.remove("hidden");
             }
         }
 
         function fazerLogout() {
-            document.getElementById("admin-panel").classList.add("hidden");
-            document.getElementById("login-screen").classList.remove("hidden");
-            document.getElementById("senha-admin").value = "";
-            document.getElementById("erro-senha").classList.add("hidden");
+            location.reload();
         }
 
-        function abrirModalSenha() {
-            document.getElementById("modal-senha").classList.remove("hidden");
+        function abrirConfig() {
+            carregarConfigSalva();
+            document.getElementById("modal-config").classList.remove("hidden");
         }
 
-        function fecharModalSenha() {
-            document.getElementById("modal-senha").classList.add("hidden");
-            document.getElementById("senha-atual").value = "";
-            document.getElementById("senha-nova").value = "";
+        function fecharConfig() {
+            document.getElementById("modal-config").classList.add("hidden");
         }
 
-        function salvarNovaSenha(event) {
-            event.preventDefault();
+        function carregarConfigSalva() {
+            document.getElementById("gh-repo").value = localStorage.getItem("gh_repo_camacari") || "novais27/camacari-cabos-site";
+            document.getElementById("gh-token").value = localStorage.getItem("gh_token_camacari") || "";
+        }
+
+        function salvarConfigGitHub() {
+            const repo = document.getElementById("gh-repo").value.trim();
+            const token = document.getElementById("gh-token").value.trim();
+            localStorage.setItem("gh_repo_camacari", repo);
+            localStorage.setItem("gh_token_camacari", token);
+            alert("✅ Conexão com GitHub salva no seu navegador!");
+            fecharConfig();
+        }
+
+        function salvarNovaSenha(e) {
+            e.preventDefault();
             const atual = document.getElementById("senha-atual").value;
             const nova = document.getElementById("senha-nova").value;
-
             if (atual === obterSenhaAtual()) {
                 if (nova.length >= 4) {
                     localStorage.setItem("admin_senha_camacari", nova);
-                    alert("✅ Senha alterada com sucesso! Utilize a nova senha nos próximos acessos.");
-                    fecharModalSenha();
+                    alert("✅ Senha alterada com sucesso!");
+                    fecharConfig();
                 } else {
                     alert("⚠️ A nova senha deve ter pelo menos 4 caracteres.");
                 }
             } else {
-                alert("❌ A senha atual informada está incorreta.");
+                alert("❌ A senha atual está incorreta.");
             }
         }
 
-        function adicionarNovoProduto() {
-            const vitrine = document.getElementById("vitrine-produtos");
-            const novoCard = document.createElement("div");
-            novoCard.className = "bg-white p-6 rounded-xl shadow-sm border border-gray-200 space-y-3";
-            novoCard.innerHTML = `
-                <span class="bg-purple-100 text-purple-800 text-[10px] font-bold px-2.5 py-1 rounded uppercase editavel" contenteditable="true">Novo Item</span>
-                <h3 class="font-bold text-blue-950 text-base editavel" contenteditable="true">Nome do Novo Produto / Ficha</h3>
-                <p class="text-gray-600 text-xs leading-relaxed editavel" contenteditable="true">Insira aqui a descrição técnica detalhada ou especificações do item...</p>
-            `;
-            vitrine.appendChild(novoCard);
-            alert("Novo bloco adicionado à vitrine! Clique nele para editar os textos.");
+        // Carrega qualquer página real do site dentro do editor visual
+        async function carregarPaginaNoCanvas(arquivo) {
+            paginaAtual = arquivo;
+            const status = document.getElementById("status-msg");
+            status.textContent = "Carregando " + arquivo + "...";
+            try {
+                const resp = await fetch("../" + arquivo + "?t=" + Date.now());
+                if (!resp.ok) throw new Error("Página não encontrada");
+                let html = await resp.text();
+
+                // Garante que caminhos relativos de imagens (como logo.png) funcionem dentro de /admin/
+                if (!html.includes("<base")) {
+                    html = html.replace("<head>", '<head><base href="../">');
+                }
+
+                const iframe = document.getElementById("site-canvas");
+                const doc = iframe.contentWindow.document;
+                doc.open();
+                doc.write(html);
+                doc.close();
+
+                iframe.onload = () => ativarModoVisualNoIframe(doc);
+                setTimeout(() => ativarModoVisualNoIframe(doc), 500);
+                status.textContent = "Editando: " + arquivo;
+            } catch (err) {
+                status.textContent = "Erro ao abrir " + arquivo;
+                alert("Não foi possível carregar " + arquivo + ". Verifique se o arquivo existe na raiz do site.");
+            }
         }
 
-        function salvarAlteracoes() {
-            alert("✅ Alterações salvas com sucesso! No ambiente de produção integrado ao GitHub, este estado atualiza o site automaticamente em segundos.");
+        function ativarModoVisualNoIframe(doc) {
+            if (!doc || !doc.body) return;
+
+            // Injeta estilo visual de seleção e arraste no iframe
+            let style = doc.getElementById("studio-editor-style");
+            if (!style) {
+                style = doc.createElement("style");
+                style.id = "studio-editor-style";
+                style.innerHTML = `
+                    *[data-studio-selected="true"] {
+                        outline: 2px solid #f59e0b !important;
+                        outline-offset: 2px !important;
+                        position: relative;
+                    }
+                    *:hover {
+                        outline: 1px dashed #3b82f6;
+                        cursor: pointer;
+                    }
+                    img {
+                        cursor: grab !important;
+                    }
+                `;
+                doc.head.appendChild(style);
+            }
+
+            // Permite edição de texto direta em toda a página
+            doc.body.setAttribute("contenteditable", "true");
+
+            // Intercepta cliques para selecionar elementos, impedir navegação acidental e abrir modal de imagens
+            doc.body.addEventListener("click", (e) => {
+                const link = e.target.closest("a");
+                if (link) e.preventDefault(); // Evita sair da página ao clicar em menus para editar o texto deles
+
+                if (elementoSelecionado) {
+                    elementoSelecionado.removeAttribute("data-studio-selected");
+                }
+                elementoSelecionado = e.target;
+                elementoSelecionado.setAttribute("data-studio-selected", "true");
+
+                if (e.target.tagName === "IMG") {
+                    abrirModalMidia(e.target);
+                }
+            });
+
+            // Habilita arrastar e soltar imagens livremente para outros blocos
+            habilitarDragAndDropImagens(doc);
+        }
+
+        function habilitarDragAndDropImagens(doc) {
+            let imgArrastada = null;
+
+            doc.addEventListener("dragstart", (e) => {
+                if (e.target.tagName === "IMG") {
+                    imgArrastada = e.target;
+                    e.dataTransfer.effectAllowed = "move";
+                }
+            });
+
+            doc.addEventListener("dragover", (e) => {
+                if (imgArrastada) {
+                    e.preventDefault();
+                    e.dataTransfer.dropEffect = "move";
+                }
+            });
+
+            doc.addEventListener("drop", (e) => {
+                if (imgArrastada && e.target !== imgArrastada) {
+                    e.preventDefault();
+                    const alvo = e.target;
+                    alvo.parentNode.insertBefore(imgArrastada, alvo.nextSibling);
+                    imgArrastada = null;
+                }
+            });
+        }
+
+        // Ferramentas de Manipulação de Blocos
+        function moverElemento(direcao) {
+            if (!elementoSelecionado || !elementoSelecionado.parentNode) return alert("Clique primeiro em um texto, imagem ou card na página.");
+            const pai = elementoSelecionado.parentNode;
+            if (direcao === -1 && elementoSelecionado.previousElementSibling) {
+                pai.insertBefore(elementoSelecionado, elementoSelecionado.previousElementSibling);
+            } else if (direcao === 1 && elementoSelecionado.nextElementSibling) {
+                pai.insertBefore(elementoSelecionado.nextElementSibling, elementoSelecionado);
+            }
+        }
+
+        function duplicarElemento() {
+            if (!elementoSelecionado) return alert("Clique primeiro em um bloco ou card para duplicá-lo.");
+            const clone = elementoSelecionado.cloneNode(true);
+            clone.removeAttribute("data-studio-selected");
+            elementoSelecionado.parentNode.insertBefore(clone, elementoSelecionado.nextSibling);
+        }
+
+        function excluirElemento() {
+            if (!elementoSelecionado) return alert("Clique primeiro no item que deseja remover.");
+            if (confirm("Remover este elemento da página?")) {
+                const temp = elementoSelecionado;
+                elementoSelecionado = null;
+                temp.remove();
+            }
+        }
+
+        function inserirImagemLivre() {
+            const doc = document.getElementById("site-canvas").contentWindow.document;
+            const novaImg = doc.createElement("img");
+            novaImg.src = "logo.png";
+            novaImg.alt = "Nova Imagem Camaçari Cabos";
+            novaImg.className = "my-4 max-w-xs rounded-lg shadow";
+            if (elementoSelecionado && elementoSelecionado.parentNode) {
+                elementoSelecionado.parentNode.insertBefore(novaImg, elementoSelecionado.nextSibling);
+            } else {
+                doc.body.appendChild(novaImg);
+            }
+            elementoSelecionado = novaImg;
+            abrirModalMidia(novaImg);
+        }
+
+        function abrirModalMidia(imgEl) {
+            document.getElementById("img-url-input").value = imgEl.getAttribute("src") || "";
+            document.getElementById("img-width-input").value = imgEl.style.width || "";
+            document.getElementById("img-alt-input").value = imgEl.getAttribute("alt") || "";
+            document.getElementById("img-file-input").value = "";
+            document.getElementById("modal-midia").classList.remove("hidden");
+        }
+
+        function fecharModalMidia() {
+            document.getElementById("modal-midia").classList.add("hidden");
+        }
+
+        async function aplicarEdicaoImagem() {
+            if (!elementoSelecionado || elementoSelecionado.tagName !== "IMG") return;
+            const fileInput = document.getElementById("img-file-input");
+            const btn = document.getElementById("btn-aplicar-img");
+
+            // Se o usuário escolheu subir uma foto do computador, envia direto pro GitHub
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                btn.textContent = "Enviando foto...";
+                btn.disabled = true;
+                try {
+                    const nomeLimpo = "img-" + Date.now() + "-" + file.name.replace(/[^a-zA-Z0-9._-]/g, "");
+                    await uploadArquivoGitHub(nomeLimpo, file);
+                    elementoSelecionado.setAttribute("src", nomeLimpo);
+                } catch (e) {
+                    alert("Erro ao enviar imagem para o GitHub: " + e.message);
+                    btn.textContent = "Aplicar na Página";
+                    btn.disabled = false;
+                    return;
+                }
+                btn.textContent = "Aplicar na Página";
+                btn.disabled = false;
+            } else {
+                elementoSelecionado.setAttribute("src", document.getElementById("img-url-input").value.trim());
+            }
+
+            const larg = document.getElementById("img-width-input").value.trim();
+            if (larg) elementoSelecionado.style.width = larg;
+            elementoSelecionado.setAttribute("alt", document.getElementById("img-alt-input").value.trim());
+            fecharModalMidia();
+        }
+
+        // Clona o Cabeçalho (<header>/<nav>) e Rodapé (<footer>) da página Sobre.html para a página aberta
+        async function clonarLayoutSobreParaAtual() {
+            if (!confirm("Isso vai aplicar o mesmo Cabeçalho, Estilos e Rodapé da página 'sobre.html' na página atual, preservando o conteúdo central. Confirmar?")) return;
+            try {
+                const resp = await fetch("../sobre.html?t=" + Date.now());
+                const htmlSobre = await resp.text();
+                const parser = new DOMParser();
+                const docSobre = parser.parseFromString(htmlSobre, "text/html");
+
+                const docAtual = document.getElementById("site-canvas").contentWindow.document;
+
+                const headerSobre = docSobre.querySelector("header") || docSobre.querySelector("nav");
+                const headerAtual = docAtual.querySelector("header") || docAtual.querySelector("nav");
+                if (headerSobre && headerAtual) {
+                    headerAtual.outerHTML = headerSobre.outerHTML;
+                }
+
+                const footerSobre = docSobre.querySelector("footer");
+                const footerAtual = docAtual.querySelector("footer");
+                if (footerSobre && footerAtual) {
+                    footerAtual.outerHTML = footerSobre.outerHTML;
+                }
+
+                docAtual.body.className = docSobre.body.className;
+                alert("✅ Cabeçalho, cores de fundo e rodapé padronizados com a página Sobre! Clique em 'Publicar Agora' para salvar.");
+            } catch (e) {
+                alert("Erro ao padronizar com sobre.html: " + e.message);
+            }
+        }
+
+        // Limpa marcações temporárias do editor e envia o HTML final para o GitHub em 1 segundo
+        async function publicarNoGitHub() {
+            const token = localStorage.getItem("gh_token_camacari");
+            const repo = localStorage.getItem("gh_repo_camacari") || "novais27/camacari-cabos-site";
+            if (!token) {
+                abrirConfig();
+                return alert("⚠️ Cole primeiro o seu Token do GitHub (ghp_...) em Configurações para publicar sem fila!");
+            }
+
+            const btn = document.getElementById("btn-publicar");
+            const status = document.getElementById("status-msg");
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Publicando...';
+
+            try {
+                const doc = document.getElementById("site-canvas").contentWindow.document;
+                const cloneDoc = doc.documentElement.cloneNode(true);
+
+                // Remove artefatos de edição antes de salvar o arquivo real
+                const styleEditor = cloneDoc.querySelector("#studio-editor-style");
+                if (styleEditor) styleEditor.remove();
+                const baseTag = cloneDoc.querySelector("base");
+                if (baseTag) baseTag.remove();
+
+                const bodyClone = cloneDoc.querySelector("body");
+                if (bodyClone) bodyClone.removeAttribute("contenteditable");
+                cloneDoc.querySelectorAll("[data-studio-selected]").forEach(el => el.removeAttribute("data-studio-selected"));
+
+                const htmlFinal = "<!DOCTYPE html>\n" + cloneDoc.outerHTML;
+                await salvarTextoGitHub(paginaAtual, htmlFinal, `feat: Atualiza ${paginaAtual} via Studio Visual`);
+
+                status.textContent = "✅ Publicado! No ar na Vercel em ~15s.";
+                alert(`✅ Página ${paginaAtual} salva diretamente no GitHub! Em 15 segundos já estará atualizada no site oficial.`);
+            } catch (err) {
+                alert("❌ Erro ao publicar: " + err.message);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i> Publicar Agora (15s)';
+            }
+        }
+
+        async function salvarTextoGitHub(caminhoArquivo, conteudoTexto, mensagemCommit) {
+            const token = localStorage.getItem("gh_token_camacari");
+            const repo = localStorage.getItem("gh_repo_camacari") || "novais27/camacari-cabos-site";
+            const url = `https://api.github.com/repos/${repo}/contents/${caminhoArquivo}`;
+
+            // Busca o SHA atual do arquivo se ele já existir
+            let sha = null;
+            const getResp = await fetch(url, {
+                headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" }
+            });
+            if (getResp.ok) {
+                const dados = await getResp.json();
+                sha = dados.sha;
+            }
+
+            // Converte UTF-8 para Base64 com suporte a acentos
+            const base64Content = btoa(unescape(encodeURIComponent(conteudoTexto)));
+
+            const putResp = await fetch(url, {
+                method: "PUT",
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "Accept": "application/vnd.github.v3+json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    message: mensagemCommit,
+                    content: base64Content,
+                    ...(sha ? { sha } : {})
+                })
+            });
+
+            if (!putResp.ok) {
+                const erroJson = await putResp.json();
+                throw new Error(erroJson.message || "Falha na API do GitHub");
+            }
+        }
+
+        async function uploadArquivoGitHub(nomeArquivo, fileObj) {
+            const token = localStorage.getItem("gh_token_camacari");
+            const repo = localStorage.getItem("gh_repo_camacari") || "novais27/camacari-cabos-site";
+            const url = `https://api.github.com/repos/${repo}/contents/${nomeArquivo}`;
+
+            const base64Data = await new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result.split(",")[1]);
+                reader.onerror = error => reject(error);
+                reader.readAsDataURL(fileObj);
+            });
+
+            const putResp = await fetch(url, {
+                method: "PUT",
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "Accept": "application/vnd.github.v3+json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    message: `feat: Upload de imagem ${nomeArquivo} via Studio Visual`,
+                    content: base64Data
+                })
+            });
+
+            if (!putResp.ok) throw new Error("Falha no upload da imagem");
         }
     </script>
 </body>
