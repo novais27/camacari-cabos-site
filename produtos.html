@@ -1,712 +1,628 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo Técnico de Produtos | Camaçari Cabos Materiais Elétricos</title>
-  <meta name="description" content="Catálogo completo de materiais elétricos industriais e prediais em Camaçari e Região Metropolitana. Cabos 750V e 1kV, Disjuntores DIN e Caixa Moldada, Padrão Coelba homologado, Eletrocalhas e Iluminação LED.">
-  <meta name="keywords" content="cabos elétricos Camaçari, materiais elétricos atacado Salvador, padrão Coelba Camaçari, disjuntores industriais, eletrocalhas, perfilados, fios e cabos Lauro de Freitas, Simões Filho, Dias d'Ávila">
-  <meta name="geo.region" content="BR-BA">
-  <meta name="geo.placename" content="Camaçari">
-  <meta name="geo.position" content="-12.6975;-38.3242">
-  <meta name="ICBM" content="-12.6975, -38.3242">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Catálogo de Materiais Elétricos | Camaçari Cabos">
-  <meta property="og:description" content="Fornecimento de cabos, infraestrutura, proteção e padrões Coelba com pronta entrega para Camaçari e RMS.">
-  <meta property="og:image" content="logo.png">
-  <meta property="og:type" content="website">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              blue: '#0B2545',
-              navy: '#133E6E',
-              accent: '#E65100',
-              accentHover: '#BF360C',
-              dark: '#1E293B',
-              light: '#F8FAFC'
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Produtos | Camaçari Cabos Materiais Elétricos</title>
+    <meta name="description" content="Catálogo completo de materiais elétricos industriais e prediais: Cabos elétricos, Padrão Coelba homologado, disjuntores DIN e Caixa Moldada. Atendimento para Camaçari, Salvador e RMS.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0b1c3d',
+                            blue: '#16366f',
+                            light: '#f1f5f9',
+                            amber: '#f59e0b',
+                            amberDark: '#d97706'
+                        }
+                    }
+                }
             }
-          }
         }
-      }
-    }
-  </script>
-
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ElectricalStore",
-    "name": "Camaçari Cabos Materiais Elétricos",
-    "image": "logo.png",
-    "@id": "https://camacaricabos.com.br",
-    "url": "https://camacaricabos.com.br/produtos.html",
-    "telephone": "+55-71-2136-4416",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Centro, 249",
-      "addressLocality": "Camaçari",
-      "addressRegion": "BA",
-      "postalCode": "42800-029",
-      "addressCountry": "BR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -12.6975,
-      "longitude": -38.3242
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "opens": "07:30",
-      "closes": "17:30"
-    },
-    "areaServed": [
-      "Camaçari",
-      "Salvador",
-      "Lauro de Freitas",
-      "Simões Filho",
-      "Dias d'Ávila",
-      "Mata de São João"
-    ]
-  }
-  </script>
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen font-sans">
 
-  <!-- Barra Superior de Atendimento Rápido -->
-  <div class="bg-brand-blue text-white text-xs border-b border-blue-900/40">
-    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col md:flex-row justify-between items-center gap-2">
-      <div class="flex items-center space-x-4">
-        <span><i class="fa-solid fa-location-dot text-brand-accent mr-1"></i> Rua Centro, 249 - Camaçari / BA</span>
-        <span class="hidden md:inline text-slate-400">|</span>
-        <span class="hidden md:inline"><i class="fa-solid fa-clock text-brand-accent mr-1"></i> Seg - Sex: 07:30 às 17:30</span>
-      </div>
-      <div class="flex items-center space-x-4 font-semibold">
-        <a href="tel:7121364416" class="hover:text-amber-400 transition flex items-center gap-1">
-          <i class="fa-solid fa-phone"></i> (71) 2136-4416
-        </a>
-        <a href="https://wa.me/5571996660988" target="_blank" class="hover:text-green-400 transition flex items-center gap-1">
-          <i class="fa-brands fa-whatsapp text-sm text-green-400"></i> (71) 99666-0988
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Header / Navbar Principal -->
-  <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-      <!-- Logomarca Oficial -->
-      <a href="index.html" class="flex items-center space-x-3">
-        <img src="logo.png" alt="Camaçari Cabos Materiais Elétricos" class="h-12 w-auto object-contain">
-      </a>
-
-      <!-- Menu de Navegação -->
-      <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-700">
-        <a href="index.html" class="hover:text-brand-accent transition">Início</a>
-        <a href="produtos.html" class="text-brand-accent border-b-2 border-brand-accent pb-1">Catálogo de Produtos</a>
-        <a href="#coelba" class="hover:text-brand-accent transition">Padrão Coelba</a>
-        <a href="#infra" class="hover:text-brand-accent transition">Infraestrutura</a>
-        <a href="#contato" class="hover:text-brand-accent transition">Cotação Rápida</a>
-      </nav>
-
-      <!-- Botão Cotação Express -->
-      <div class="flex items-center space-x-3">
-        <a href="https://wa.me/5571996660988?text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação%20técnica%20de%20materiais." 
-           target="_blank" 
-           class="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-accentHover text-white px-4 py-2.5 rounded-lg text-sm font-bold shadow-sm transition">
-          <i class="fa-brands fa-whatsapp text-lg"></i>
-          <span>Pedir Orçamento</span>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Banner do Catálogo & Busca Rápida -->
-  <section class="bg-gradient-to-r from-brand-blue to-brand-navy text-white py-12 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 relative z-10">
-      <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/80 border border-blue-700 text-xs font-semibold uppercase tracking-wider text-amber-300 mb-3">
-          <i class="fa-solid fa-shield-halved"></i> Estoque Local & Pronta Entrega
-        </div>
-        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3">
-          Catálogo Técnico de Materiais Elétricos
-        </h1>
-        <p class="text-slate-200 text-sm md:text-base leading-relaxed mb-6">
-          Suprimento de alta performance para indústrias do Polo Petroquímico, instaladores, montadoras e empreiteiras em Camaçari, Salvador e Região Metropolitana. Atacado e Varejo.
-        </p>
-
-        <!-- Filtro Rápido com Busca -->
-        <div class="bg-white p-2 rounded-xl shadow-lg flex flex-col md:flex-row gap-2">
-          <div class="relative flex-grow">
-            <i class="fa-solid fa-magnifying-glass absolute left-3 top-3.5 text-slate-400"></i>
-            <input 
-              type="text" 
-              id="search-input" 
-              placeholder="Pesquisar por bitola, produto, norma NBR (ex: 10mm², caixa trifásica)..." 
-              class="w-full pl-10 pr-4 py-2.5 rounded-lg text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent"
-              onkeyup="filtrarProdutos()"
-            >
-          </div>
-          <button type="button" class="bg-brand-accent hover:bg-brand-accentHover text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition flex items-center justify-center gap-2">
-            <span>Filtrar</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Filtro por Abas de Categorias -->
-  <div class="bg-white border-b border-slate-200 sticky top-[73px] z-40">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex overflow-x-auto space-x-2 py-3 scrollbar-none" id="category-tabs">
-        <button onclick="filtrarCategoria('todas')" class="cat-btn active-tab px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold transition whitespace-nowrap bg-brand-blue text-white">
-          Todos os Produtos
-        </button>
-        <button onclick="filtrarCategoria('cabos')" class="cat-btn px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">
-          Fios & Cabos Elétricos
-        </button>
-        <button onclick="filtrarCategoria('coelba')" class="cat-btn px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">
-          Padrão Coelba
-        </button>
-        <button onclick="filtrarCategoria('protecao')" class="cat-btn px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">
-          Proteção & Comando
-        </button>
-        <button onclick="filtrarCategoria('infra')" class="cat-btn px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">
-          Infraestrutura Elétrica
-        </button>
-        <button onclick="filtrarCategoria('iluminacao')" class="cat-btn px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">
-          Iluminação LED & Refletores
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Grid de Produtos com Informações Técnicas -->
-  <main class="max-w-7xl mx-auto px-4 py-10 flex-grow">
-    
-    <div class="flex justify-between items-center mb-6">
-      <p class="text-xs md:text-sm text-slate-500" id="contador-produtos">Exibindo catálogo com conformidade ABNT / NBR e homologação Neoenergia Coelba</p>
-      <span class="text-xs bg-emerald-100 text-emerald-800 font-semibold px-2.5 py-1 rounded-md border border-emerald-300">
-        <i class="fa-solid fa-check-double mr-1"></i> Venda Atacado & Varejo
-      </span>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="product-grid">
-
-      <!-- PRODUTO 1: Cabo Flexível 750V -->
-      <article class="product-card bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="cabos">
-        <div class="p-5">
-          <div class="flex justify-between items-start gap-2 mb-2">
-            <span class="bg-blue-100 text-brand-navy text-[11px] font-bold px-2 py-0.5 rounded">Cabos de Cobre</span>
-            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Pronta Entrega</span>
-          </div>
-          <h2 class="text-lg font-bold text-slate-900 mb-1">Cabo Flexível 750V (1,5mm² a 16mm²)</h2>
-          <p class="text-xs text-slate-600 mb-3">Condutor de cobre eletrolítico, têmpera mole, isolamento PVC antichama (BWF-B).</p>
-          
-          <div class="bg-slate-50 rounded-lg p-3 text-xs mb-4 border border-slate-100 space-y-1">
-            <div class="flex justify-between"><span class="text-slate-500">Norma Técnica:</span> <span class="font-semibold text-slate-700">NBR NM 247-3</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Tensão Nominal:</span> <span class="font-semibold text-slate-700">450/750V</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Aplicações:</span> <span class="font-semibold text-slate-700">Painéis, iluminação e tomadas</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Acondicionamento:</span> <span class="font-semibold text-slate-700">Rolos 100m ou Bobinas</span></div>
-          </div>
-        </div>
-
-        <div class="p-5 pt-0 border-t border-slate-100 mt-auto">
-          <div class="flex items-center justify-between pt-3">
-            <div>
-              <span class="text-[11px] text-slate-400 block">Preço sob consulta</span>
-              <span class="text-xs font-semibold text-slate-700">Venda metro ou rolo</span>
+    <!-- Topbar Corporativo -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i> Rua Centro, 249, Camaçari - BA (CEP 42800-029)</span>
+                <span class="hidden md:inline text-slate-600">|</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-clock text-amber-500 mr-1.5"></i> Seg. a Sex. das 07:30 às 17:30</span>
             </div>
-            <a href="https://wa.me/5571996660988?text=Olá,%20solicito%20cotação%20para%20Cabo%20Flexível%20750V." 
-               target="_blank" 
-               class="bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold px-3 py-2 rounded-lg transition inline-flex items-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-green-400"></i> Cotar Preço
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- PRODUTO 2: Cabo de Potência EPR/XLPE 0,6/1kV -->
-      <article class="product-card bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="cabos">
-        <div class="p-5">
-          <div class="flex justify-between items-start gap-2 mb-2">
-            <span class="bg-blue-100 text-brand-navy text-[11px] font-bold px-2 py-0.5 rounded">Cabos Industriais</span>
-            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Alta Resistência</span>
-          </div>
-          <h2 class="text-lg font-bold text-slate-900 mb-1">Cabo de Potência 0,6/1kV HEPR/XLPE</h2>
-          <p class="text-xs text-slate-600 mb-3">Cabo unipolar ou multipolar para alimentação industrial, subestações e redes subterrâneas.</p>
-          
-          <div class="bg-slate-50 rounded-lg p-3 text-xs mb-4 border border-slate-100 space-y-1">
-            <div class="flex justify-between"><span class="text-slate-500">Norma Técnica:</span> <span class="font-semibold text-slate-700">NBR 7286 / NBR 7288</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Bitolas Disponíveis:</span> <span class="font-semibold text-slate-700">10mm² até 240mm²</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Temperatura Trabalho:</span> <span class="font-semibold text-slate-700">90°C contínuo</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Isolamento:</span> <span class="font-semibold text-slate-700">HEPR com cobertura PVC ST2</span></div>
-          </div>
-        </div>
-
-        <div class="p-5 pt-0 border-t border-slate-100 mt-auto">
-          <div class="flex items-center justify-between pt-3">
-            <div>
-              <span class="text-[11px] text-slate-400 block">Demanda Industrial</span>
-              <span class="text-xs font-semibold text-slate-700">Corte sob medida</span>
+            <div class="flex items-center gap-4">
+                <a href="tel:7121364416" class="hover:text-white transition"><i class="fa-solid fa-phone text-amber-500 mr-1"></i> (71) 2136-4416</a>
+                <a href="https://wa.me/5571996660988?text=Olá,%20gostaria%20de%20um%20orçamento%20de%20materiais%20elétricos" target="_blank" class="hover:text-amber-400 font-semibold transition text-emerald-400"><i class="fa-brands fa-whatsapp mr-1"></i> (71) 99666-0988</a>
             </div>
-            <a href="https://wa.me/5571996660988?text=Olá,%20preciso%20de%20cotação%20para%20Cabo%20de%20Potência%201kV." 
-               target="_blank" 
-               class="bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold px-3 py-2 rounded-lg transition inline-flex items-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-green-400"></i> Cotar Preço
-            </a>
-          </div>
         </div>
-      </article>
-
-      <!-- PRODUTO 3: Padrão Coelba Montado e Homologado -->
-      <article class="product-card bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" id="coelba" data-category="coelba">
-        <div class="p-5">
-          <div class="flex justify-between items-start gap-2 mb-2">
-            <span class="bg-amber-100 text-amber-900 text-[11px] font-bold px-2 py-0.5 rounded">Padrão Coelba</span>
-            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">100% Homologado</span>
-          </div>
-          <h2 class="text-lg font-bold text-slate-900 mb-1">Caixa de Medição Padrão Coelba (Mono / Poli)</h2>
-          <p class="text-xs text-slate-600 mb-3">Conjunto de medição padrão Neoenergia Coelba em policarbonato com proteção UV e antichama.</p>
-          
-          <div class="bg-slate-50 rounded-lg p-3 text-xs mb-4 border border-slate-100 space-y-1">
-            <div class="flex justify-between"><span class="text-slate-500">Concessionária:</span> <span class="font-semibold text-slate-700">Neoenergia Coelba (DIS-NOR-030)</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Configurações:</span> <span class="font-semibold text-slate-700">Monofásica / Bifásica / Trifásica</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Acompanha:</span> <span class="font-semibold text-slate-700">Haste, cabos internos e disjuntor</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Opções:</span> <span class="font-semibold text-slate-700">Visor de rua ou muro lateral</span></div>
-          </div>
-        </div>
-
-        <div class="p-5 pt-0 border-t border-slate-100 mt-auto">
-          <div class="flex items-center justify-between pt-3">
-            <div>
-              <span class="text-[11px] text-slate-400 block">Kits completos</span>
-              <span class="text-xs font-semibold text-slate-700">Montagem certificada</span>
-            </div>
-            <a href="https://wa.me/5571996660988?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20Padrão%20Coelba." 
-               target="_blank" 
-               class="bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold px-3 py-2 rounded-lg transition inline-flex items-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-green-400"></i> Cotar Preço
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- PRODUTO 4: Disjuntores DIN e Caixa Moldada -->
-      <article class="product-card bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="protecao">
-        <div class="p-5">
-          <div class="flex justify-between items-start gap-2 mb-2">
-            <span class="bg-purple-100 text-purple-900 text-[11px] font-bold px-2 py-0.5 rounded">Proteção & Disjuntores</span>
-            <span class="text-xs font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">Curvas B, C e D</span>
-          </div>
-          <h2 class="text-lg font-bold text-slate-900 mb-1">Disjuntores Termomagnéticos & Caixa Moldada</h2>
-          <p class="text-xs text-slate-600 mb-3">Proteção contra sobrecargas e curtos-circuitos em instalações prediais, comerciais e subpainéis fabris.</p>
-          
-          <div class="bg-slate-50 rounded-lg p-3 text-xs mb-4 border border-slate-100 space-y-1">
-            <div class="flex justify-between"><span class="text-slate-500">Linha DIN:</span> <span class="font-semibold text-slate-700">1A a 125A (Monopolar, Bipolar, Tripolar)</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Caixa Moldada:</span> <span class="font-semibold text-slate-700">100A até 800A (Capacidade de Ruptura até 50kA)</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Normas:</span> <span class="font-semibold text-slate-700">IEC 60898 / IEC 60947-2</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Adicionais:</span> <span class="font-semibold text-slate-700">DPS e Dispositivos DR (DDR/IDR)</span></div>
-          </div>
-        </div>
-
-        <div class="p-5 pt-0 border-t border-slate-100 mt-auto">
-          <div class="flex items-center justify-between pt-3">
-            <div>
-              <span class="text-[11px] text-slate-400 block">Marcas Homologadas</span>
-              <span class="text-xs font-semibold text-slate-700">Diversas amperagens</span>
-            </div>
-            <a href="https://wa.me/5571996660988?text=Olá,%20orçamento%20para%20Disjuntores%20DIN%20e%20Caixa%20Moldada." 
-               target="_blank" 
-               class="bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold px-3 py-2 rounded-lg transition inline-flex items-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-green-400"></i> Cotar Preço
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- PRODUTO 5: Plugs e Tomadas Industriais Steck/Scame -->
-      <article class="product-card bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="protecao">
-        <div class="p-5">
-          <div class="flex justify-between items-start gap-2 mb-2">
-            <span class="bg-purple-100 text-purple-900 text-[11px] font-bold px-2 py-0.5 rounded">Comando Industrial</span>
-            <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">Grau IP44 / IP67</span>
-          </div>
-          <h2 class="text-lg font-bold text-slate-900 mb-1">Plugs, Acoplamentos e Tomadas Industriais</h2>
-          <p class="text-xs text-slate-600 mb-3">Conexões industriais robustas com alta durabilidade mecânica e química para ambientes severos.</p>
-          
-          <div class="bg-slate-50 rounded-lg p-3 text-xs mb-4 border border-slate-100 space-y-1">
-            <div class="flex justify-between"><span class="text-slate-500">Correntes:</span> <span class="font-semibold text-slate-700">16A, 32A, 63A e 125A</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Polos:</span> <span class="font-semibold text-slate-700">2P+T, 3P+T, 3P+T+N</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Tensões / Cores:</span> <span class="font-semibold text-slate-700">Azul (220V), Vermelho (380/440V)</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Norma:</span> <span class="font-semibold text-slate-700">IEC 60309-1 / 60309-2</span></div>
-          </div>
-        </div>
-
-        <div class="p-5 pt-0 border-t border-slate-100 mt-auto">
-          <div class="flex items-center justify-between pt-3">
-            <div>
-              <span class="text-[11px] text-slate-400 block">Linha Industrial</span>
-              <span class="text-xs font-semibold text-slate-700">Macho, fêmea e sobrepor</span>
-            </div>
-            <a href="https://wa.me/5571996660988?text=Olá,%20preciso%20de%20plugs%20e%20tomadas%20industriais." 
-               target="_blank" 
-               class="bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold px-3 py-2 rounded-lg transition inline-flex items-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-green-400"></i> Cotar Preço
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- PRODUTO 6: Eletrocalhas, Perfilados e Eletrodutos -->
-      <article class="product-card bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" id="infra" data-category="infra">
-        <div class="p-5">
-          <div class="flex justify-between items-start gap-2 mb-2">
-            <span class="bg-zinc-200 text-zinc-900 text-[11px] font-bold px-2 py-0.5 rounded">Infraestrutura</span>
-            <span class="text-xs font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">Aço Galvanizado</span>
-          </div>
-          <h2 class="text-lg font-bold text-slate-900 mb-1">Eletrocalhas, Perfilados e Eletrodutos NBR 5598</h2>
-          <p class="text-xs text-slate-600 mb-3">Infraestrutura completa de roteamento e sustentação de cabos para galpões e fábricas.</p>
-          
-          <div class="bg-slate-50 rounded-lg p-3 text-xs mb-4 border border-slate-100 space-y-1">
-            <div class="flex justify-between"><span class="text-slate-500">Modelos:</span> <span class="font-semibold text-slate-700">Perfurada, lisa, com tampa de encaixe</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Perfilados:</span> <span class="font-semibold text-slate-700">38x38 perfurado / liso</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Eletrodutos:</span> <span class="font-semibold text-slate-700">Galvanizados a Fogo ou Eletrolítico</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Acessórios:</span> <span class="font-semibold text-slate-700">Curvas 90°, Ts, cruzetas, emendas</span></div>
-          </div>
-        </div>
-
-        <div class="p-5 pt-0 border-t border-slate-100 mt-auto">
-          <div class="flex items-center justify-between pt-3">
-            <div>
-              <span class="text-[11px] text-slate-400 block">Varas de 3 metros</span>
-              <span class="text-xs font-semibold text-slate-700">Entrega com frota própria</span>
-            </div>
-            <a href="https://wa.me/5571996660988?text=Olá,%20orçamento%20para%20Eletrocalhas%20e%20Perfilados." 
-               target="_blank" 
-               class="bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold px-3 py-2 rounded-lg transition inline-flex items-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-green-400"></i> Cotar Preço
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- PRODUTO 7: Cabo Multiplexado de Alumínio -->
-      <article class="product-card bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="cabos">
-        <div class="p-5">
-          <div class="flex justify-between items-start gap-2 mb-2">
-            <span class="bg-blue-100 text-brand-navy text-[11px] font-bold px-2 py-0.5 rounded">Cabos de Alumínio</span>
-            <span class="text-xs font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">Entrada Aérea</span>
-          </div>
-          <h2 class="text-lg font-bold text-slate-900 mb-1">Cabo Multiplexado Alumínio 0,6/1kV</h2>
-          <p class="text-xs text-slate-600 mb-3">Destinado a ramais de ligação e redes aéreas de distribuição de baixa tensão.</p>
-          
-          <div class="bg-slate-50 rounded-lg p-3 text-xs mb-4 border border-slate-100 space-y-1">
-            <div class="flex justify-between"><span class="text-slate-500">Construção:</span> <span class="font-semibold text-slate-700">Duplex, Triplex e Quadruplex</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Bitolas Neutro Nu/Isolado:</span> <span class="font-semibold text-slate-700">10mm² até 120mm²</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Isolação:</span> <span class="font-semibold text-slate-700">XLPE 90°C resistente ao intemperismo</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Norma:</span> <span class="font-semibold text-slate-700">NBR 8182</span></div>
-          </div>
-        </div>
-
-        <div class="p-5 pt-0 border-t border-slate-100 mt-auto">
-          <div class="flex items-center justify-between pt-3">
-            <div>
-              <span class="text-[11px] text-slate-400 block">Lotes para construtoras</span>
-              <span class="text-xs font-semibold text-slate-700">Venda no atacado</span>
-            </div>
-            <a href="https://wa.me/5571996660988?text=Olá,%20orçamento%20para%20Cabo%20Multiplexado%20de%20Alumínio." 
-               target="_blank" 
-               class="bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold px-3 py-2 rounded-lg transition inline-flex items-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-green-400"></i> Cotar Preço
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- PRODUTO 8: Refletores LED e Iluminação Industrial -->
-      <article class="product-card bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="iluminacao">
-        <div class="p-5">
-          <div class="flex justify-between items-start gap-2 mb-2">
-            <span class="bg-emerald-100 text-emerald-900 text-[11px] font-bold px-2 py-0.5 rounded">Iluminação LED</span>
-            <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">Alta Eficiência</span>
-          </div>
-          <h2 class="text-lg font-bold text-slate-900 mb-1">Refletores LED IP66 / IP67 (50W a 400W)</h2>
-          <p class="text-xs text-slate-600 mb-3">Iluminação potente para pátios de manobra, galpões, fachadas e áreas externas da RMS.</p>
-          
-          <div class="bg-slate-50 rounded-lg p-3 text-xs mb-4 border border-slate-100 space-y-1">
-            <div class="flex justify-between"><span class="text-slate-500">Potências:</span> <span class="font-semibold text-slate-700">50W, 100W, 150W, 200W, 400W</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Temperatura de Cor:</span> <span class="font-semibold text-slate-700">6500K (Branco Frio)</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Grau de Proteção:</span> <span class="font-semibold text-slate-700">IP66 resistente a chuva e maresia</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Vida Útil:</span> <span class="font-semibold text-slate-700">&gt; 30.000 horas</span></div>
-          </div>
-        </div>
-
-        <div class="p-5 pt-0 border-t border-slate-100 mt-auto">
-          <div class="flex items-center justify-between pt-3">
-            <div>
-              <span class="text-[11px] text-slate-400 block">Garantia estendida</span>
-              <span class="text-xs font-semibold text-slate-700">Bivolt automático</span>
-            </div>
-            <a href="https://wa.me/5571996660988?text=Olá,%20orçamento%20para%20Refletores%20LED%20Industriais." 
-               target="_blank" 
-               class="bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold px-3 py-2 rounded-lg transition inline-flex items-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-green-400"></i> Cotar Preço
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- PRODUTO 9: Luminárias Herméticas & Fitas de LED -->
-      <article class="product-card bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="iluminacao">
-        <div class="p-5">
-          <div class="flex justify-between items-start gap-2 mb-2">
-            <span class="bg-emerald-100 text-emerald-900 text-[11px] font-bold px-2 py-0.5 rounded">LED & Luminárias</span>
-            <span class="text-xs font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">IP65 Hermética</span>
-          </div>
-          <h2 class="text-lg font-bold text-slate-900 mb-1">Luminárias Herméticas e Fitas de LED</h2>
-          <p class="text-xs text-slate-600 mb-3">Luminárias blindadas contra poeira e vapor de umidade, além de fitas de LED de alta densidade.</p>
-          
-          <div class="bg-slate-50 rounded-lg p-3 text-xs mb-4 border border-slate-100 space-y-1">
-            <div class="flex justify-between"><span class="text-slate-500">Herméticas:</span> <span class="font-semibold text-slate-700">1x18W, 2x18W, 1x36W, 2x36W LED</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Fitas de LED:</span> <span class="font-semibold text-slate-700">12V / 24V / 110V / 220V (Rolo 5m a 50m)</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Aplicação:</span> <span class="font-semibold text-slate-700">Galpões, garagens, sancas comerciais</span></div>
-            <div class="flex justify-between"><span class="text-slate-500">Acessórios:</span> <span class="font-semibold text-slate-700">Fontes Slim e drivers estabilizados</span></div>
-          </div>
-        </div>
-
-        <div class="p-5 pt-0 border-t border-slate-100 mt-auto">
-          <div class="flex items-center justify-between pt-3">
-            <div>
-              <span class="text-[11px] text-slate-400 block">Estoque completo</span>
-              <span class="text-xs font-semibold text-slate-700">Acessórios inclusos</span>
-            </div>
-            <a href="https://wa.me/5571996660988?text=Olá,%20orçamento%20para%20Luminárias%20Herméticas%20e%20Fitas%20LED." 
-               target="_blank" 
-               class="bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold px-3 py-2 rounded-lg transition inline-flex items-center gap-1.5">
-              <i class="fa-brands fa-whatsapp text-green-400"></i> Cotar Preço
-            </a>
-          </div>
-        </div>
-      </article>
-
     </div>
 
-    <!-- Mensagem de Nenhum Produto Encontrado -->
-    <div id="no-results" class="hidden text-center py-16 bg-white rounded-xl border border-slate-200 mt-6">
-      <i class="fa-solid fa-box-open text-4xl text-slate-300 mb-3"></i>
-      <h3 class="text-lg font-bold text-slate-700">Nenhum item encontrado</h3>
-      <p class="text-sm text-slate-500 max-w-md mx-auto mt-1 mb-4">Não localizou a especificação técnica desejada? Fale com nosso balcão de vendas industriais.</p>
-      <a href="https://wa.me/5571996660988" class="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-accentHover text-white px-5 py-2.5 rounded-lg text-sm font-bold transition">
-        <i class="fa-brands fa-whatsapp"></i> Consultar com Especialista
-      </a>
-    </div>
+    <!-- Header Principal -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logomarca Oficial Obrigatória -->
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.png" alt="Camaçari Cabos" class="h-10 object-contain">
+                <div class="border-l border-slate-300 pl-3 hidden sm:block">
+                    <span class="block text-xs uppercase tracking-wider text-slate-500 font-medium leading-tight">Materiais Elétricos</span>
+                    <span class="block text-xs text-amber-600 font-semibold">Desde 2014 em Camaçari - BA</span>
+                </div>
+            </a>
 
-  </main>
+            <!-- Menu de Navegação -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-700">
+                <a href="index.html" class="hover:text-brand-blue transition">Início</a>
+                <a href="produtos.html" class="text-brand-blue border-b-2 border-brand-amber font-semibold pb-1">Produtos & Catálogo</a>
+                <a href="#coelba" class="hover:text-brand-blue transition">Padrão Coelba</a>
+                <a href="#disjuntores" class="hover:text-brand-blue transition">Proteção & Disjuntores</a>
+                <a href="#cabos" class="hover:text-brand-blue transition">Cabos Elétricos</a>
+            </nav>
 
-  <!-- Seção GEO / Autoridade Logística na Bahia -->
-  <section class="bg-white border-t border-slate-200 py-12">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <div class="flex items-start space-x-4">
-          <div class="bg-blue-100 text-brand-blue p-3 rounded-lg text-xl flex-shrink-0">
-            <i class="fa-solid fa-truck-fast"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-slate-900 mb-1">Logística Ágil na Região Metropolitana</h4>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Atendimento programado e entregas diretas em <strong>Camaçari, Salvador, Lauro de Freitas, Simões Filho, Dias d'Ávila</strong> e <strong>Mata de São João</strong>.
-            </p>
-          </div>
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/5571996660988?text=Olá,%20gostaria%20de%20uma%20cotação%20rápida" target="_blank" class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-navy text-white text-sm font-semibold px-4 py-2.5 rounded shadow-sm hover:shadow transition">
+                    <i class="fa-solid fa-file-invoice text-amber-400"></i>
+                    <span>Cotação Imediata</span>
+                </a>
+            </div>
         </div>
+    </header>
 
-        <div class="flex items-start space-x-4">
-          <div class="bg-amber-100 text-amber-900 p-3 rounded-lg text-xl flex-shrink-0">
-            <i class="fa-solid fa-certificate"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-slate-900 mb-1">Conformidade e Laudos NBR</h4>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Fornecemos produtos rigorosamente certificados pelos padrões da ABNT/INMETRO e diretrizes vigentes da concessionária Neoenergia Coelba.
-            </p>
-          </div>
+    <!-- Banner Hero da Página de Produtos -->
+    <section class="bg-brand-navy text-white py-12 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-blue to-slate-900 opacity-95"></div>
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <span class="inline-block py-1 px-3 rounded bg-amber-500/20 text-amber-400 text-xs font-semibold tracking-wider uppercase mb-3 border border-amber-500/30">
+                    Catálogo Técnico Oficial
+                </span>
+                <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3">
+                    Cabos Industriais, Disjuntores e Padrão Coelba
+                </h1>
+                <p class="text-slate-300 text-base md:text-lg mb-6 leading-relaxed">
+                    Soluções certificadas NBR/Inmetro para engenharia, manutenção industrial e obras civis com pronta entrega em Camaçari, Salvador, Lauro de Freitas, Simões Filho, Dias d'Ávila e Mata de São João.
+                </p>
+
+                <!-- Barra de Busca e Filtro Rápido -->
+                <div class="bg-white p-2 rounded shadow-lg flex flex-col sm:flex-row gap-2">
+                    <div class="relative flex-1">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-3.5 text-slate-400"></i>
+                        <input type="text" id="searchInput" placeholder="Pesquisar por bitola, amperagem, cabo ou tipo..." class="w-full pl-9 pr-4 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none">
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="filterCategory('todos')" class="filter-btn active-filter px-4 py-2 text-xs font-semibold rounded bg-slate-100 hover:bg-slate-200 text-slate-700 transition">Todos</button>
+                        <button onclick="filterCategory('cabos')" class="filter-btn px-4 py-2 text-xs font-semibold rounded bg-slate-100 hover:bg-slate-200 text-slate-700 transition">Cabos</button>
+                        <button onclick="filterCategory('coelba')" class="filter-btn px-4 py-2 text-xs font-semibold rounded bg-slate-100 hover:bg-slate-200 text-slate-700 transition">Padrão Coelba</button>
+                        <button onclick="filterCategory('disjuntores')" class="filter-btn px-4 py-2 text-xs font-semibold rounded bg-slate-100 hover:bg-slate-200 text-slate-700 transition">Disjuntores</button>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="flex items-start space-x-4">
-          <div class="bg-emerald-100 text-emerald-900 p-3 rounded-lg text-xl flex-shrink-0">
-            <i class="fa-solid fa-handshake"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-slate-900 mb-1">Desde 2014 em Camaçari</h4>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Mais de uma década de solidez e credibilidade técnica no mercado baiano, abastecendo o Polo Petroquímico, construtoras e eletricistas.
-            </p>
-          </div>
+    <!-- Conteúdo Principal -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1">
+
+        <!-- Seção 1: Cabos Elétricos Industriais e Comerciais -->
+        <section id="cabos" class="product-section mb-16">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-slate-200 gap-4">
+                <div>
+                    <div class="flex items-center gap-2 text-amber-600 font-semibold text-xs tracking-wider uppercase mb-1">
+                        <i class="fa-solid fa-bolt"></i> Condutores de Alta Performance
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900">Cabos Elétricos Industriais & Prediais</h2>
+                    <p class="text-slate-600 text-sm mt-1">Fornecimento fracionado e em bobinas completas. Cobre puro com certificação NBR.</p>
+                </div>
+                <span class="text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200 self-start md:self-auto">
+                    Normas NBR 247-3, NBR 7286 e NBR 5410
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Card Cabo 1 -->
+                <div class="product-card bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col" data-category="cabos">
+                    <div class="bg-slate-100 p-4 border-b border-slate-200 flex justify-between items-center">
+                        <span class="bg-blue-100 text-brand-blue text-xs font-bold px-2.5 py-0.5 rounded">Cobre Eletrolítico</span>
+                        <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Pronta Entrega</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 leading-tight">Cabo Flexível 750V (1,5mm² a 16mm²)</h3>
+                            <p class="text-xs text-slate-500 mt-1 mb-4">Classe 5 e 4 de encordoamento | Isolamento PVC Antichama</p>
+                            
+                            <div class="bg-slate-50 rounded p-3 text-xs space-y-2 mb-4 text-slate-700">
+                                <div class="flex justify-between border-b border-slate-200 pb-1">
+                                    <span class="font-medium">Tensão Nominal:</span>
+                                    <span>450/750V</span>
+                                </div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1">
+                                    <span class="font-medium">Bitolas Disponíveis:</span>
+                                    <span>1,5 / 2,5 / 4 / 6 / 10 / 16 mm²</span>
+                                </div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1">
+                                    <span class="font-medium">Aplicação:</span>
+                                    <span>Quadro de distribuição, tomadas e iluminação</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-medium">Queda de Tensão:</span>
+                                    <span>Conforme NBR 5410 (&lt;= 4%)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5571996660988?text=Olá,%20gostaria%20de%20cotação%20para%20Cabo%20Flexivel%20750V" target="_blank" class="w-full py-2.5 px-4 bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold rounded flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Cotar Metragem / Rolo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Cabo 2 -->
+                <div class="product-card bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col" data-category="cabos">
+                    <div class="bg-slate-100 p-4 border-b border-slate-200 flex justify-between items-center">
+                        <span class="bg-blue-100 text-brand-blue text-xs font-bold px-2.5 py-0.5 rounded">Industrial Pesado</span>
+                        <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Bobina / Metro</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 leading-tight">Cabo de Potência HEPR/EPR 0,6/1kV</h3>
+                            <p class="text-xs text-slate-500 mt-1 mb-4">Temperatura de operação 90°C | NBR 7286</p>
+                            
+                            <div class="bg-slate-50 rounded p-3 text-xs space-y-2 mb-4 text-slate-700">
+                                <div class="flex justify-between border-b border-slate-200 pb-1">
+                                    <span class="font-medium">Tensão de Isolamento:</span>
+                                    <span>0,6/1 kV (1000V)</span>
+                                </div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1">
+                                    <span class="font-medium">Bitolas:</span>
+                                    <span>16mm² até 240mm²</span>
+                                </div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1">
+                                    <span class="font-medium">Vias:</span>
+                                    <span>Unipolar e Multiplexado</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-medium">Uso Típico:</span>
+                                    <span>Alimentação de subestações e motores industriais</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5571996660988?text=Olá,%20gostaria%20de%20cotação%20para%20Cabo%20HEPR%200,6/1kV" target="_blank" class="w-full py-2.5 px-4 bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold rounded flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Consultar Disponibilidade
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Cabo 3 -->
+                <div class="product-card bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col" data-category="cabos">
+                    <div class="bg-slate-100 p-4 border-b border-slate-200 flex justify-between items-center">
+                        <span class="bg-slate-200 text-slate-800 text-xs font-bold px-2.5 py-0.5 rounded">Rede Aérea</span>
+                        <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Em Estoque</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 leading-tight">Cabo Multiplexado Alumínio (Auto-Sustentado)</h3>
+                            <p class="text-xs text-slate-500 mt-1 mb-4">Isolação XLPE 90°C | Duplex, Triplex e Quadruplex</p>
+                            
+                            <div class="bg-slate-50 rounded p-3 text-xs space-y-2 mb-4 text-slate-700">
+                                <div class="flex justify-between border-b border-slate-200 pb-1">
+                                    <span class="font-medium">Composição:</span>
+                                    <span>Fases em Alumínio + Neutro Sustentador</span>
+                                </div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1">
+                                    <span class="font-medium">Bitolas:</span>
+                                    <span>1x10+10mm² até 3x70+70mm²</span>
+                                </div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1">
+                                    <span class="font-medium">Homologação:</span>
+                                    <span>Padrão Neoenergia Coelba</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-medium">Aplicação:</span>
+                                    <span>Entradas de serviço aéreo e ramais residenciais</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5571996660988?text=Olá,%20gostaria%20de%20cotação%20para%20Cabo%20Multiplexado%20Alumínio" target="_blank" class="w-full py-2.5 px-4 bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold rounded flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Seção 2: Padrão Coelba (Homologado Neoenergia) -->
+        <section id="coelba" class="product-section mb-16">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-slate-200 gap-4">
+                <div>
+                    <div class="flex items-center gap-2 text-amber-600 font-semibold text-xs tracking-wider uppercase mb-1">
+                        <i class="fa-solid fa-certificate"></i> Neoenergia Coelba
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900">Kits e Caixas Padrão Coelba Homologados</h2>
+                    <p class="text-slate-600 text-sm mt-1">Soluções completas e prontas para ligação de energia sem risco de reprovação técnica na vistoria.</p>
+                </div>
+                <div class="flex items-center gap-2 bg-amber-50 text-amber-900 border border-amber-200 px-3 py-1.5 rounded text-xs font-medium">
+                    <i class="fa-solid fa-shield-halved text-amber-600"></i> Atende especificações técnicas Neoenergia
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Card Padrão Monofásico -->
+                <div class="product-card bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col" data-category="coelba">
+                    <div class="bg-amber-500 text-slate-950 p-4 font-bold flex justify-between items-center text-sm">
+                        <span>Padrão Monofásico</span>
+                        <span class="text-xs bg-black/20 px-2 py-0.5 rounded text-white font-medium">Residencial / Comercial</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Kit Completo Monofásico Coelba</h3>
+                            <p class="text-xs text-slate-500 mt-1 mb-4">Caixa de policarbonato com visor transparente e acessórios</p>
+
+                            <ul class="text-xs space-y-2.5 text-slate-700 mb-6 border-y border-slate-100 py-4">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                    <span>Caixa em policarbonato homologada Neoenergia Coelba.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                    <span>Disjuntor Monopolar Curva C (40A / 50A / 63A).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                    <span>Bengala em PVC ou galvanizada com cabeçote.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                    <span>Haste de aterramento cobreada 5/8 x 2,40m + conector.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/5571996660988?text=Olá,%20preciso%20de%20um%20Kit%20Padrão%20Coelba%20Monofásico" target="_blank" class="w-full py-2.5 px-4 bg-brand-navy hover:bg-brand-blue text-white text-xs font-bold rounded flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Cotar Kit Monofásico
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Padrão Bifásico -->
+                <div class="product-card bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col" data-category="coelba">
+                    <div class="bg-brand-blue text-white p-4 font-bold flex justify-between items-center text-sm">
+                        <span>Padrão Bifásico</span>
+                        <span class="text-xs bg-white/20 px-2 py-0.5 rounded font-medium">Médio Porte</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Kit Completo Bifásico Coelba</h3>
+                            <p class="text-xs text-slate-500 mt-1 mb-4">Ideal para residências com múltiplos ar-condicionados e motores</p>
+
+                            <ul class="text-xs space-y-2.5 text-slate-700 mb-6 border-y border-slate-100 py-4">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                    <span>Caixa homologada Coelba em policarbonato com proteção UV.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                    <span>Disjuntor Bipolar Curva C (50A / 63A / 70A).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                    <span>Cabos de entrada flexíveis normatizados (10mm² ou 16mm²).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                    <span>Armação secundária, roldanas e buchas de vedação.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/5571996660988?text=Olá,%20preciso%20de%20um%20Kit%20Padrão%20Coelba%20Bifásico" target="_blank" class="w-full py-2.5 px-4 bg-brand-navy hover:bg-brand-blue text-white text-xs font-bold rounded flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Cotar Kit Bifásico
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Padrão Trifásico -->
+                <div class="product-card bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col" data-category="coelba">
+                    <div class="bg-slate-900 text-white p-4 font-bold flex justify-between items-center text-sm">
+                        <span>Padrão Trifásico</span>
+                        <span class="text-xs bg-amber-500 text-slate-900 px-2 py-0.5 rounded font-bold">Comercial & Industrial</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Kit Padrão Trifásico Industrial Coelba</h3>
+                            <p class="text-xs text-slate-500 mt-1 mb-4">Medição direta até 100A ou indireta com caixa para TC</p>
+
+                            <ul class="text-xs space-y-2.5 text-slate-700 mb-6 border-y border-slate-100 py-4">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                    <span>Caixa de medição trifásica com placa de montagem Coelba.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                    <span>Disjuntor Tripolar DIN ou Caixa Moldada (50A até 125A).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                    <span>Eletroduto galvanizado a fogo com conexões normatizadas.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                    <span>Kit completo com cabos de entrada e sistema de aterramento.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/5571996660988?text=Olá,%20preciso%20de%20um%20Kit%20Padrão%20Coelba%20Trifásico" target="_blank" class="w-full py-2.5 px-4 bg-brand-navy hover:bg-brand-blue text-white text-xs font-bold rounded flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Cotar Kit Trifásico
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Seção 3: Disjuntores e Equipamentos de Proteção -->
+        <section id="disjuntores" class="product-section mb-16">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-slate-200 gap-4">
+                <div>
+                    <div class="flex items-center gap-2 text-amber-600 font-semibold text-xs tracking-wider uppercase mb-1">
+                        <i class="fa-solid fa-toggle-on"></i> Proteção Elétrica e Manobra
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900">Disjuntores Termomagnéticos & Caixa Moldada</h2>
+                    <p class="text-slate-600 text-sm mt-1">Equipamentos para segurança patrimonial contra sobrecargas e curtos-circuitos.</p>
+                </div>
+                <span class="text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200 self-start md:self-auto">
+                    Certificação NBR NM 60898 e NBR IEC 60947-2
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Disjuntores DIN -->
+                <div class="product-card bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col" data-category="disjuntores">
+                    <div class="bg-slate-100 p-4 border-b border-slate-200 flex justify-between items-center">
+                        <span class="bg-blue-100 text-brand-blue text-xs font-bold px-2.5 py-0.5 rounded">Trilho DIN</span>
+                        <span class="text-xs text-slate-600">3kA / 4,5kA / 6kA</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Minidisjuntores Curva C (DIN)</h3>
+                            <p class="text-xs text-slate-500 mt-1 mb-4">Monopolar, Bipolar e Tripolar para quadros de distribuição</p>
+                            
+                            <div class="space-y-2 text-xs text-slate-600 mb-6 bg-slate-50 p-3 rounded">
+                                <p><strong>Correntes Nominais:</strong> 10A, 16A, 20A, 25A, 32A, 40A, 50A e 63A.</p>
+                                <p><strong>Capacidade de Interrupção:</strong> Até 6.000A (6kA).</p>
+                                <p><strong>Curva de Disparo:</strong> Curva C (cargas indutivas leves e resistivas).</p>
+                                <p><strong>Montagem:</strong> Trilho DIN TS-35mm.</p>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5571996660988?text=Olá,%20gostaria%20de%20preço%20de%20Disjuntores%20DIN" target="_blank" class="w-full py-2.5 px-4 bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold rounded flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Cotação por Amperagem
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Disjuntores Caixa Moldada -->
+                <div class="product-card bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col" data-category="disjuntores">
+                    <div class="bg-slate-100 p-4 border-b border-slate-200 flex justify-between items-center">
+                        <span class="bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-0.5 rounded">Linha Pesada</span>
+                        <span class="text-xs text-slate-600">Até 65kA</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Disjuntores em Caixa Moldada (Tripolar)</h3>
+                            <p class="text-xs text-slate-500 mt-1 mb-4">Para entrada geral, subestações e CCMs industriais</p>
+                            
+                            <div class="space-y-2 text-xs text-slate-600 mb-6 bg-slate-50 p-3 rounded">
+                                <p><strong>Faixa de Corrente:</strong> 100A, 125A, 160A, 200A, 250A, 400A e 630A.</p>
+                                <p><strong>Disparo:</strong> Fixo ou Regulável térmico/magnético.</p>
+                                <p><strong>Aplicações:</strong> Painéis QGBT, indústrias petroquímicas e centros comerciais.</p>
+                                <p><strong>Acessórios:</strong> Bobinas de disparo e contatos auxiliares sob consulta.</p>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5571996660988?text=Olá,%20gostaria%20de%20preço%20de%20Disjuntores%20Caixa%20Moldada" target="_blank" class="w-full py-2.5 px-4 bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold rounded flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Consultar Modelo e Amperagem
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dispositivos DR e DPS -->
+                <div class="product-card bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col" data-category="disjuntores">
+                    <div class="bg-slate-100 p-4 border-b border-slate-200 flex justify-between items-center">
+                        <span class="bg-blue-100 text-brand-blue text-xs font-bold px-2.5 py-0.5 rounded">Segurança Pessoal & Surto</span>
+                        <span class="text-xs text-slate-600">NBR 5410 Obrigatório</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Interruptores DR (IDR) & DPS</h3>
+                            <p class="text-xs text-slate-500 mt-1 mb-4">Proteção contra choques residuais e descargas atmosféricas</p>
+                            
+                            <div class="space-y-2 text-xs text-slate-600 mb-6 bg-slate-50 p-3 rounded">
+                                <p><strong>IDR Bipolar/Tetrapolar:</strong> Sensibilidade 30mA (25A a 63A).</p>
+                                <p><strong>DPS Monopolar Classe II:</strong> 20kA, 40kA e 45kA (175V e 275V).</p>
+                                <p><strong>Finalidade DPS:</strong> Proteção de equipamentos contra queima por raios.</p>
+                                <p><strong>Finalidade DR:</strong> Prevenção contra choques elétricos e fugas de corrente.</p>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5571996660988?text=Olá,%20gostaria%20de%20cotação%20para%20DPS%20e%20DR" target="_blank" class="w-full py-2.5 px-4 bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold rounded flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Solicitar DPS e DR
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção Adicional: Infraestrutura e Plugs Industriais -->
+        <section class="bg-white rounded-xl border border-slate-200 p-8 shadow-sm mb-16">
+            <div class="max-w-3xl mb-8">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Linha de Suporte e Infraestrutura</span>
+                <h2 class="text-2xl font-bold text-slate-900 mt-1">Eletrocalhas, Perfilados e Conexões Industriais</h2>
+                <p class="text-slate-600 text-sm mt-2">Além de cabos e disjuntores, possuímos portfólio completo de ferragens e materiais elétricos de sustentação.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-4 rounded-lg bg-slate-50 border border-slate-100 hover:border-amber-400 transition">
+                    <i class="fa-solid fa-bars-staggered text-3xl text-brand-blue mb-2"></i>
+                    <h4 class="font-bold text-sm text-slate-800">Eletrocalhas & Perfilados</h4>
+                    <p class="text-xs text-slate-500 mt-1">Chapas perfuradas e lisas em aço galvanizado</p>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-50 border border-slate-100 hover:border-amber-400 transition">
+                    <i class="fa-solid fa-plug text-3xl text-brand-blue mb-2"></i>
+                    <h4 class="font-bold text-sm text-slate-800">Plugs & Tomadas Industriais</h4>
+                    <p class="text-xs text-slate-500 mt-1">Padrão Steck IP44 / IP67 (16A, 32A, 63A)</p>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-50 border border-slate-100 hover:border-amber-400 transition">
+                    <i class="fa-solid fa-lightbulb text-3xl text-brand-blue mb-2"></i>
+                    <h4 class="font-bold text-sm text-slate-800">Refletores & LED Industrial</h4>
+                    <p class="text-xs text-slate-500 mt-1">Luminárias herméticas e refletores de alta potência</p>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-50 border border-slate-100 hover:border-amber-400 transition">
+                    <i class="fa-solid fa-circle-nodes text-3xl text-brand-blue mb-2"></i>
+                    <h4 class="font-bold text-sm text-slate-800">Eletrodutos & Conexões</h4>
+                    <p class="text-xs text-slate-500 mt-1">PVC roscável, corrugado reforçado e aço carbono</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner de Atendimento Regional -->
+        <section class="bg-gradient-to-r from-brand-navy to-brand-blue rounded-xl text-white p-8 md:p-10 shadow-lg relative overflow-hidden">
+            <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 text-center md:text-left">
+                    <span class="text-amber-400 font-semibold text-xs tracking-wider uppercase">Logística Ágil e Estratégica</span>
+                    <h3 class="text-2xl font-bold">Entrega Expressa para Indústrias e Construtoras</h3>
+                    <p class="text-slate-300 text-sm max-w-xl">
+                        Atendimento diário no Polo Petroquímico de Camaçari, Salvador, Lauro de Freitas, Simões Filho, Dias d'Ávila e Mata de São João com faturamento corporativo.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <a href="https://wa.me/5571996660988?text=Olá,%20preciso%20de%20uma%20cotação%20para%20minha%20empresa" target="_blank" class="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm rounded shadow text-center transition flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Falar com Vendedor Técnico
+                    </a>
+                    <a href="tel:7121364416" class="px-5 py-3 bg-white/10 hover:bg-white/20 text-white font-medium text-sm rounded text-center transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i> (71) 2136-4416
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé Corporativo -->
+    <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Coluna 1: Empresa -->
+                <div class="space-y-3">
+                    <div class="bg-white p-2 rounded inline-block">
+                        <img src="logo.png" alt="Camaçari Cabos" class="h-10 object-contain">
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Camaçari Cabos Materiais Elétricos. Especialistas em condutores elétricos, sistemas de proteção e padrões de energia desde 2014.
+                    </p>
+                    <p class="text-xs text-amber-500 font-semibold">Atacado e Varejo Especializado</p>
+                </div>
+
+                <!-- Coluna 2: Categorias Principais -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-3 border-b border-slate-800 pb-2">Linhas em Destaque</h4>
+                    <ul class="text-xs space-y-2">
+                        <li><a href="#cabos" class="hover:text-amber-400 transition">Cabos Flexíveis 750V e HEPR 1kV</a></li>
+                        <li><a href="#coelba" class="hover:text-amber-400 transition">Padrão Coelba (Mono, Bi e Trifásico)</a></li>
+                        <li><a href="#disjuntores" class="hover:text-amber-400 transition">Disjuntores DIN e Caixa Moldada</a></li>
+                        <li><a href="#disjuntores" class="hover:text-amber-400 transition">Protetores DPS e Interruptores DR</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition">Eletrocalhas e Perfilados Perfurados</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Regiões de Atendimento -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-3 border-b border-slate-800 pb-2">Cidades Atendidas</h4>
+                    <ul class="text-xs space-y-1.5 text-slate-400">
+                        <li><i class="fa-solid fa-angle-right text-amber-500 mr-1.5 text-[10px]"></i> Camaçari (Polo e Centro)</li>
+                        <li><i class="fa-solid fa-angle-right text-amber-500 mr-1.5 text-[10px]"></i> Salvador e RMS</li>
+                        <li><i class="fa-solid fa-angle-right text-amber-500 mr-1.5 text-[10px]"></i> Lauro de Freitas</li>
+                        <li><i class="fa-solid fa-angle-right text-amber-500 mr-1.5 text-[10px]"></i> Simões Filho</li>
+                        <li><i class="fa-solid fa-angle-right text-amber-500 mr-1.5 text-[10px]"></i> Dias d'Ávila & Mata de São João</li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Endereço & Contatos -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-3 border-b border-slate-800 pb-2">Atendimento e Balcão</h4>
+                    <address class="not-italic text-xs space-y-2">
+                        <p><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i> Rua Centro, 249, Camaçari - BA<br><span class="pl-5 text-slate-500">CEP: 42800-029</span></p>
+                        <p><i class="fa-solid fa-phone text-amber-500 mr-2"></i> (71) 2136-4416</p>
+                        <p><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i> (71) 99666-0988</p>
+                        <p class="pt-2 text-[11px] text-slate-500">Condições especiais para faturamento CNPJ.</p>
+                    </address>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2024 Camaçari Cabos Materiais Elétricos. Todos os direitos reservados.</p>
+                <p>Normatização técnica: NBR 5410 | NBR NM 60898 | NBR 7286</p>
+            </div>
         </div>
+    </footer>
 
-      </div>
-    </div>
-  </section>
+    <!-- Script de Filtro Simples e Rápido -->
+    <script>
+        function filterCategory(cat) {
+            // Atualizar classes dos botões
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-navy', 'text-white');
+                btn.classList.add('bg-slate-100', 'text-slate-700');
+            });
+            event.target.classList.remove('bg-slate-100', 'text-slate-700');
+            event.target.classList.add('bg-brand-navy', 'text-white');
 
-  <!-- CTA de Contato / Cotação de Projeto Completo -->
-  <section id="contato" class="bg-brand-blue text-white py-12 border-t border-blue-900">
-    <div class="max-w-5xl mx-auto px-4 text-center">
-      <h3 class="text-2xl md:text-3xl font-extrabold mb-3">Precisa de cotação para lista de materiais ou projeto elétrico?</h3>
-      <p class="text-slate-300 text-sm md:text-base max-w-2xl mx-auto mb-6">
-        Envie sua relação de materiais em PDF ou planilha. Nossa equipe de engenharia e vendas técnicas retorna com a melhor proposta comercial em poucos minutos.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="https://wa.me/5571996660988?text=Olá,%20tenho%20uma%20lista%20de%20materiais%20para%20cotação." 
-           target="_blank" 
-           class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-lg text-sm transition inline-flex items-center gap-2 shadow-md">
-          <i class="fa-brands fa-whatsapp text-lg"></i>
-          <span>Enviar Lista via WhatsApp: (71) 99666-0988</span>
-        </a>
-        <a href="tel:7121364416" 
-           class="bg-slate-700 hover:bg-slate-600 text-white font-semibold px-6 py-3 rounded-lg text-sm transition inline-flex items-center gap-2">
-          <i class="fa-solid fa-phone"></i>
-          <span>Ligar no Balcão: (71) 2136-4416</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Rodapé Institucional e Técnico com SEO Local -->
-  <footer class="bg-slate-900 text-slate-400 text-xs py-10 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-      
-      <!-- Bloco Institucional com Logomarca -->
-      <div>
-        <img src="logo.png" alt="Camaçari Cabos Materiais Elétricos" class="h-10 w-auto mb-3 bg-white p-1 rounded">
-        <p class="text-slate-400 leading-relaxed mb-3">
-          Referência técnica em condutores elétricos, sistemas de proteção, infraestrutura e conexões industriais na Bahia desde 2014.
-        </p>
-        <span class="text-slate-500 block">CNPJ / Inscrição Estadual regularizada para faturamento faturado B2B.</span>
-      </div>
-
-      <!-- Links Técnicos do Catálogo -->
-      <div>
-        <h5 class="text-white font-bold text-sm mb-3 uppercase tracking-wider">Linhas de Produtos</h5>
-        <ul class="space-y-2">
-          <li><a href="#" onclick="filtrarCategoria('cabos'); return false;" class="hover:text-white transition">Fios e Cabos 750V / 1kV</a></li>
-          <li><a href="#" onclick="filtrarCategoria('coelba'); return false;" class="hover:text-white transition">Padrão Coelba Trifásico e Monofásico</a></li>
-          <li><a href="#" onclick="filtrarCategoria('protecao'); return false;" class="hover:text-white transition">Disjuntores DIN e Caixa Moldada</a></li>
-          <li><a href="#" onclick="filtrarCategoria('protecao'); return false;" class="hover:text-white transition">Tomadas e Plugs Industriais Steck</a></li>
-          <li><a href="#" onclick="filtrarCategoria('infra'); return false;" class="hover:text-white transition">Eletrocalhas e Perfilados Perfurados</a></li>
-          <li><a href="#" onclick="filtrarCategoria('iluminacao'); return false;" class="hover:text-white transition">Refletores LED e Fitas 12V/220V</a></li>
-        </ul>
-      </div>
-
-      <!-- Cobertura Geográfica -->
-      <div>
-        <h5 class="text-white font-bold text-sm mb-3 uppercase tracking-wider">Cidades Atendidas</h5>
-        <ul class="space-y-1.5">
-          <li class="flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-brand-accent"></i> Camaçari (Sede & Polo Petroquímico)</li>
-          <li class="flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-brand-accent"></i> Salvador</li>
-          <li class="flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-brand-accent"></i> Lauro de Freitas</li>
-          <li class="flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-brand-accent"></i> Simões Filho</li>
-          <li class="flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-brand-accent"></i> Dias d'Ávila</li>
-          <li class="flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-brand-accent"></i> Mata de São João</li>
-        </ul>
-      </div>
-
-      <!-- Dados Físicos de Contato -->
-      <div>
-        <h5 class="text-white font-bold text-sm mb-3 uppercase tracking-wider">Unidade Física</h5>
-        <p class="leading-relaxed text-slate-300 mb-2">
-          <strong>Camaçari Cabos Materiais Elétricos</strong><br>
-          Rua Centro, 249<br>
-          Camaçari - BA<br>
-          CEP: 42800-029
-        </p>
-        <p class="text-slate-300 space-y-1">
-          <div><i class="fa-solid fa-phone text-brand-accent mr-1"></i> (71) 2136-4416</div>
-          <div><i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i> (71) 99666-0988</div>
-        </p>
-      </div>
-
-    </div>
-
-    <div class="max-w-7xl mx-auto px-4 pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs">
-      <p>&copy; 2014 - 2025 Camaçari Cabos Materiais Elétricos. Todos os direitos reservados.</p>
-      <p class="mt-2 md:mt-0">Especialista em Distribuição e Logística Elétrica Industrial.</p>
-    </div>
-  </footer>
-
-  <!-- Script Interativo de Filtros e Busca em Tempo Real -->
-  <script>
-    let categoriaAtual = 'todas';
-
-    function filtrarCategoria(cat) {
-      categoriaAtual = cat;
-      const botoes = document.querySelectorAll('.cat-btn');
-      botoes.forEach(btn => {
-        btn.classList.remove('bg-brand-blue', 'text-white');
-        btn.classList.add('text-slate-600', 'hover:bg-slate-100');
-      });
-
-      // Aplica estilo ao botão clicado
-      event.currentTarget.classList.remove('text-slate-600', 'hover:bg-slate-100');
-      event.currentTarget.classList.add('bg-brand-blue', 'text-white');
-
-      filtrarProdutos();
-    }
-
-    function filtrarProdutos() {
-      const termo = document.getElementById('search-input').value.toLowerCase().trim();
-      const cards = document.querySelectorAll('.product-card');
-      let visiveis = 0;
-
-      cards.forEach(card => {
-        const categoriaCard = card.getAttribute('data-category');
-        const conteudoCard = card.innerText.toLowerCase();
-
-        const bateCategoria = (categoriaAtual === 'todas' || categoriaCard === categoriaAtual);
-        const bateBusca = (termo === '' || conteudoCard.includes(termo));
-
-        if (bateCategoria && bateBusca) {
-          card.style.display = 'flex';
-          visiveis++;
-        } else {
-          card.style.display = 'none';
+            // Filtrar seções ou cards
+            const sections = document.querySelectorAll('.product-section');
+            if (cat === 'todos') {
+                sections.forEach(sec => sec.style.display = 'block');
+            } else {
+                sections.forEach(sec => {
+                    if (sec.id === cat) {
+                        sec.style.display = 'block';
+                    } else {
+                        sec.style.display = 'none';
+                    }
+                });
+            }
         }
-      });
 
-      const noResults = document.getElementById('no-results');
-      if (visiveis === 0) {
-        noResults.classList.remove('hidden');
-      } else {
-        noResults.classList.add('hidden');
-      }
+        // Busca por texto
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const term = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.product-card');
 
-      document.getElementById('contador-produtos').innerText = `Exibindo ${visiveis} produto(s) homologado(s)`;
-    }
-  </script>
-
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(term)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
