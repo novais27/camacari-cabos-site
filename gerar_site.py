@@ -64,7 +64,7 @@ def atualizar_apenas_blog(max_tentativas=4):
     for tentativa in range(1, max_tentativas + 1):
         try:
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-3.8-flash",
                 contents=prompt_final
             )
             novos_artigos_html = limpar_codigo(response.text)
@@ -86,7 +86,6 @@ def atualizar_apenas_blog(max_tentativas=4):
     if marcador in html_atual:
         html_novo = html_atual.replace(marcador, f"{marcador}\n\n{novos_artigos_html}")
     else:
-        # Se ainda não tiver o marcador, insere logo na primeira <section> com grid de artigos
         padrao_grid = re.compile(r'(<section[^>]*grid[^>]*>)', re.IGNORECASE)
         if padrao_grid.search(html_atual):
             html_novo = padrao_grid.sub(r'\1\n    <!-- NOVOS_ARTIGOS_AQUI -->\n' + novos_artigos_html, html_atual, count=1)
