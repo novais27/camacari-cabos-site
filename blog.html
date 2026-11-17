@@ -1,112 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Técnico e Engenharia Elétrica | Camaçari Cabos</title>
-  <meta name="description" content="Artigos técnicos sobre dimensionamento de cabos elétricos, ampacidade, normas NBR 5410, NBR 14039 e padrões Neoenergia Coelba para a indústria e construção civil.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    .font-mono-tech { font-family: 'JetBrains Mono', monospace; }
-  </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-12{margin-top:3rem}.mt-16{margin-top:4rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-8{margin-top:2rem}.mr-2{margin-right:0.5rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-20{height:5rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-6{height:1.5rem}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-2{width:0.5rem}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-6{width:1.5rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.flex-shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-10{gap:2.5rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-8{gap:2rem}.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-slate-200 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(226 232 240 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-sm{border-radius:0.125rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-l-2{border-left-width:2px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-amber-400{--tw-border-opacity:1;border-color:rgb(251 191 36 / var(--tw-border-opacity, 1))}.border-amber-500{--tw-border-opacity:1;border-color:rgb(245 158 11 / var(--tw-border-opacity, 1))}.border-blue-700{--tw-border-opacity:1;border-color:rgb(29 78 216 / var(--tw-border-opacity, 1))}.border-blue-800{--tw-border-opacity:1;border-color:rgb(30 64 175 / var(--tw-border-opacity, 1))}.border-blue-900{--tw-border-opacity:1;border-color:rgb(30 58 138 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-slate-900{--tw-border-opacity:1;border-color:rgb(15 23 42 / var(--tw-border-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-800\/80{background-color:rgb(30 64 175 / 0.8)}.bg-blue-900{--tw-bg-opacity:1;background-color:rgb(30 58 138 / var(--tw-bg-opacity, 1))}.bg-blue-950{--tw-bg-opacity:1;background-color:rgb(23 37 84 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-\[radial-gradient\(\#f59e0b_1px\2c transparent_1px\)\]{background-image:radial-gradient(#f59e0b 1px,transparent 1px)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.from-blue-950{--tw-gradient-from:#172554 var(--tw-gradient-from-position);--tw-gradient-to:rgb(23 37 84 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-blue-900{--tw-gradient-to:rgb(30 58 138 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #1e3a8a var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-blue-900{--tw-gradient-to:#1e3a8a var(--tw-gradient-to-position)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.fill-current{fill:currentColor}.object-contain{object-fit:contain}.p-2{padding:0.5rem}.p-2\.5{padding:0.625rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-1{padding:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-14{padding-top:3.5rem;padding-bottom:3.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-1{padding-bottom:0.25rem}.pb-3{padding-bottom:0.75rem}.pb-5{padding-bottom:1.25rem}.pl-2{padding-left:0.5rem}.pl-4{padding-left:1rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.pt-4{padding-top:1rem}.pt-8{padding-top:2rem}.text-left{text-align:left}.text-center{text-align:center}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[12px\]{font-size:12px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-light{font-weight:300}.font-medium{font-weight:500}.font-semibold{font-weight:600}.font-black{font-weight:900}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-none{line-height:1}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.text-blue-950{--tw-text-opacity:1;color:rgb(23 37 84 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70 / var(--tw-text-opacity, 1))}.text-rose-700{--tw-text-opacity:1;color:rgb(190 18 60 / var(--tw-text-opacity, 1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-10{opacity:0.1}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.\[background-size\:24px_24px\]{background-size:24px 24px}.hover\:bg-amber-400:hover{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-800:hover{--tw-bg-opacity:1;background-color:rgb(30 64 175 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:text-amber-400:hover{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.hover\:text-amber-600:hover{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.hover\:text-amber-700:hover{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.hover\:text-blue-900:hover{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}@media (min-width: 640px){.sm\:mt-0{margin-top:0px}.sm\:flex{display:flex}.sm\:w-auto{width:auto}.sm\:flex-row{flex-direction:row}.sm\:justify-between{justify-content:space-between}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-left{text-align:left}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width: 768px){.md\:inline{display:inline}.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 1024px){.lg\:col-span-4{grid-column:span 4 / span 4}.lg\:col-span-8{grid-column:span 8 / span 8}.lg\:flex{display:flex}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mr-2{margin-right:0.5rem}.mt-1{margin-top:0.25rem}.mt-16{margin-top:4rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-3\.5{height:0.875rem}.h-6{height:1.5rem}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-2{width:0.5rem}.w-3\.5{width:0.875rem}.w-6{width:1.5rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.flex-grow{flex-grow:1}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-10{gap:2.5rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-8{gap:2rem}.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-slate-200 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(226 232 240 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-sm{border-radius:0.125rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-amber-400{--tw-border-opacity:1;border-color:rgb(251 191 36 / var(--tw-border-opacity, 1))}.border-amber-500{--tw-border-opacity:1;border-color:rgb(245 158 11 / var(--tw-border-opacity, 1))}.border-blue-700{--tw-border-opacity:1;border-color:rgb(29 78 216 / var(--tw-border-opacity, 1))}.border-blue-800{--tw-border-opacity:1;border-color:rgb(30 64 175 / var(--tw-border-opacity, 1))}.border-blue-900{--tw-border-opacity:1;border-color:rgb(30 58 138 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-800\/80{background-color:rgb(30 64 175 / 0.8)}.bg-blue-900{--tw-bg-opacity:1;background-color:rgb(30 58 138 / var(--tw-bg-opacity, 1))}.bg-blue-950{--tw-bg-opacity:1;background-color:rgb(23 37 84 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-\[radial-gradient\(\#f59e0b_1px\2c transparent_1px\)\]{background-image:radial-gradient(#f59e0b 1px,transparent 1px)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.from-blue-950{--tw-gradient-from:#172554 var(--tw-gradient-from-position);--tw-gradient-to:rgb(23 37 84 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-blue-900{--tw-gradient-to:rgb(30 58 138 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #1e3a8a var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-blue-900{--tw-gradient-to:#1e3a8a var(--tw-gradient-to-position)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.fill-current{fill:currentColor}.object-contain{object-fit:contain}.p-1{padding:0.25rem}.p-2\.5{padding:0.625rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-14{padding-top:3.5rem;padding-bottom:3.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-1{padding-bottom:0.25rem}.pb-3{padding-bottom:0.75rem}.pl-4{padding-left:1rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.pt-4{padding-top:1rem}.text-left{text-align:left}.text-center{text-align:center}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[12px\]{font-size:12px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-light{font-weight:300}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.text-blue-950{--tw-text-opacity:1;color:rgb(23 37 84 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70 / var(--tw-text-opacity, 1))}.text-rose-700{--tw-text-opacity:1;color:rgb(190 18 60 / var(--tw-text-opacity, 1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-10{opacity:0.1}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.\[background-size\:24px_24px\]{background-size:24px 24px}.hover\:bg-amber-400:hover{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-800:hover{--tw-bg-opacity:1;background-color:rgb(30 64 175 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:text-amber-400:hover{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.hover\:text-amber-600:hover{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.hover\:text-amber-700:hover{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.hover\:text-blue-900:hover{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}@media (min-width: 640px){.sm\:w-auto{width:auto}.sm\:flex-row{flex-direction:row}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width: 768px){.md\:inline{display:inline}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 1024px){.lg\:col-span-4{grid-column:span 4 / span 4}.lg\:col-span-8{grid-column:span 8 / span 8}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mr-2{margin-right:0.5rem}.mt-1{margin-top:0.25rem}.mt-16{margin-top:4rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-3\.5{height:0.875rem}.h-6{height:1.5rem}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-2{width:0.5rem}.w-3\.5{width:0.875rem}.w-6{width:1.5rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.flex-grow{flex-grow:1}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-10{gap:2.5rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-8{gap:2rem}.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-slate-200 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(226 232 240 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-sm{border-radius:0.125rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-amber-400{--tw-border-opacity:1;border-color:rgb(251 191 36 / var(--tw-border-opacity, 1))}.border-amber-500{--tw-border-opacity:1;border-color:rgb(245 158 11 / var(--tw-border-opacity, 1))}.border-blue-700{--tw-border-opacity:1;border-color:rgb(29 78 216 / var(--tw-border-opacity, 1))}.border-blue-800{--tw-border-opacity:1;border-color:rgb(30 64 175 / var(--tw-border-opacity, 1))}.border-blue-900{--tw-border-opacity:1;border-color:rgb(30 58 138 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-800\/80{background-color:rgb(30 64 175 / 0.8)}.bg-blue-900{--tw-bg-opacity:1;background-color:rgb(30 58 138 / var(--tw-bg-opacity, 1))}.bg-blue-950{--tw-bg-opacity:1;background-color:rgb(23 37 84 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-\[radial-gradient\(\#f59e0b_1px\2c transparent_1px\)\]{background-image:radial-gradient(#f59e0b 1px,transparent 1px)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.from-blue-950{--tw-gradient-from:#172554 var(--tw-gradient-from-position);--tw-gradient-to:rgb(23 37 84 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-blue-900{--tw-gradient-to:rgb(30 58 138 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #1e3a8a var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-blue-900{--tw-gradient-to:#1e3a8a var(--tw-gradient-to-position)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.fill-current{fill:currentColor}.object-contain{object-fit:contain}.p-1{padding:0.25rem}.p-2\.5{padding:0.625rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-14{padding-top:3.5rem;padding-bottom:3.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-1{padding-bottom:0.25rem}.pb-3{padding-bottom:0.75rem}.pl-4{padding-left:1rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.pt-4{padding-top:1rem}.text-left{text-align:left}.text-center{text-align:center}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[12px\]{font-size:12px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-light{font-weight:300}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.text-blue-950{--tw-text-opacity:1;color:rgb(23 37 84 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70 / var(--tw-text-opacity, 1))}.text-rose-700{--tw-text-opacity:1;color:rgb(190 18 60 / var(--tw-text-opacity, 1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-10{opacity:0.1}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.\[background-size\:24px_24px\]{background-size:24px 24px}.hover\:bg-amber-400:hover{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-800:hover{--tw-bg-opacity:1;background-color:rgb(30 64 175 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:text-amber-400:hover{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.hover\:text-amber-600:hover{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.hover\:text-amber-700:hover{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.hover\:text-blue-900:hover{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}@media (min-width: 640px){.sm\:w-auto{width:auto}.sm\:flex-row{flex-direction:row}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width: 768px){.md\:inline{display:inline}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 1024px){.lg\:col-span-4{grid-column:span 4 / span 4}.lg\:col-span-8{grid-column:span 8 / span 8}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style>
-        <style id="camacari-mobile-fix">
-            @media (max-width: 768px) {
-                /* Cabeçalho compacto no celular */
-                header > div {
-                    padding: 0.65rem 1rem !important;
-                    gap: 0.5rem !important;
-                }
-                header img {
-                    height: 2rem !important;
-                }
-                header a span.text-xl {
-                    font-size: 0.95rem !important;
-                }
-                header a span.text-\[11px\] {
-                    font-size: 0.6rem !important;
-                }
-                /* Botão de WhatsApp compacto no topo */
-                header > div > a:last-child {
-                    padding: 0.45rem 0.75rem !important;
-                    font-size: 0.65rem !important;
-                    border-radius: 0.5rem !important;
-                }
-                /* Transforma as 7 abas em barra horizontal deslizante (linha única sem quebrar) */
-                header nav {
-                    order: 3 !important;
-                    width: 100% !important;
-                    flex-wrap: nowrap !important;
-                    overflow-x: auto !important;
-                    white-space: nowrap !important;
-                    gap: 1.1rem !important;
-                    padding: 0.45rem 0.25rem 0.2rem 0.25rem !important;
-                    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
-                    -webkit-overflow-scrolling: touch !important;
-                    scrollbar-width: none !important;
-                }
-                header nav::-webkit-scrollbar {
-                    display: none !important;
-                }
-                header nav a {
-                    font-size: 0.78rem !important;
-                    flex-shrink: 0 !important;
-                }
-                /* Ajuste proporcional de banners, títulos e espaçamentos internos */
-                section.py-20, section.py-16, section.py-14 {
-                    padding-top: 2.25rem !important;
-                    padding-bottom: 2.25rem !important;
-                    padding-left: 1rem !important;
-                    padding-right: 1rem !important;
-                }
-                h1.text-3xl, h1.text-4xl, h1.md\:text-5xl {
-                    font-size: 1.65rem !important;
-                    line-height: 1.25 !important;
-                }
-                h2.text-2xl, h2.text-3xl, h2.md\:text-4xl {
-                    font-size: 1.35rem !important;
-                    line-height: 1.3 !important;
-                }
-                .p-8 {
-                    padding: 1.25rem !important;
-                }
-                .gap-12 {
-                    gap: 1.5rem !important;
-                }
-            }
-        </style>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog e Dicas de Materiais Elétricos | Camaçari Cabos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style id="camacari-mobile-fix">
+        @media (max-width: 768px) {
+            header > div { padding: 0.65rem 1rem !important; gap: 0.5rem !important; }
+            header img { height: 2rem !important; }
+            header a span.text-xl { font-size: 0.95rem !important; }
+            header a span.text-\[11px\] { font-size: 0.6rem !important; }
+            header > div > a:last-child { padding: 0.45rem 0.75rem !important; font-size: 0.65rem !important; border-radius: 0.5rem !important; }
+            header nav { order: 3 !important; width: 100% !important; flex-wrap: nowrap !important; overflow-x: auto !important; white-space: nowrap !important; gap: 1.1rem !important; padding: 0.45rem 0.25rem 0.2rem 0.25rem !important; border-top: 1px solid rgba(255, 255, 255, 0.12) !important; -webkit-overflow-scrolling: touch !important; scrollbar-width: none !important; }
+            header nav::-webkit-scrollbar { display: none !important; }
+            header nav a { font-size: 0.78rem !important; flex-shrink: 0 !important; }
+            section.py-16, section.py-12 { padding: 2rem 1rem !important; }
+            h1.text-3xl, h1.md\:text-5xl { font-size: 1.65rem !important; line-height: 1.25 !important; }
+        }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
 
-  <!-- TOP BAR -->
-  <div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-4">
-        <span class="flex items-center gap-1.5">
-          <svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-          Rua Centro, 249, Camaçari - BA (CEP 42800-029)
-        </span>
-        <span class="hidden md:inline text-slate-600">|</span>
-        <span class="hidden md:inline text-slate-400">Atendendo todo o Polo Industrial e Região Metropolitana</span>
-      </div>
-      <div class="flex items-center gap-5">
-        <a href="tel:7121364416" class="hover:text-amber-400 transition-colors flex items-center gap-1">
-          <svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-          (71) 2136-4416
-        </a>
-        <a href="https://wa.me/5571996660988" target="_blank" class="hover:text-amber-400 transition-colors flex items-center gap-1 font-medium text-emerald-400">
-          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"></path></svg>
-          (71) 99666-0988
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- MAIN HEADER / NAVBAR -->
-  <header class="bg-blue-950 text-white sticky top-0 z-50 shadow-lg border-b border-blue-900">
+    <!-- Cabeçalho Unificado -->
+    <header class="bg-blue-950 text-white sticky top-0 z-50 shadow-lg border-b border-blue-900">
         <div class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
             <a href="index.html" class="flex items-center gap-3">
                 <img src="logo.png" alt="Camaçari Cabos" class="h-10 object-contain bg-white p-1 rounded">
@@ -124,439 +42,131 @@
                 <a href="blog.html" class="text-amber-400 font-bold border-b-2 border-amber-400 pb-1">Blog</a>
                 <a href="sobre.html" class="text-slate-200 hover:text-amber-400 transition font-medium">Sobre Nós</a>
             </nav>
-            <a href="https://wa.me/5571996660988" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition shadow-md flex items-center gap-2">
+            <a href="https://wa.me/5571996660988?text=Olá, vim pelo Blog da Camaçari Cabos e quero fazer uma cotação" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition shadow-md flex items-center gap-2">
                 <i class="fa-brands fa-whatsapp text-base"></i> Cotação Rápida
             </a>
         </div>
     </header>
 
-  <!-- BREADCRUMB & HERO BANNER -->
-  <section class="bg-gradient-to-b from-blue-950 via-blue-900 to-slate-900 text-white py-14 px-4 sm:px-6 lg:px-8 border-b border-blue-800 relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto relative z-10">
-      <div class="flex items-center gap-2 text-xs font-mono-tech text-amber-400 mb-3 uppercase tracking-wider">
-        <a href="index.html" class="hover:underline">Início</a>
-        <span>/</span>
-        <span class="text-slate-300">Engenharia &amp; Artigos Técnicos</span>
-      </div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
-        Caderno Técnico de Instalações Elétricas
-      </h1>
-      <p class="max-w-3xl text-slate-300 text-base sm:text-lg font-light leading-relaxed">
-        Diretrizes normativas (ABNT NBR 5410, NBR 14039), métodos de cálculo de ampacidade, dimensionamento de condutores e engenharia aplicada às indústrias de Camaçari e Região Metropolitana.
-      </p>
-
-      <!-- Category Filter Pills -->
-      <div class="flex flex-wrap gap-2 mt-8">
-        <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-amber-500 text-slate-950 shadow">Todos os Artigos</span>
-        <span class="px-3 py-1.5 rounded-full text-xs font-medium bg-blue-800/80 hover:bg-blue-800 text-slate-200 border border-blue-700 cursor-pointer">NBR 5410 &amp; BT</span>
-        <span class="px-3 py-1.5 rounded-full text-xs font-medium bg-blue-800/80 hover:bg-blue-800 text-slate-200 border border-blue-700 cursor-pointer">Média Tensão (NBR 14039)</span>
-        <span class="px-3 py-1.5 rounded-full text-xs font-medium bg-blue-800/80 hover:bg-blue-800 text-slate-200 border border-blue-700 cursor-pointer">Ampacidade &amp; Fatores de Correção</span>
-        <span class="px-3 py-1.5 rounded-full text-xs font-medium bg-blue-800/80 hover:bg-blue-800 text-slate-200 border border-blue-700 cursor-pointer">Padrão Neoenergia Coelba</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- MAIN CONTENT AREA -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-
-      <!-- ARTICLES COLUMN (8 cols) -->
-      <div class="lg:col-span-8 space-y-12">
-
-        <!-- FEATURED COMPLETE TECHNICAL ARTICLE -->
-        <article class="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden transition-all hover:shadow-lg">
-          <div class="p-6 sm:p-8 border-b border-slate-100">
-            <div class="flex flex-wrap items-center gap-3 text-xs mb-3">
-              <span class="bg-blue-100 text-blue-900 font-bold px-2.5 py-1 rounded tracking-wide uppercase">Artigo Técnico em Destaque</span>
-              <span class="text-slate-500">18 de Outubro, 2024</span>
-              <span class="text-slate-400">•</span>
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                Tempo de leitura: 8 min
-              </span>
+    <main class="flex-1">
+        <!-- Banner do Blog -->
+        <section class="bg-gradient-to-r from-blue-950 via-slate-900 to-blue-950 text-white py-16 px-6">
+            <div class="max-w-7xl mx-auto">
+                <span class="bg-amber-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded uppercase">Guias de Compra e Dicas Práticas</span>
+                <h1 class="text-3xl md:text-5xl font-black mt-3">Blog Camaçari Cabos</h1>
+                <p class="text-slate-300 max-w-3xl mt-4 text-sm md:text-base leading-relaxed">
+                    Conheça a fundo as aplicações, diferenças e vantagens dos materiais elétricos e de cabeamento estruturado que fornecemos para indústrias, comércios e residências em Camaçari e Região Metropolitana.
+                </p>
             </div>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug">
-              Dimensionamento Rigoroso de Condutores de Cobre em Baixa Tensão: Métodos dos 6 Critérios segundo a ABNT NBR 5410
-            </h2>
-            <p class="text-slate-600 mt-3 text-sm leading-relaxed">
-              Em plantas industriais como as do Polo de Camaçari, o subdimensionamento de cabos resulta em paradas imprevistas, aquecimento de bandejamentos e perdas por efeito Joule. Este guia aborda o dimensionamento correto passo a passo.
-            </p>
-          </div>
+        </section>
 
-          <div class="p-6 sm:p-8 space-y-6 text-slate-700 text-sm leading-relaxed">
-            
-            <h3 class="text-lg font-bold text-blue-950 flex items-center gap-2">
-              <span class="w-2 h-6 bg-amber-500 rounded-sm"></span>
-              1. Critério da Capacidade de Condução de Corrente (Ampacidade)
-            </h3>
-            <p>
-              A capacidade de condução de corrente de um condutor não depende apenas da sua seção nominal em mm². Conforme a norma ABNT NBR 5410 (item 6.2.5), a corrente corrigida admissível (Iz) do condutor deve ser maior ou igual à corrente de projeto (Ib), dividida pelos fatores de correção:
-            </p>
+        <!-- Grade de Artigos (O Agente insere novos artigos sempre no marcador abaixo) -->
+        <section class="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-8">
+            <!-- NOVOS_ARTIGOS_AQUI -->
 
-            <!-- Technical Calculation Box -->
-            <div class="bg-slate-900 text-slate-100 rounded-lg p-4 font-mono-tech text-xs overflow-x-auto border-l-4 border-amber-500 shadow-inner">
-              <div class="text-slate-400">// Relação Fundamental de Projeto</div>
-              <div class="text-amber-400 font-bold mt-1">Ib &lt;= In &lt;= Iz</div>
-              <div class="mt-2 text-slate-300">Onde:</div>
-              <div class="pl-4">Ib = Corrente de projeto do circuito (A)</div>
-              <div class="pl-4">In = Corrente nominal do dispositivo de proteção / disjuntor (A)</div>
-              <div class="pl-4">Iz = Capacidade de corrente corrigida do condutor instalado (A)</div>
-              <div class="mt-2 text-slate-300">Fórmula da Ampacidade Requerida:</div>
-              <div class="text-emerald-400 font-bold mt-1">I_tabela &gt;= Ib / (FCT x FCA x FCR)</div>
-              <div class="pl-4 text-slate-400 text-[11px] mt-1">* FCT: Fator de Correção por Temperatura ambiente (Ref. 30°C ar / 20°C solo)</div>
-              <div class="pl-4 text-slate-400 text-[11px]">* FCA: Fator de Correção por Agrupamento de circuitos em eletrocalha/leito</div>
-              <div class="pl-4 text-slate-400 text-[11px]">* FCR: Fator de Resistividade Térmica do solo (para cabos enterrados)</div>
-            </div>
+            <!-- Artigo 1: Industrial -->
+            <article class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition">
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <span class="text-[11px] font-extrabold uppercase bg-blue-100 text-blue-950 px-2.5 py-1 rounded">Industrial</span>
+                        <span class="text-[11px] text-slate-400 font-medium">Guia de Produtos</span>
+                    </div>
+                    <h2 class="text-lg font-black text-blue-950 mb-3 leading-snug">Cabos de Instrumentação Shield, Controle e HEPR 1kV: Qual a aplicação de cada um?</h2>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-3">Em plantas industriais e centros logísticos, cada circuito exige um condutor específico. Enquanto os cabos HEPR 1kV (90°C) e XLPE são ideais para alimentação de força e motores pesados, os cabos de instrumentação com blindagem (Shield) protegem sinais de automação contra interferências eletromagnéticas.</p>
+                    <p class="text-xs text-slate-600 leading-relaxed">Na Camaçari Cabos, fornecemos toda a linha de cabos de potência, controle, cabos PP e cobre nu para paradas de manutenção e obras no Polo Industrial.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
+                    <span class="text-[11px] font-bold text-slate-500">Pronta entrega em Camaçari</span>
+                    <a href="https://wa.me/5571996660988?text=Olá, quero cotar cabos industriais e de instrumentação" target="_blank" class="text-amber-600 hover:text-amber-500 font-extrabold text-xs flex items-center gap-1">
+                        Cotar Produtos <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </article>
 
-            <h3 class="text-lg font-bold text-blue-950 flex items-center gap-2 pt-2">
-              <span class="w-2 h-6 bg-amber-500 rounded-sm"></span>
-              2. Critério do Limite de Queda de Tensão Admissível
-            </h3>
-            <p>
-              Para assegurar o torque e rendimento de motores elétricos e a longevidade dos equipamentos eletrônicos sensíveis, a norma estipula limites máximos para a perda percentual no trecho:
-            </p>
+            <!-- Artigo 2: Comercial -->
+            <article class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition">
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <span class="text-[11px] font-extrabold uppercase bg-amber-100 text-amber-900 px-2.5 py-1 rounded">Comercial</span>
+                        <span class="text-[11px] text-slate-400 font-medium">Iluminação e TI</span>
+                    </div>
+                    <h2 class="text-lg font-black text-blue-950 mb-3 leading-snug">Modernização de Lojas, Clínicas e Restaurantes: Iluminação LED e Rede Cat6</h2>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-3">Um ponto comercial moderno precisa aliar estética, economia de energia e conectividade estável. O uso de perfis de alumínio com fitas de LED, painéis embutidos e spots valoriza vitrines e consultórios, reduzindo o consumo elétrico e a carga térmica do ar-condicionado.</p>
+                    <p class="text-xs text-slate-600 leading-relaxed">Além da parte elétrica e iluminação, fornecemos a linha completa de rede estruturada: cabos Cat5e e Cat6, patch panels, switches, patch cords e conectores RJ45.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
+                    <span class="text-[11px] font-bold text-slate-500">Atacado e Varejo</span>
+                    <a href="https://wa.me/5571996660988?text=Olá, quero cotar iluminação LED e materiais de rede para comércio" target="_blank" class="text-amber-600 hover:text-amber-500 font-extrabold text-xs flex items-center gap-1">
+                        Cotar Produtos <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </article>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div class="border border-slate-200 rounded p-3.5 bg-slate-50">
-                <span class="font-bold text-slate-900 block mb-1">Alimentação Direta da Concessionária</span>
-                <p class="text-xs text-slate-600">Queda total máxima tolerada:</p>
-                <p class="font-mono-tech text-blue-900 font-bold text-sm mt-1">Queda de Tensão Total &lt;= 5%</p>
-                <p class="text-[11px] text-slate-500 mt-1">(Sendo no máx. 2% em alimentadores e 3% nos circuitos terminais).</p>
-              </div>
-              <div class="border border-slate-200 rounded p-3.5 bg-slate-50">
-                <span class="font-bold text-slate-900 block mb-1">Alimentação via Subestação Própria</span>
-                <p class="text-xs text-slate-600">Queda total máxima tolerada:</p>
-                <p class="font-mono-tech text-amber-700 font-bold text-sm mt-1">Queda de Tensão Total &lt;= 7%</p>
-                <p class="text-[11px] text-slate-500 mt-1">(Casos industriais com transformador próprio a partir de 13,8 kV).</p>
-              </div>
-            </div>
+            <!-- Artigo 3: Residencial -->
+            <article class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition">
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <span class="text-[11px] font-extrabold uppercase bg-emerald-100 text-emerald-900 px-2.5 py-1 rounded">Residencial</span>
+                        <span class="text-[11px] text-slate-400 font-medium">Checklist de Obra</span>
+                    </div>
+                    <h2 class="text-lg font-black text-blue-950 mb-3 leading-snug">O que compõe o Kit Padrão Coelba e por que usar DR e DPS no quadro da sua casa?</h2>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-3">Para agilizar a ligação de energia em obras residenciais e condomínios em Camaçari e Litoral Norte, é fundamental utilizar caixas em policarbonato homologadas, cabos multiplexados, bengalas e aterramento completo com hastes cobreadas e conectores.</p>
+                    <p class="text-xs text-slate-600 leading-relaxed">Já no Quadro de Distribuição (QDC), a combinação do disjuntor DIN com o interruptor DR (proteção contra choques) e o DPS (proteção contra surtos e raios) protege eletrodomésticos e moradores.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
+                    <span class="text-[11px] font-bold text-slate-500">Padrão Homologado</span>
+                    <a href="https://wa.me/5571996660988?text=Olá, quero cotar Kit Padrão Coelba e materiais residenciais" target="_blank" class="text-amber-600 hover:text-amber-500 font-extrabold text-xs flex items-center gap-1">
+                        Cotar Produtos <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </article>
 
-            <!-- Plain Text Formula Block (No LaTeX) -->
-            <div class="bg-blue-950 text-white p-4 rounded-lg text-xs font-mono-tech">
-              <p class="text-amber-400 font-semibold mb-1">// Cálculo Prático de Seção por Queda de Tensão (Circuito Trifásico 380V)</p>
-              <p class="text-slate-300">S (mm²) = (raiz(3) * L * Ib * (R * cos(phi) + X * sen(phi))) / DeltaV_adm</p>
-              <p class="text-slate-400 mt-2 text-[11px]">Para cálculo simplificado com condutores de cobre (condutividade gamma = 56 m/(ohm*mm²)):</p>
-              <p class="text-emerald-300 font-bold mt-1">S (mm²) = (100 * raiz(3) * L * Ib * cos(phi)) / (56 * V_linha * DeltaV_percentual)</p>
-            </div>
+            <!-- Artigo 4: Industrial (Infraestrutura e Quadro Robô) -->
+            <article class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition">
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <span class="text-[11px] font-extrabold uppercase bg-blue-100 text-blue-950 px-2.5 py-1 rounded">Industrial</span>
+                        <span class="text-[11px] text-slate-400 font-medium">Canteiro e Manutenção</span>
+                    </div>
+                    <h2 class="text-lg font-black text-blue-950 mb-3 leading-snug">Quadro Robô, Plugs Blindados e Eletrocalhas: Segurança na distribuição de força</h2>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-3">Em paradas de manutenção e obras industriais, o Quadro Robô garante pontos de energia seguros para máquinas de solda e ferramentas pesadas, utilizando plugs e tomadas industriais (16A, 32A, 63A) com proteção IP44/IP67 e bloqueio diferencial.</p>
+                    <p class="text-xs text-slate-600 leading-relaxed">Para instalações permanentes em galpões, trabalhamos com linha completa de eletrocalhas, perfilados, eletrodutos galvanizados e conduletes de alumínio e PVC.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
+                    <span class="text-[11px] font-bold text-slate-500">Linha Pesada B2B</span>
+                    <a href="https://wa.me/5571996660988?text=Olá, quero cotar Quadro Robô, plugs industriais e infraestrutura" target="_blank" class="text-amber-600 hover:text-amber-500 font-extrabold text-xs flex items-center gap-1">
+                        Cotar Produtos <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
 
-            <h3 class="text-lg font-bold text-blue-950 flex items-center gap-2 pt-2">
-              <span class="w-2 h-6 bg-amber-500 rounded-sm"></span>
-              3. Tabela Comparativa de Isolações: PVC 70°C vs. HEPR / XLPE 90°C
-            </h3>
-            <p>
-              Em instalações petroquímicas, plásticas e metalúrgicas do polo baiano, a escolha do composto isolante define não apenas a capacidade térmica, mas também o diâmetro final dos eletrodutos e perfilados:
-            </p>
-
-            <div class="overflow-x-auto">
-              <table class="w-full text-left text-xs border border-slate-200 divide-y divide-slate-200">
-                <thead class="bg-slate-100 text-slate-800 font-bold uppercase tracking-wider">
-                  <tr>
-                    <th class="py-2.5 px-3">Parâmetro de Engenharia</th>
-                    <th class="py-2.5 px-3">PVC (Cloreto de Polivinila)</th>
-                    <th class="py-2.5 px-3">HEPR (Borracha Etilenopropileno)</th>
-                    <th class="py-2.5 px-3">XLPE (Polietileno Reticulado)</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-slate-200 font-mono-tech text-[12px]">
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-2.5 px-3 font-sans font-medium text-slate-900">Temp. Regime Contínuo</td>
-                    <td class="py-2.5 px-3 text-blue-950 font-semibold">70°C</td>
-                    <td class="py-2.5 px-3 text-emerald-700 font-bold">90°C</td>
-                    <td class="py-2.5 px-3 text-emerald-700 font-bold">90°C</td>
-                  </tr>
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-2.5 px-3 font-sans font-medium text-slate-900">Temp. em Sobrecarga (máx. 100h)</td>
-                    <td class="py-2.5 px-3">100°C</td>
-                    <td class="py-2.5 px-3 text-amber-700 font-semibold">130°C</td>
-                    <td class="py-2.5 px-3 text-amber-700 font-semibold">130°C</td>
-                  </tr>
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-2.5 px-3 font-sans font-medium text-slate-900">Temp. Limite em Curto-Circuito (&lt;= 5s)</td>
-                    <td class="py-2.5 px-3">160°C</td>
-                    <td class="py-2.5 px-3 text-rose-700 font-bold">250°C</td>
-                    <td class="py-2.5 px-3 text-rose-700 font-bold">250°C</td>
-                  </tr>
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-2.5 px-3 font-sans font-medium text-slate-900">Vantagem Operacional</td>
-                    <td class="py-2.5 px-3 font-sans text-slate-600">Menor custo unitário em circuitos leves</td>
-                    <td class="py-2.5 px-3 font-sans text-slate-800 font-semibold">Alta flexibilidade e maior ampacidade</td>
-                    <td class="py-2.5 px-3 font-sans text-slate-800 font-semibold">Excelente rigidez dielétrica para alimentadores</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Conclusion Note -->
-            <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded text-xs text-amber-900">
-              <strong class="font-bold">Recomendação da Engenharia Camaçari Cabos:</strong> Ao dimensionar cabos agrupados em eletrocalhas perfuradas com mais de 6 circuitos trifásicos, o fator FCA (fator de correção de agrupamento) pode reduzir a ampacidade para 0,55 do valor de catálogo. Nesses casos, cabos HEPR 0,6/1kV de 90°C evitam o aumento desnecessário da bitola metálica.
-            </div>
-
-          </div>
-
-          <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-            <span class="text-slate-500 font-mono-tech">Normas Citadas: ABNT NBR 5410:2004 / NBR NM 280 / NBR 7286</span>
-            <a href="https://wa.me/5571996660988?text=Gostaria%20de%20ajuda%20para%20dimensionar%20cabos%20HEPR/XLPE%20para%20minha%20obra." class="text-blue-900 font-bold hover:text-amber-600 flex items-center gap-1">
-              Solicitar Apoio no Dimensionamento →
-            </a>
-          </div>
-        </article>
-
-        <!-- SECOND ARTICLE: AMPACITY & GROUPING FACTORS -->
-        <article class="bg-white rounded-xl shadow-md border border-slate-200 p-6 sm:p-8 transition-all hover:shadow-lg">
-          <div class="flex flex-wrap items-center gap-3 text-xs mb-3">
-            <span class="bg-amber-100 text-amber-900 font-bold px-2.5 py-1 rounded tracking-wide uppercase">Instalações Industriais</span>
-            <span class="text-slate-500">12 de Outubro, 2024</span>
-            <span class="text-slate-400">•</span>
-            <span class="text-slate-500">6 min de leitura</span>
-          </div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900 hover:text-blue-900 transition-colors">
-            Fator de Agrupamento (FCA) em Eletrocalhas e Perfilados: O Erro Mais Frequente em Galpões Industriais
-          </h2>
-          <p class="text-slate-600 mt-2 text-sm leading-relaxed">
-            Durante reformas ou expansões em linhas produtivas de Dias d'Ávila e Camaçari, novos circuitos de força são frequentemente lançados nas mesmas eletrocalhas existentes sem reavaliação de FCA. Saiba como o confinamento térmico compromete os isolamentos.
-          </p>
-
-          <div class="my-4 bg-slate-50 p-4 rounded-lg border border-slate-200 text-xs text-slate-700 space-y-2">
-            <p class="font-semibold text-slate-900">Exemplo Prático de Perda de Ampacidade:</p>
-            <p>Um cabo de cobre 16 mm² HEPR (Método de Instalação F - leito perfurado) tem ampacidade nominal de <strong class="text-blue-950 font-mono-tech">99 A</strong> a 30°C para circuito trifásico.</p>
-            <p>Se instalado junto a outros 5 circuitos no mesmo duto (total 6 circuitos agrupados, FCA = 0,57):</p>
-            <div class="font-mono-tech bg-white p-2.5 rounded border border-slate-300 text-slate-800">
-              Iz_real = Iz_tabela * FCA = 99 A * 0,57 = <span class="text-rose-700 font-bold">56,43 A</span>
-            </div>
-            <p class="text-slate-500 italic">Resultado: O condutor suporta 43% menos corrente útil antes de atingir a temperatura limite de segurança.</p>
-          </div>
-
-          <div class="flex items-center justify-between text-xs pt-2">
-            <span class="font-medium text-slate-500">Aplicável a: Leitos, Perfilados e Bandejas Metálicas</span>
-            <a href="produtos.html" class="text-amber-600 hover:text-amber-700 font-bold flex items-center gap-1">
-              Ver Catálogo de Eletrocalhas e Condutores →
-            </a>
-          </div>
-        </article>
-
-        <!-- THIRD ARTICLE: NBR 14039 (MEDIUM VOLTAGE) -->
-        <article class="bg-white rounded-xl shadow-md border border-slate-200 p-6 sm:p-8 transition-all hover:shadow-lg">
-          <div class="flex flex-wrap items-center gap-3 text-xs mb-3">
-            <span class="bg-slate-200 text-slate-800 font-bold px-2.5 py-1 rounded tracking-wide uppercase">Média Tensão (1.0 kV a 36.2 kV)</span>
-            <span class="text-slate-500">02 de Outubro, 2024</span>
-            <span class="text-slate-400">•</span>
-            <span class="text-slate-500">10 min de leitura</span>
-          </div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900 hover:text-blue-900 transition-colors">
-            NBR 14039 em Foco: Blindagem Metálica e Ensaios de Rotina em Cabos de Média Tensão 8,7/15 kV
-          </h2>
-          <p class="text-slate-600 mt-2 text-sm leading-relaxed">
-            Compreenda o papel da camada semicondutora externa, a função da blindagem em fita de cobre na drenagem de correntes capacitivas e os requisitos de terminação e emenda para redes de distribuição em parques industriais da Bahia.
-          </p>
-
-          <ul class="mt-4 space-y-2 text-xs text-slate-700">
-            <li class="flex items-start gap-2">
-              <span class="text-amber-500 font-bold">✓</span>
-              <span><strong>Uniformização do Campo Elétrico:</strong> A importância do composto semicondutor para evitar descargas parciais e efeito Corona no dielétrico XLPE.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-amber-500 font-bold">✓</span>
-              <span><strong>Aterramento Unilateral vs. Bilateral:</strong> Decisão entre tensão induzida na blindagem e correntes de circulação parasitas.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-amber-500 font-bold">✓</span>
-              <span><strong>Homologação Concessionária:</strong> Diretrizes para conexão nos padrões Neoenergia Coelba em média tensão.</span>
-            </li>
-          </ul>
-
-          <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-            <span class="text-slate-400 font-mono-tech">Norma Base: ABNT NBR 14039 &amp; NBR 7286</span>
-            <a href="https://wa.me/5571996660988" class="text-blue-900 font-bold hover:underline">Solicitar Cotação de Cabos MT →</a>
-          </div>
-        </article>
-
-        <!-- FOURTH ARTICLE: PADRÃO COELBA -->
-        <article class="bg-white rounded-xl shadow-md border border-slate-200 p-6 sm:p-8 transition-all hover:shadow-lg">
-          <div class="flex flex-wrap items-center gap-3 text-xs mb-3">
-            <span class="bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded tracking-wide uppercase">Padrão Coelba</span>
-            <span class="text-slate-500">24 de Setembro, 2024</span>
-            <span class="text-slate-400">•</span>
-            <span class="text-slate-500">5 min de leitura</span>
-          </div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900 hover:text-blue-900 transition-colors">
-            Dimensionamento de Caixas e Disjuntores de Entrada Coelba para Edificações Comerciais
-          </h2>
-          <p class="text-slate-600 mt-2 text-sm leading-relaxed">
-            Evite a reprovação na vistoria da Neoenergia Coelba. Veja as especificações exatas de caixas de medição (policarbonato homologadas), tipo de condutor neutro, malha de aterramento com haste cobreada 5/8" x 2,40m e curvas de disjuntores para categorias monofásica, bifásica e trifásica comercial.
-          </p>
-          <div class="mt-4 flex items-center justify-between text-xs pt-2">
-            <span class="text-slate-500">DIS-NOR-CTMT-0020 / Padrão Coelba</span>
-            <a href="produtos.html" class="text-amber-600 hover:text-amber-700 font-bold">Kits Padrão Coelba Disponíveis →</a>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- SIDEBAR (4 cols) -->
-      <aside class="lg:col-span-4 space-y-8">
-
-        <!-- Engineering Consultation Widget -->
-        <div class="bg-gradient-to-br from-blue-950 to-blue-900 rounded-xl p-6 text-white shadow-lg border border-blue-800">
-          <div class="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center text-slate-950 font-bold mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">Dúvida no Dimensionamento?</h3>
-          <p class="text-slate-300 text-xs leading-relaxed mb-4">
-            Envie sua memória de cálculo ou lista de cargas da sua indústria. Nossa equipe técnica valida as seções, quedas de tensão e compatibilidade de disjuntores em conformidade com as normas ABNT.
-          </p>
-          <div class="space-y-2">
-            <a href="https://wa.me/5571996660988?text=Ola,%20gostaria%20de%20ajuda%20para%20validar%20o%20dimensionamento%20de%20cabos%20do%20meu%20projeto." target="_blank" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2.5 px-4 rounded text-xs text-center block uppercase tracking-wider transition-colors shadow">
-              Falar com Engenharia / Vendas
-            </a>
-            <a href="tel:7121364416" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-medium py-2 px-4 rounded text-xs text-center block border border-blue-700 transition-colors">
-              Ligue: (71) 2136-4416
-            </a>
-          </div>
-        </div>
-
-        <!-- Quick Reference Table Widget -->
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
-          <h3 class="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
-            <span>Tabela Rápida: Ampacidade</span>
-            <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-mono-tech">NBR 5410</span>
-          </h3>
-          <p class="text-[11px] text-slate-500 mb-3">Cabos de Cobre em Eletroduto Embutido (Método B1 - 3 Condutores Carregados 70°C PVC):</p>
-          
-          <div class="space-y-1.5 font-mono-tech text-xs">
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-              <span class="text-slate-600 font-sans">1,5 mm²</span>
-              <span class="font-bold text-slate-900">15,5 A</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-              <span class="text-slate-600 font-sans">2,5 mm²</span>
-              <span class="font-bold text-slate-900">21,0 A</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-              <span class="text-slate-600 font-sans">4,0 mm²</span>
-              <span class="font-bold text-slate-900">28,0 A</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-              <span class="text-slate-600 font-sans">6,0 mm²</span>
-              <span class="font-bold text-slate-900">36,0 A</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-              <span class="text-slate-600 font-sans">10,0 mm²</span>
-              <span class="font-bold text-slate-900">50,0 A</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-              <span class="text-slate-600 font-sans">16,0 mm²</span>
-              <span class="font-bold text-slate-900">68,0 A</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-              <span class="text-slate-600 font-sans">25,0 mm²</span>
-              <span class="font-bold text-slate-900">89,0 A</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-              <span class="text-slate-600 font-sans">35,0 mm²</span>
-              <span class="font-bold text-slate-900">110,0 A</span>
-            </div>
-            <div class="flex justify-between items-center py-1">
-              <span class="text-slate-600 font-sans">50,0 mm²</span>
-              <span class="font-bold text-slate-900">134,0 A</span>
-            </div>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 text-[10px] text-slate-400">
-            * Valores referenciais para ar a 30°C sem agrupamento adicional.
-          </div>
-        </div>
-
-        <!-- Technical Topics Covered -->
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
-          <h3 class="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-100 pb-3 mb-4">
-            Normas &amp; Diretrizes em Pauta
-          </h3>
-          <div class="flex flex-wrap gap-2 text-xs">
-            <span class="bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded text-slate-700 font-mono-tech">ABNT NBR 5410</span>
-            <span class="bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded text-slate-700 font-mono-tech">ABNT NBR 14039</span>
-            <span class="bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded text-slate-700 font-mono-tech">NBR NM 280 (Condutores)</span>
-            <span class="bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded text-slate-700 font-mono-tech">NR-10 Segurança</span>
-            <span class="bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded text-slate-700 font-mono-tech">DIS-NOR Coelba</span>
-            <span class="bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded text-slate-700 font-mono-tech">NBR 7286 (EPR)</span>
-            <span class="bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded text-slate-700 font-mono-tech">NBR 13248 (LSHF/Atox)</span>
-          </div>
-        </div>
-
-        <!-- Locations Served Card -->
-        <div class="bg-slate-100 rounded-xl p-6 border border-slate-200 text-xs text-slate-600">
-          <h4 class="font-bold text-slate-900 uppercase tracking-wider mb-2">Entregas Técnicas Rápidas</h4>
-          <p class="mb-3">Fornecemos com logística expressa para frentes industriais e comerciais em:</p>
-          <ul class="grid grid-cols-2 gap-1.5 font-medium text-slate-700">
-            <li class="flex items-center gap-1"><span class="text-amber-500">•</span> Camaçari (Sede/Polo)</li>
-            <li class="flex items-center gap-1"><span class="text-amber-500">•</span> Dias d'Ávila</li>
-            <li class="flex items-center gap-1"><span class="text-amber-500">•</span> Simões Filho</li>
-            <li class="flex items-center gap-1"><span class="text-amber-500">•</span> Lauro de Freitas</li>
-            <li class="flex items-center gap-1"><span class="text-amber-500">•</span> Salvador</li>
-            <li class="flex items-center gap-1"><span class="text-amber-500">•</span> Mata de São João</li>
-          </ul>
-        </div>
-
-      </aside>
-
-    </div>
-  </main>
-
-  <!-- NEWSLETTER / TECH UPDATE CTA -->
-  <section class="bg-blue-950 text-white py-12 px-4 sm:px-6 lg:px-8 border-t border-blue-900 mt-16">
-    <div class="max-w-5xl mx-auto text-center space-y-4">
-      <span class="text-xs font-mono-tech text-amber-400 uppercase tracking-widest">Atualização Técnica Contínua</span>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
-        Precisa de cabos certificados conforme as normas ABNT para seu projeto?
-      </h2>
-      <p class="text-slate-300 text-sm max-w-2xl mx-auto">
-        Trabalhamos exclusivamente com fabricantes certificados pelo INMETRO, acompanhados de laudos de condutividade, ensaios de tração e garantia de pureza do cobre eletrolítico.
-      </p>
-      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="produtos.html" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3 rounded text-xs uppercase tracking-wider transition-all shadow-md">
-          Consultar Produtos Homologados
-        </a>
-        <a href="https://wa.me/5571996660988?text=Ola,%20gostaria%20de%20receber%20um%20orcamento%20de%20cabos%20eletricos." class="w-full sm:w-auto bg-blue-900 hover:bg-blue-800 text-white border border-blue-700 font-bold px-6 py-3 rounded text-xs uppercase tracking-wider transition-all">
-          Solicitar Cotação Direta no WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CORPORATE FOOTER -->
-  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+    <!-- Rodapé Unificado -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
                 <img src="logo.png" alt="Camaçari Cabos" class="h-10 object-contain bg-white p-1 rounded mb-3">
                 <p class="text-sm text-slate-300 font-semibold mb-2">Camaçari Cabos Materiais Elétricos</p>
-                <p class="text-xs leading-relaxed">Atacado e varejo de cabos elétricos, automação, iluminação e Padrão Coelba desde 2014.</p>
+                <p class="text-xs leading-relaxed">Fornecimento de materiais elétricos industriais, comerciais e residenciais desde 2014.</p>
             </div>
             <div>
                 <h4 class="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">Links Rápidos</h4>
                 <ul class="space-y-2 text-xs">
                     <li><a href="index.html" class="hover:text-white">Início</a></li>
+                    <li><a href="produtos.html" class="hover:text-white">Catálogo de Produtos</a></li>
                     <li><a href="industrial.html" class="hover:text-white">Linha Industrial</a></li>
                     <li><a href="residencial.html" class="hover:text-white">Linha Residencial</a></li>
-                    <li><a href="projetos.html" class="hover:text-white">Projetos e Engenharia</a></li>
+                    <li><a href="projetos.html" class="hover:text-white">Projetos</a></li>
+                    <li><a href="sobre.html" class="hover:text-white">Sobre Nós</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">Contato e Loja Física</h4>
+                <h4 class="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">Contato</h4>
                 <p class="text-xs mb-2"><i class="fa-solid fa-location-dot text-amber-400 mr-2"></i>Rua Centro, 249, Camaçari - BA (CEP 42800-029)</p>
-                <p class="text-xs mb-2"><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i>(71) 99666-0988 / (71) 2136-4416</p>
+                <p class="text-xs"><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i>(71) 99666-0988 / (71) 2136-4416</p>
             </div>
         </div>
     </footer>
-
-  <!-- Simple script for mobile nav toggle -->
-  <script>
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (mobileBtn && mobileMenu) {
-      mobileBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
-  </script>
-
-</body></html>
+</body>
+</html>
