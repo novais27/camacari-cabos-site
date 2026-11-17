@@ -31,7 +31,6 @@
                 <button onclick="fecharConfig()" class="text-gray-400 hover:text-gray-700"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
 
-            <!-- Configuração GitHub API -->
             <div class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
                 <h4 class="text-xs font-extrabold uppercase text-blue-900"><i class="fa-brands fa-github mr-1"></i> Conexão Direta GitHub (Deploy 15s)</h4>
                 <div>
@@ -45,7 +44,6 @@
                 <button onclick="salvarConfigGitHub()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition">Salvar Conexão GitHub</button>
             </div>
 
-            <!-- Alterar Senha do Painel -->
             <form onsubmit="salvarNovaSenha(event)" class="space-y-3 pt-2 border-t">
                 <h4 class="text-xs font-extrabold uppercase text-gray-700"><i class="fa-solid fa-key mr-1"></i> Alterar Senha do Painel</h4>
                 <div class="grid grid-cols-2 gap-2">
@@ -88,7 +86,7 @@
 
     <!-- Barra Superior do Construtor Visual -->
     <header id="studio-header" class="bg-slate-950 border-b border-slate-800 px-4 py-2.5 flex flex-wrap justify-between items-center gap-3 z-40 hidden">
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 flex-wrap">
             <span class="bg-amber-500 text-slate-950 font-black text-xs px-2.5 py-1 rounded uppercase tracking-wider">Studio</span>
             
             <!-- Seletor de Página Real do Site -->
@@ -105,18 +103,26 @@
                 </select>
             </div>
 
-            <button onclick="clonarLayoutSobreParaAtual()" class="bg-indigo-600/30 hover:bg-indigo-600 border border-indigo-500/40 text-indigo-200 hover:text-white text-[11px] font-semibold px-3 py-1.5 rounded-lg transition" title="Aplica o cabeçalho e rodapé da página Sobre nesta página ajustando a aba ativa">
-                <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Padronizar Topo/Rodapé pelo "Sobre"
+            <button onclick="clonarLayoutSobreParaAtual()" class="bg-indigo-600/30 hover:bg-indigo-600 border border-indigo-500/40 text-indigo-200 hover:text-white text-[11px] font-semibold px-2.5 py-1.5 rounded-lg transition" title="Aplica o cabeçalho e rodapé da página Sobre nesta página ajustando a aba ativa">
+                <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Padronizar pelo "Sobre"
+            </button>
+
+            <button onclick="otimizarMobileTodasPaginas()" id="btn-mobile-opt" class="bg-amber-500/20 hover:bg-amber-500 border border-amber-400/50 text-amber-300 hover:text-slate-950 text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition" title="Ajusta automaticamente menu, fontes e espaçamentos para celular em todas as 7 páginas">
+                <i class="fa-solid fa-mobile-screen-button mr-1"></i> Otimizar Mobile (Todas as Páginas)
+            </button>
+
+            <button onclick="alternarPreviewMobile()" id="btn-preview-mobile" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] font-semibold px-2.5 py-1.5 rounded-lg transition" title="Simular tela de celular aqui no Studio">
+                <i class="fa-solid fa-eye mr-1"></i> Ver como Celular
             </button>
         </div>
 
         <!-- Ferramentas do Elemento Selecionado -->
         <div class="flex items-center gap-1.5 bg-slate-900 px-3 py-1 rounded-lg border border-slate-800">
-            <span class="text-[11px] text-slate-400 mr-1">Item selecionado:</span>
+            <span class="text-[11px] text-slate-400 mr-1">Item:</span>
             <button onclick="moverElemento(-1)" class="hover:bg-slate-800 text-slate-200 px-2 py-1 rounded text-xs" title="Mover para Cima / Esquerda"><i class="fa-solid fa-arrow-up"></i></button>
             <button onclick="moverElemento(1)" class="hover:bg-slate-800 text-slate-200 px-2 py-1 rounded text-xs" title="Mover para Baixo / Direita"><i class="fa-solid fa-arrow-down"></i></button>
-            <button onclick="duplicarElemento()" class="hover:bg-slate-800 text-emerald-400 px-2 py-1 rounded text-xs" title="Duplicar Bloco/Card"><i class="fa-regular fa-copy"></i> Duplicar</button>
-            <button onclick="inserirImagemLivre()" class="hover:bg-slate-800 text-amber-400 px-2 py-1 rounded text-xs" title="Inserir Nova Imagem"><i class="fa-regular fa-image"></i> +Imagem</button>
+            <button onclick="duplicarElemento()" class="hover:bg-slate-800 text-emerald-400 px-2 py-1 rounded text-xs" title="Duplicar Bloco/Card"><i class="fa-regular fa-copy"></i></button>
+            <button onclick="inserirImagemLivre()" class="hover:bg-slate-800 text-amber-400 px-2 py-1 rounded text-xs" title="Inserir Nova Imagem"><i class="fa-regular fa-image"></i></button>
             <button onclick="excluirElemento()" class="hover:bg-slate-800 text-red-400 px-2 py-1 rounded text-xs" title="Apagar Item"><i class="fa-regular fa-trash-can"></i></button>
         </div>
 
@@ -124,7 +130,7 @@
         <div class="flex items-center gap-2">
             <span id="status-msg" class="text-[11px] text-amber-400 font-medium"></span>
             <button onclick="abrirConfig()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold px-3 py-2 rounded-lg transition" title="Configurar Token GitHub e Senha">
-                <i class="fa-solid fa-gear"></i> Config / Senha
+                <i class="fa-solid fa-gear"></i>
             </button>
             <button onclick="publicarNoGitHub()" id="btn-publicar" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2 rounded-lg transition shadow-lg flex items-center gap-1.5">
                 <i class="fa-solid fa-cloud-arrow-up"></i> Publicar Agora (15s)
@@ -134,8 +140,8 @@
     </header>
 
     <!-- Área Central: Iframe com a Página Real Editável -->
-    <main id="studio-main" class="flex-1 bg-slate-800 p-3 overflow-hidden hidden flex flex-col">
-        <div class="bg-white w-full h-full rounded-xl shadow-2xl overflow-hidden border border-slate-700 relative">
+    <main id="studio-main" class="flex-1 bg-slate-800 p-3 overflow-hidden hidden flex flex-col items-center justify-center">
+        <div id="canvas-wrapper" class="bg-white w-full h-full rounded-xl shadow-2xl overflow-hidden border border-slate-700 relative transition-all duration-300">
             <iframe id="site-canvas" class="w-full h-full border-0"></iframe>
         </div>
     </main>
@@ -143,6 +149,75 @@
     <script>
         let elementoSelecionado = null;
         let paginaAtual = "index.html";
+        let modoPreviewMobile = false;
+
+        // Bloco CSS Responsivo Inteligente que corrige cabeçalho, menu, fontes e espaçamentos no celular
+        const CSS_OTIMIZACAO_MOBILE = `
+        <style id="camacari-mobile-fix">
+            @media (max-width: 768px) {
+                /* Cabeçalho compacto no celular */
+                header > div {
+                    padding: 0.65rem 1rem !important;
+                    gap: 0.5rem !important;
+                }
+                header img {
+                    height: 2rem !important;
+                }
+                header a span.text-xl {
+                    font-size: 0.95rem !important;
+                }
+                header a span.text-\\[11px\\] {
+                    font-size: 0.6rem !important;
+                }
+                /* Botão de WhatsApp compacto no topo */
+                header > div > a:last-child {
+                    padding: 0.45rem 0.75rem !important;
+                    font-size: 0.65rem !important;
+                    border-radius: 0.5rem !important;
+                }
+                /* Transforma as 7 abas em barra horizontal deslizante (linha única sem quebrar) */
+                header nav {
+                    order: 3 !important;
+                    width: 100% !important;
+                    flex-wrap: nowrap !important;
+                    overflow-x: auto !important;
+                    white-space: nowrap !important;
+                    gap: 1.1rem !important;
+                    padding: 0.45rem 0.25rem 0.2rem 0.25rem !important;
+                    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+                    -webkit-overflow-scrolling: touch !important;
+                    scrollbar-width: none !important;
+                }
+                header nav::-webkit-scrollbar {
+                    display: none !important;
+                }
+                header nav a {
+                    font-size: 0.78rem !important;
+                    flex-shrink: 0 !important;
+                }
+                /* Ajuste proporcional de banners, títulos e espaçamentos internos */
+                section.py-20, section.py-16, section.py-14 {
+                    padding-top: 2.25rem !important;
+                    padding-bottom: 2.25rem !important;
+                    padding-left: 1rem !important;
+                    padding-right: 1rem !important;
+                }
+                h1.text-3xl, h1.text-4xl, h1.md\\:text-5xl {
+                    font-size: 1.65rem !important;
+                    line-height: 1.25 !important;
+                }
+                h2.text-2xl, h2.text-3xl, h2.md\\:text-4xl {
+                    font-size: 1.35rem !important;
+                    line-height: 1.3 !important;
+                }
+                .p-8 {
+                    padding: 1.25rem !important;
+                }
+                .gap-12 {
+                    gap: 1.5rem !important;
+                }
+            }
+        </style>`;
 
         function obterSenhaAtual() {
             return localStorage.getItem("admin_senha_camacari") || "camacari2026";
@@ -164,6 +239,21 @@
 
         function fazerLogout() {
             location.reload();
+        }
+
+        function alternarPreviewMobile() {
+            modoPreviewMobile = !modoPreviewMobile;
+            const wrapper = document.getElementById("canvas-wrapper");
+            const btn = document.getElementById("btn-preview-mobile");
+            if (modoPreviewMobile) {
+                wrapper.style.maxWidth = "390px";
+                btn.innerHTML = '<i class="fa-solid fa-desktop mr-1"></i> Ver como PC';
+                btn.className = "bg-amber-500 text-slate-950 text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition";
+            } else {
+                wrapper.style.maxWidth = "100%";
+                btn.innerHTML = '<i class="fa-solid fa-eye mr-1"></i> Ver como Celular';
+                btn.className = "bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] font-semibold px-2.5 py-1.5 rounded-lg transition";
+            }
         }
 
         function abrirConfig() {
@@ -206,7 +296,6 @@
             }
         }
 
-        // Carrega qualquer página real do site dentro do editor visual
         async function carregarPaginaNoCanvas(arquivo) {
             paginaAtual = arquivo;
             const status = document.getElementById("status-msg");
@@ -216,7 +305,6 @@
                 if (!resp.ok) throw new Error("Página não encontrada");
                 let html = await resp.text();
 
-                // Garante que caminhos relativos de imagens (como logo.png) funcionem dentro de /admin/
                 if (!html.includes("<base")) {
                     html = html.replace("<head>", '<head><base href="../">');
                 }
@@ -232,7 +320,7 @@
                 status.textContent = "Editando: " + arquivo;
             } catch (err) {
                 status.textContent = "Erro ao abrir " + arquivo;
-                alert("Não foi possível carregar " + arquivo + ". Verifique se o arquivo existe na raiz do site.");
+                alert("Não foi possível carregar " + arquivo + ".");
             }
         }
 
@@ -282,21 +370,18 @@
 
         function habilitarDragAndDropImagens(doc) {
             let imgArrastada = null;
-
             doc.addEventListener("dragstart", (e) => {
                 if (e.target.tagName === "IMG") {
                     imgArrastada = e.target;
                     e.dataTransfer.effectAllowed = "move";
                 }
             });
-
             doc.addEventListener("dragover", (e) => {
                 if (imgArrastada) {
                     e.preventDefault();
                     e.dataTransfer.dropEffect = "move";
                 }
             });
-
             doc.addEventListener("drop", (e) => {
                 if (imgArrastada && e.target !== imgArrastada) {
                     e.preventDefault();
@@ -307,7 +392,6 @@
             });
         }
 
-        // Ferramentas de Manipulação de Blocos
         function moverElemento(direcao) {
             if (!elementoSelecionado || !elementoSelecionado.parentNode) return alert("Clique primeiro em um texto, imagem ou card na página.");
             const pai = elementoSelecionado.parentNode;
@@ -407,7 +491,6 @@
                 const headerAtual = docAtual.querySelector("header") || docAtual.querySelector("nav");
 
                 if (headerSobre && headerAtual) {
-                    // Atualiza as classes dos links do menu para destacar apenas a página atual
                     const linksMenu = headerSobre.querySelectorAll("nav a");
                     linksMenu.forEach(link => {
                         const href = (link.getAttribute("href") || "").trim();
@@ -427,14 +510,60 @@
                     footerAtual.outerHTML = footerSobre.outerHTML;
                 }
 
+                // Garante também a otimização mobile na página atual
+                if (!docAtual.getElementById("camacari-mobile-fix")) {
+                    docAtual.head.insertAdjacentHTML("beforeend", CSS_OTIMIZACAO_MOBILE);
+                }
+
                 docAtual.body.className = docSobre.body.className;
-                alert(`✅ Topo e rodapé padronizados! A aba "${paginaAtual}" agora está destacada corretamente no menu. Clique em 'Publicar Agora (15s)' para salvar.`);
+                alert(`✅ Topo e rodapé padronizados + Mobile ajustado! Clique em 'Publicar Agora (15s)' para salvar.`);
             } catch (e) {
                 alert("Erro ao padronizar com sobre.html: " + e.message);
             }
         }
 
-        // Limpa marcações temporárias do editor e envia o HTML final para o GitHub em 1 segundo
+        // Aplica a otimização Mobile automaticamente em TODAS as 7 páginas direto no GitHub
+        async function otimizarMobileTodasPaginas() {
+            const token = localStorage.getItem("gh_token_camacari");
+            if (!token) {
+                abrirConfig();
+                return alert("⚠️ Configure primeiro o seu Token do GitHub em Configurações!");
+            }
+
+            if (!confirm("Isso vai otimizar a visualização de celular (menu deslizante compacto, fontes e espaçamentos) em TODAS as 7 páginas do site automaticamente. Deseja iniciar?")) return;
+
+            const paginas = ["index.html", "produtos.html", "industrial.html", "residencial.html", "projetos.html", "blog.html", "sobre.html"];
+            const btn = document.getElementById("btn-mobile-opt");
+            const status = document.getElementById("status-msg");
+            btn.disabled = true;
+
+            try {
+                for (const pag of paginas) {
+                    status.textContent = `Otimizando mobile: ${pag}...`;
+                    btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-1"></i> ${pag}...`;
+
+                    const resp = await fetch("../" + pag + "?t=" + Date.now());
+                    if (!resp.ok) continue;
+                    let html = await resp.text();
+
+                    // Remove versão anterior se existir e injeta a nova antes de </head>
+                    html = html.replace(/<style id="camacari-mobile-fix">[\s\S]*?<\/style>/g, "");
+                    html = html.replace("</head>", `${CSS_OTIMIZACAO_MOBILE}\n</head>`);
+
+                    await salvarTextoGitHub(pag, html, `feat: Otimiza layout mobile em ${pag}`);
+                }
+
+                await carregarPaginaNoCanvas(paginaAtual);
+                status.textContent = "✅ Todas as 7 páginas otimizadas para celular!";
+                alert("✅ Sucesso! Todas as 7 páginas do site foram otimizadas para celular. Aguarde ~15 segundos e atualize o site no seu smartphone (ou clique em 'Ver como Celular' na barra superior).");
+            } catch (err) {
+                alert("❌ Erro durante a otimização: " + err.message);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fa-solid fa-mobile-screen-button mr-1"></i> Otimizar Mobile (Todas as Páginas)';
+            }
+        }
+
         async function publicarNoGitHub() {
             const token = localStorage.getItem("gh_token_camacari");
             if (!token) {
@@ -451,7 +580,6 @@
                 const doc = document.getElementById("site-canvas").contentWindow.document;
                 const cloneDoc = doc.documentElement.cloneNode(true);
 
-                // Remove artefatos de edição antes de salvar o arquivo real
                 const styleEditor = cloneDoc.querySelector("#studio-editor-style");
                 if (styleEditor) styleEditor.remove();
                 const baseTag = cloneDoc.querySelector("base");
