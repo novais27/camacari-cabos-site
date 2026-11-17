@@ -1,84 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head>
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog e Dicas de Materiais Elétricos | Camaçari Cabos</title>
+    <title>Blog e Artigos sobre Materiais Elétricos | Camaçari Cabos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-
-        <style id="camacari-mobile-fix">
-            @media (max-width: 768px) {
-                #camacari-top-bar {
-                    padding: 0.35rem 0.75rem !important;
-                    font-size: 0.65rem !important;
-                }
-                #camacari-top-bar > div {
-                    justify-content: center !important;
-                    gap: 0.35rem !important;
-                }
-                header > div:last-child {
-                    padding: 0.65rem 1rem !important;
-                    gap: 0.5rem !important;
-                }
-                header img {
-                    height: 2rem !important;
-                }
-                header a span.text-xl {
-                    font-size: 0.95rem !important;
-                }
-                header a span.text-\[11px\] {
-                    font-size: 0.6rem !important;
-                }
-                header > div:last-child > a:last-child {
-                    padding: 0.45rem 0.75rem !important;
-                    font-size: 0.65rem !important;
-                    border-radius: 0.5rem !important;
-                }
-                header nav {
-                    order: 3 !important;
-                    width: 100% !important;
-                    flex-wrap: nowrap !important;
-                    overflow-x: auto !important;
-                    white-space: nowrap !important;
-                    gap: 1.1rem !important;
-                    padding: 0.45rem 0.25rem 0.2rem 0.25rem !important;
-                    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
-                    -webkit-overflow-scrolling: touch !important;
-                    scrollbar-width: none !important;
-                }
-                header nav::-webkit-scrollbar {
-                    display: none !important;
-                }
-                header nav a {
-                    font-size: 0.78rem !important;
-                    flex-shrink: 0 !important;
-                }
-                section.py-20, section.py-16, section.py-14 {
-                    padding: 2.25rem 1rem !important;
-                }
-                h1.text-3xl, h1.text-4xl, h1.md\:text-5xl {
-                    font-size: 1.65rem !important;
-                    line-height: 1.25 !important;
-                }
-                h2.text-2xl, h2.text-3xl, h2.md\:text-4xl {
-                    font-size: 1.35rem !important;
-                    line-height: 1.3 !important;
-                }
-                .p-8 {
-                    padding: 1.25rem !important;
-                }
-                .gap-12 {
-                    gap: 1.5rem !important;
-                }
-            }
-        </style></head>
+    <style id="camacari-mobile-fix">
+        @media (max-width: 768px) {
+            #camacari-top-bar { padding: 0.35rem 0.75rem !important; font-size: 0.65rem !important; }
+            #camacari-top-bar > div { justify-content: center !important; gap: 0.35rem !important; }
+            header > div:last-child { padding: 0.65rem 1rem !important; gap: 0.5rem !important; }
+            header img { height: 2rem !important; }
+            header a span.text-xl { font-size: 0.95rem !important; }
+            header a span.text-\[11px\] { font-size: 0.6rem !important; }
+            header > div:last-child > a:last-child { padding: 0.45rem 0.75rem !important; font-size: 0.65rem !important; border-radius: 0.5rem !important; }
+            header nav { order: 3 !important; width: 100% !important; flex-wrap: nowrap !important; overflow-x: auto !important; white-space: nowrap !important; gap: 1.1rem !important; padding: 0.45rem 0.25rem 0.2rem 0.25rem !important; border-top: 1px solid rgba(255, 255, 255, 0.12) !important; -webkit-overflow-scrolling: touch !important; scrollbar-width: none !important; }
+            header nav::-webkit-scrollbar { display: none !important; }
+            header nav a { font-size: 0.78rem !important; flex-shrink: 0 !important; }
+            section.py-16, section.py-14 { padding: 2rem 1rem !important; }
+            h1.text-3xl, h1.md\:text-5xl { font-size: 1.65rem !important; line-height: 1.25 !important; }
+        }
+    </style>
+</head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
 
-    <!-- Cabeçalho Unificado -->
-    
-    <header class="bg-blue-950 text-white sticky top-0 z-50 shadow-lg border-b border-blue-900">
-        <!-- Barra Superior de Endereço e Telefones (Idêntica à de Produtos) -->
+    <!-- Cabeçalho Unificado com Barra de Topo -->
+    <header class="bg-blue-950 text-white sticky top-0 z-40 shadow-lg border-b border-blue-900">
         <div id="camacari-top-bar" class="bg-slate-950 text-slate-300 text-xs py-2 px-6 border-b border-slate-800/80">
             <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
                 <div class="flex flex-wrap items-center gap-2">
@@ -97,7 +45,6 @@
             </div>
         </div>
 
-        <!-- Barra Principal com Logo, 7 Abas e Botão de Cotação -->
         <div class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
             <a href="index.html" class="flex items-center gap-3">
                 <img src="logo.png" alt="Camaçari Cabos" class="h-10 object-contain bg-white p-1 rounded">
@@ -115,7 +62,7 @@
                 <a href="blog.html" class="text-amber-400 font-bold border-b-2 border-amber-400 pb-1">Blog</a>
                 <a href="sobre.html" class="text-slate-200 hover:text-amber-400 transition font-medium">Sobre Nós</a>
             </nav>
-            <a href="https://wa.me/5571996660988?text=Olá, gostaria de solicitar uma cotação rápida" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition shadow-md flex items-center gap-2">
+            <a href="https://wa.me/5571996660988?text=Olá, vim pelo Blog da Camaçari Cabos e quero fazer uma cotação" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition shadow-md flex items-center gap-2">
                 <i class="fa-brands fa-whatsapp text-base"></i> Cotação Rápida
             </a>
         </div>
@@ -125,95 +72,172 @@
         <!-- Banner do Blog -->
         <section class="bg-gradient-to-r from-blue-950 via-slate-900 to-blue-950 text-white py-16 px-6">
             <div class="max-w-7xl mx-auto">
-                <span class="bg-amber-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded uppercase">Guias de Compra e Dicas Práticas</span>
+                <span class="bg-amber-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded uppercase">Guias de Produtos e Dicas Práticas</span>
                 <h1 class="text-3xl md:text-5xl font-black mt-3">Blog Camaçari Cabos</h1>
                 <p class="text-slate-300 max-w-3xl mt-4 text-sm md:text-base leading-relaxed">
-                    Conheça a fundo as aplicações, diferenças e vantagens dos materiais elétricos e de cabeamento estruturado que fornecemos para indústrias, comércios e residências em Camaçari e Região Metropolitana.
+                    Artigos completos sobre materiais elétricos, infraestrutura industrial, cabeamento estruturado e soluções para indústrias, comércios e residências em Camaçari e Região Metropolitana.
                 </p>
             </div>
         </section>
 
-        <!-- Grade de Artigos (O Agente insere novos artigos sempre no marcador abaixo) -->
+        <!-- Grade de Artigos -->
         <section class="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-8">
             <!-- NOVOS_ARTIGOS_AQUI -->
 
             <!-- Artigo 1: Industrial -->
-            <article class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition">
+            <article class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-xl transition">
                 <div>
                     <div class="flex items-center justify-between gap-2 mb-3">
                         <span class="text-[11px] font-extrabold uppercase bg-blue-100 text-blue-950 px-2.5 py-1 rounded">Industrial</span>
-                        <span class="text-[11px] text-slate-400 font-medium">Guia de Produtos</span>
+                        <span class="text-[11px] text-slate-400 font-medium">Guia de Condutores</span>
                     </div>
-                    <h2 class="text-lg font-black text-blue-950 mb-3 leading-snug">Cabos de Instrumentação Shield, Controle e HEPR 1kV: Qual a aplicação de cada um?</h2>
-                    <p class="text-xs text-slate-600 leading-relaxed mb-3">Em plantas industriais e centros logísticos, cada circuito exige um condutor específico. Enquanto os cabos HEPR 1kV (90°C) e XLPE são ideais para alimentação de força e motores pesados, os cabos de instrumentação com blindagem (Shield) protegem sinais de automação contra interferências eletromagnéticas.</p>
-                    <p class="text-xs text-slate-600 leading-relaxed">Na Camaçari Cabos, fornecemos toda a linha de cabos de potência, controle, cabos PP e cobre nu para paradas de manutenção e obras no Polo Industrial.</p>
+                    <h2 class="text-lg font-black text-blue-950 mb-3 leading-snug">Cabos HEPR 1kV, XLPE, Controle e Instrumentação Shield: Entenda as Diferenças na Compra</h2>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">Na hora de adquirir cabos para manutenção industrial, galpões logísticos ou ampliação de plantas fabris, conhecer a função de cada isolação e blindagem evita paradas não programadas e garante a durabilidade da instalação...</p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
-                    <span class="text-[11px] font-bold text-slate-500">Pronta entrega em Camaçari</span>
-                    <a href="https://wa.me/5571996660988?text=Olá, quero cotar cabos industriais e de instrumentação" target="_blank" class="text-amber-600 hover:text-amber-500 font-extrabold text-xs flex items-center gap-1">
-                        Cotar Produtos <i class="fa-brands fa-whatsapp"></i>
+
+                <!-- Conteúdo Completo Oculto que Abre na Página de Leitura -->
+                <div class="artigo-completo hidden space-y-4 text-slate-700 text-sm md:text-base leading-relaxed">
+                    <p>Na rotina de compras e manutenção de plantas industriais, centros logísticos e hospitais, a escolha correta dos condutores elétricos e de automação é decisiva para a confiabilidade da operação. Cada linha de cabo possui características construtivas específicas voltadas para força, comando ou transmissão de sinais sensíveis.</p>
+                    
+                    <h3 class="text-lg font-black text-blue-950 pt-2">1. Cabos de Potência: HEPR 0,6/1kV (90°C) e XLPE vs. PVC 750V</h3>
+                    <p>Enquanto os cabos flexíveis 750V com isolação em PVC (antichama BWF) suportam temperaturas de operação contínua de até 70°C em quadros e circuitos internos de distribuição, os <strong>cabos HEPR 0,6/1kV e XLPE</strong> trabalham com folga até 90°C em regime permanente (e 250°C em curto-circuito). Por isso, são os mais requisitados em redes subterrâneas, eletrocalhas industriais pesadas e alimentação de motores e máquinas de grande porte.</p>
+
+                    <h3 class="text-lg font-black text-blue-950 pt-2">2. Cabos de Controle e Cabos de Instrumentação Blindados (Shield)</h3>
+                    <p>Em ambientes com inversores de frequência, motores de alta potência e painéis de automação, o ruído eletromagnético pode interferir na leitura de sensores e CLPs. Os <strong>cabos de instrumentação com blindagem em fita de alumínio/poliéster ou malha de cobre (Shield)</strong> atuam como uma barreira contra interferências, garantindo que os sinais analógicos e digitais cheguem limpos ao painel de controle. Já os cabos de controle multipolares (numerados ou coloridos) organizam o acionamento de botoeiras, contatores e válvulas.</p>
+
+                    <h3 class="text-lg font-black text-blue-950 pt-2">3. Cabos PP e Cobre Nu para Malha de Aterramento</h3>
+                    <p>Para equipamentos móveis, ferramentas industriais e Quadros Robô de canteiro de obras, o <strong>cabo PP multipolar</strong> oferece dupla capa de proteção mecânica e alta flexibilidade. Já para a segurança de subestações, SPDA e carcaças metálicas, o <strong>cabo de cobre nu normatizado</strong> em conjunto com hastes cobreadas e conectores de bronze assegura o escoamento seguro de correntes de falta.</p>
+
+                    <div class="bg-blue-50 border-l-4 border-amber-500 p-5 rounded-r-xl mt-6">
+                        <h4 class="font-black text-blue-950 text-base">Onde comprar Cabos Industriais e de Instrumentação em Camaçari?</h4>
+                        <p class="text-xs md:text-sm text-slate-700 mt-1">Na <strong>Camaçari Cabos Materiais Elétricos</strong> (Rua Centro, 249, Camaçari - BA), fornecemos toda a linha de cabos HEPR 1kV, XLPE, 750V, cabos PP, controle, instrumentação blindado Shield e cabos de rede Cat5e/Cat6 para indústrias e empreiteiras do Polo Industrial e Região Metropolitana. Solicite sua cotação com nossa equipe comercial!</p>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
+                    <button onclick="abrirLeitorArtigo(this)" class="bg-blue-50 hover:bg-blue-950 text-blue-950 hover:text-white font-extrabold px-3.5 py-2 rounded-lg text-xs transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-book-open text-amber-500"></i> Ler artigo completo
+                    </button>
+                    <a href="https://wa.me/5571996660988?text=Olá, li o artigo sobre Cabos Industriais e quero fazer uma cotação" target="_blank" class="text-emerald-600 hover:text-emerald-500 font-extrabold text-xs flex items-center gap-1">
+                        Cotar <i class="fa-brands fa-whatsapp text-sm"></i>
                     </a>
                 </div>
             </article>
 
             <!-- Artigo 2: Comercial -->
-            <article class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition">
+            <article class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-xl transition">
                 <div>
                     <div class="flex items-center justify-between gap-2 mb-3">
                         <span class="text-[11px] font-extrabold uppercase bg-amber-100 text-amber-900 px-2.5 py-1 rounded">Comercial</span>
-                        <span class="text-[11px] text-slate-400 font-medium">Iluminação e TI</span>
+                        <span class="text-[11px] text-slate-400 font-medium">Iluminação e Conectividade</span>
                     </div>
-                    <h2 class="text-lg font-black text-blue-950 mb-3 leading-snug">Modernização de Lojas, Clínicas e Restaurantes: Iluminação LED e Rede Cat6</h2>
-                    <p class="text-xs text-slate-600 leading-relaxed mb-3">Um ponto comercial moderno precisa aliar estética, economia de energia e conectividade estável. O uso de perfis de alumínio com fitas de LED, painéis embutidos e spots valoriza vitrines e consultórios, reduzindo o consumo elétrico e a carga térmica do ar-condicionado.</p>
-                    <p class="text-xs text-slate-600 leading-relaxed">Além da parte elétrica e iluminação, fornecemos a linha completa de rede estruturada: cabos Cat5e e Cat6, patch panels, switches, patch cords e conectores RJ45.</p>
+                    <h2 class="text-lg font-black text-blue-950 mb-3 leading-snug">Como Equipar Lojas, Clínicas e Restaurantes com Iluminação LED e Rede Estruturada</h2>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">Vai inaugurar ou reformar um espaço comercial, consultório ou escritório? Veja os materiais essenciais de iluminação LED, proteção de quadros e cabeamento de rede (Cat5e/Cat6, switches e patch panels) para uma operação moderna...</p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
-                    <span class="text-[11px] font-bold text-slate-500">Atacado e Varejo</span>
-                    <a href="https://wa.me/5571996660988?text=Olá, quero cotar iluminação LED e materiais de rede para comércio" target="_blank" class="text-amber-600 hover:text-amber-500 font-extrabold text-xs flex items-center gap-1">
-                        Cotar Produtos <i class="fa-brands fa-whatsapp"></i>
+
+                <div class="artigo-completo hidden space-y-4 text-slate-700 text-sm md:text-base leading-relaxed">
+                    <p>A abertura ou modernização de um ponto comercial — seja uma loja, clínica médica, consultório odontológico, restaurante ou escritório — exige materiais elétricos que unam apresentação visual impecável, baixo consumo de energia e internet estável para sistemas de pagamento e gestão.</p>
+
+                    <h3 class="text-lg font-black text-blue-950 pt-2">1. Iluminação LED Comercial: Perfis, Fitas, Painéis e Spots</h3>
+                    <p>A iluminação valoriza os produtos na vitrine e traz conforto para pacientes e clientes. O uso combinado de <strong>perfis de alumínio com fitas de LED de alto brilho</strong>, painéis LED de embutir/sobrepor e spots direcionáveis reduz em até 70% o gasto com iluminação, além de emitir menos calor no ambiente — diminuindo o esforço dos aparelhos de ar-condicionado.</p>
+
+                    <h3 class="text-lg font-black text-blue-950 pt-2">2. Cabeamento Estruturado de Rede: Estabilidade para Caixas e Sistemas</h3>
+                    <p>Em ambientes comerciais e clínicas, depender apenas de sinal Wi-Fi para computadores de caixa, impressoras fiscais, câmeras CFTV e servidores pode gerar lentidão. Por isso, o uso de <strong>cabos de rede Cat5e e Cat6</strong> interligados a <strong>patch panels, switches, patch cords e conectores RJ45 de qualidade</strong> garante velocidade máxima e conexão contínua sem quedas.</p>
+
+                    <h3 class="text-lg font-black text-blue-950 pt-2">3. Quadros de Distribuição e Proteção para Equipamentos Caros</h3>
+                    <p>Equipamentos médicos, freezers comerciais, computadores e sistemas de climatização precisam estar protegidos no Quadro de Distribuição (QDC) com disjuntores termomagnéticos DIN, interruptor diferencial residual (DR) e Dispositivos de Proteção contra Surtos (DPS), evitando que oscilações da rede queimem placas eletrônicas.</p>
+
+                    <div class="bg-blue-50 border-l-4 border-amber-500 p-5 rounded-r-xl mt-6">
+                        <h4 class="font-black text-blue-950 text-base">Fornecedor Completo para o seu Comércio em Camaçari e Região</h4>
+                        <p class="text-xs md:text-sm text-slate-700 mt-1">A <strong>Camaçari Cabos</strong> fornece desde cabos flexíveis antichama, eletrodutos, canaletas e quadros até iluminação LED completa e linha de rede (Cat5e, Cat6, switches, patch panels e RJ45). Venha até nossa loja na Rua Centro, 249, Camaçari - BA, ou envie sua lista de materiais pelo WhatsApp (71) 99666-0988!</p>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
+                    <button onclick="abrirLeitorArtigo(this)" class="bg-blue-50 hover:bg-blue-950 text-blue-950 hover:text-white font-extrabold px-3.5 py-2 rounded-lg text-xs transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-book-open text-amber-500"></i> Ler artigo completo
+                    </button>
+                    <a href="https://wa.me/5571996660988?text=Olá, li o artigo sobre Materiais para Comércio e quero fazer uma cotação" target="_blank" class="text-emerald-600 hover:text-emerald-500 font-extrabold text-xs flex items-center gap-1">
+                        Cotar <i class="fa-brands fa-whatsapp text-sm"></i>
                     </a>
                 </div>
             </article>
 
             <!-- Artigo 3: Residencial -->
-            <article class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition">
+            <article class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-xl transition">
                 <div>
                     <div class="flex items-center justify-between gap-2 mb-3">
                         <span class="text-[11px] font-extrabold uppercase bg-emerald-100 text-emerald-900 px-2.5 py-1 rounded">Residencial</span>
-                        <span class="text-[11px] text-slate-400 font-medium">Checklist de Obra</span>
+                        <span class="text-[11px] text-slate-400 font-medium">Segurança e Padrão Coelba</span>
                     </div>
-                    <h2 class="text-lg font-black text-blue-950 mb-3 leading-snug">O que compõe o Kit Padrão Coelba e por que usar DR e DPS no quadro da sua casa?</h2>
-                    <p class="text-xs text-slate-600 leading-relaxed mb-3">Para agilizar a ligação de energia em obras residenciais e condomínios em Camaçari e Litoral Norte, é fundamental utilizar caixas em policarbonato homologadas, cabos multiplexados, bengalas e aterramento completo com hastes cobreadas e conectores.</p>
-                    <p class="text-xs text-slate-600 leading-relaxed">Já no Quadro de Distribuição (QDC), a combinação do disjuntor DIN com o interruptor DR (proteção contra choques) e o DPS (proteção contra surtos e raios) protege eletrodomésticos e moradores.</p>
+                    <h2 class="text-lg font-black text-blue-950 mb-3 leading-snug">Checklist de Materiais Elétricos para Obras Residenciais e Kit Padrão Coelba Completo</h2>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">Construindo ou reformando em Camaçari ou no Litoral Norte? Confira a lista dos materiais indispensáveis desde a entrada de energia homologada até os cabos antichama, aterramento e proteção do quadro...</p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
-                    <span class="text-[11px] font-bold text-slate-500">Padrão Homologado</span>
-                    <a href="https://wa.me/5571996660988?text=Olá, quero cotar Kit Padrão Coelba e materiais residenciais" target="_blank" class="text-amber-600 hover:text-amber-500 font-extrabold text-xs flex items-center gap-1">
-                        Cotar Produtos <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                </div>
-            </article>
 
-            <!-- Artigo 4: Industrial (Infraestrutura e Quadro Robô) -->
-            <article class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition">
-                <div>
-                    <div class="flex items-center justify-between gap-2 mb-3">
-                        <span class="text-[11px] font-extrabold uppercase bg-blue-100 text-blue-950 px-2.5 py-1 rounded">Industrial</span>
-                        <span class="text-[11px] text-slate-400 font-medium">Canteiro e Manutenção</span>
+                <div class="artigo-completo hidden space-y-4 text-slate-700 text-sm md:text-base leading-relaxed">
+                    <p>Em qualquer obra ou reforma residencial — seja no centro de Camaçari, Abrantes, Busca Vida, Guarajuba ou Praia do Forte — adquirir materiais elétricos certificados pelo INMETRO é a garantia de uma instalação livre de aquecimentos nos fios, desarmes constantes de disjuntores e riscos de curto-circuito.</p>
+
+                    <h3 class="text-lg font-black text-blue-950 pt-2">1. Entrada de Energia: O que vai no Kit Padrão Coelba?</h3>
+                    <p>Para que a concessionária aprove e ligue a energia do imóvel sem atrasos na vistoria, todos os componentes do padrão de entrada precisam ser homologados. O kit completo inclui a <strong>caixa de medição em policarbonato</strong> (monofásica, bifásica ou trifásica), disjuntor geral, cabo multiplexado, eletroduto/bengala, haste de aterramento cobreada, conector, cabo de cobre nu e caixa de inspeção.</p>
+
+                    <h3 class="text-lg font-black text-blue-950 pt-2">2. Fios e Cabos Flexíveis 750V Antichama e Quadro QDC</h3>
+                    <p>Para os circuitos internos de iluminação, tomadas de uso geral, chuveiros elétricos e ar-condicionado, é essencial utilizar cabos de cobre puro com isolação PVC/BWF antichama nas bitolas adequadas (1,5mm², 2,5mm², 4mm², 6mm² e 10mm²). No Quadro de Distribuição (QDC), barramentos de cobre estilo pente, disjuntores DIN, interruptor DR e DPS contra raios protegem toda a residência.</p>
+
+                    <h3 class="text-lg font-black text-blue-950 pt-2">3. Acabamentos e Iluminação Externa/Jardim</h3>
+                    <p>Na fase final da obra, tomadas e interruptores de qualidade evitam mau contato e folgas nos pinos. Já para valorizar fachadas, muros, áreas gourmet e piscinas em condomínios, refletores LED IP66 (à prova d'água), espetos de jardim e arandelas garantem beleza e segurança noturna.</p>
+
+                    <div class="bg-blue-50 border-l-4 border-amber-500 p-5 rounded-r-xl mt-6">
+                        <h4 class="font-black text-blue-950 text-base">Compre todo o Material da sua Obra na Camaçari Cabos</h4>
+                        <p class="text-xs md:text-sm text-slate-700 mt-1">Desde 2014, a <strong>Camaçari Cabos</strong> entrega economia, variedade e pronta entrega para obras residenciais e condomínios em Camaçari e Litoral Norte. Traga a lista do seu eletricista para nossa loja na Rua Centro, 249, Camaçari - BA, ou peça seu orçamento rápido pelo WhatsApp (71) 99666-0988!</p>
                     </div>
-                    <h2 class="text-lg font-black text-blue-950 mb-3 leading-snug">Quadro Robô, Plugs Blindados e Eletrocalhas: Segurança na distribuição de força</h2>
-                    <p class="text-xs text-slate-600 leading-relaxed mb-3">Em paradas de manutenção e obras industriais, o Quadro Robô garante pontos de energia seguros para máquinas de solda e ferramentas pesadas, utilizando plugs e tomadas industriais (16A, 32A, 63A) com proteção IP44/IP67 e bloqueio diferencial.</p>
-                    <p class="text-xs text-slate-600 leading-relaxed">Para instalações permanentes em galpões, trabalhamos com linha completa de eletrocalhas, perfilados, eletrodutos galvanizados e conduletes de alumínio e PVC.</p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
-                    <span class="text-[11px] font-bold text-slate-500">Linha Pesada B2B</span>
-                    <a href="https://wa.me/5571996660988?text=Olá, quero cotar Quadro Robô, plugs industriais e infraestrutura" target="_blank" class="text-amber-600 hover:text-amber-500 font-extrabold text-xs flex items-center gap-1">
-                        Cotar Produtos <i class="fa-brands fa-whatsapp"></i>
+
+                <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
+                    <button onclick="abrirLeitorArtigo(this)" class="bg-blue-50 hover:bg-blue-950 text-blue-950 hover:text-white font-extrabold px-3.5 py-2 rounded-lg text-xs transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-book-open text-amber-500"></i> Ler artigo completo
+                    </button>
+                    <a href="https://wa.me/5571996660988?text=Olá, li o artigo sobre Materiais Residenciais e Padrão Coelba e quero orçar" target="_blank" class="text-emerald-600 hover:text-emerald-500 font-extrabold text-xs flex items-center gap-1">
+                        Cotar <i class="fa-brands fa-whatsapp text-sm"></i>
                     </a>
                 </div>
             </article>
         </section>
     </main>
+
+    <!-- Modal / Página de Leitura Completa do Artigo -->
+    <div id="modal-leitor-artigo" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden overflow-y-auto p-4 md:p-10">
+        <div class="bg-white max-w-4xl mx-auto rounded-2xl shadow-2xl border border-slate-200 overflow-hidden my-4">
+            <!-- Cabeçalho da Página do Artigo -->
+            <div class="bg-blue-950 text-white p-6 md:p-8 flex justify-between items-start gap-4">
+                <div>
+                    <span id="leitor-categoria" class="bg-amber-500 text-slate-950 text-[11px] font-extrabold uppercase px-3 py-1 rounded">Categoria</span>
+                    <h2 id="leitor-titulo" class="text-xl md:text-3xl font-black mt-3 leading-tight">Título do Artigo</h2>
+                </div>
+                <button onclick="fecharLeitorArtigo()" class="bg-white/10 hover:bg-white/20 text-white w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition" title="Fechar leitura">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Corpo do Texto Aprofundado -->
+            <div id="leitor-corpo" class="p-6 md:p-10 space-y-4 text-slate-700 leading-relaxed"></div>
+
+            <!-- Rodapé de Conversão da Página do Artigo -->
+            <div class="bg-slate-100 px-6 md:px-10 py-6 border-t border-slate-200 flex flex-wrap justify-between items-center gap-4">
+                <div>
+                    <p class="text-sm font-extrabold text-blue-950">Precisa cotar esses materiais elétricos com pronta entrega?</p>
+                    <p class="text-xs text-slate-600">Visite nossa loja na Rua Centro, 249, Camaçari - BA ou fale agora com nossos vendedores.</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button onclick="fecharLeitorArtigo()" class="bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-4 py-2.5 rounded-xl text-xs transition">
+                        Voltar ao Blog
+                    </button>
+                    <a href="https://wa.me/5571996660988?text=Olá, li um artigo completo no Blog da Camaçari Cabos e gostaria de fazer uma cotação" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider shadow-md flex items-center gap-2 transition">
+                        <i class="fa-brands fa-whatsapp text-base"></i> Falar com Vendedor no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Rodapé Unificado -->
     <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
@@ -242,5 +266,38 @@
         </div>
     </footer>
 
+    <!-- Script que abre o Artigo Completo na Tela -->
+    <script>
+        function abrirLeitorArtigo(botao) {
+            const card = botao.closest("article");
+            const titulo = card.querySelector("h2").innerText;
+            const categoria = card.querySelector("span").innerText;
+            const conteudoCompleto = card.querySelector(".artigo-completo");
 
-</body></html>
+            document.getElementById("leitor-titulo").innerText = titulo;
+            document.getElementById("leitor-categoria").innerText = categoria;
+
+            if (conteudoCompleto) {
+                document.getElementById("leitor-corpo").innerHTML = conteudoCompleto.innerHTML;
+            } else {
+                // Caso seja um card antigo sem div oculta, mostra os parágrafos existentes
+                const paragrafos = Array.from(card.querySelectorAll("p")).map(p => `<p>${p.innerHTML}</p>`).join("");
+                document.getElementById("leitor-corpo").innerHTML = paragrafos;
+            }
+
+            document.getElementById("modal-leitor-artigo").classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+        }
+
+        function fecharLeitorArtigo() {
+            document.getElementById("modal-leitor-artigo").classList.add("hidden");
+            document.body.style.overflow = "auto";
+        }
+
+        // Fecha ao apertar a tecla ESC
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") fecharLeitorArtigo();
+        });
+    </script>
+</body>
+</html>
