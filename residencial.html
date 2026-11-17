@@ -6,6 +6,72 @@
     <title>Linha Residencial e Padrão Coelba | Camaçari Cabos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <style id="camacari-mobile-fix">
+            @media (max-width: 768px) {
+                /* Cabeçalho compacto no celular */
+                header > div {
+                    padding: 0.65rem 1rem !important;
+                    gap: 0.5rem !important;
+                }
+                header img {
+                    height: 2rem !important;
+                }
+                header a span.text-xl {
+                    font-size: 0.95rem !important;
+                }
+                header a span.text-\[11px\] {
+                    font-size: 0.6rem !important;
+                }
+                /* Botão de WhatsApp compacto no topo */
+                header > div > a:last-child {
+                    padding: 0.45rem 0.75rem !important;
+                    font-size: 0.65rem !important;
+                    border-radius: 0.5rem !important;
+                }
+                /* Transforma as 7 abas em barra horizontal deslizante (linha única sem quebrar) */
+                header nav {
+                    order: 3 !important;
+                    width: 100% !important;
+                    flex-wrap: nowrap !important;
+                    overflow-x: auto !important;
+                    white-space: nowrap !important;
+                    gap: 1.1rem !important;
+                    padding: 0.45rem 0.25rem 0.2rem 0.25rem !important;
+                    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+                    -webkit-overflow-scrolling: touch !important;
+                    scrollbar-width: none !important;
+                }
+                header nav::-webkit-scrollbar {
+                    display: none !important;
+                }
+                header nav a {
+                    font-size: 0.78rem !important;
+                    flex-shrink: 0 !important;
+                }
+                /* Ajuste proporcional de banners, títulos e espaçamentos internos */
+                section.py-20, section.py-16, section.py-14 {
+                    padding-top: 2.25rem !important;
+                    padding-bottom: 2.25rem !important;
+                    padding-left: 1rem !important;
+                    padding-right: 1rem !important;
+                }
+                h1.text-3xl, h1.text-4xl, h1.md\:text-5xl {
+                    font-size: 1.65rem !important;
+                    line-height: 1.25 !important;
+                }
+                h2.text-2xl, h2.text-3xl, h2.md\:text-4xl {
+                    font-size: 1.35rem !important;
+                    line-height: 1.3 !important;
+                }
+                .p-8 {
+                    padding: 1.25rem !important;
+                }
+                .gap-12 {
+                    gap: 1.5rem !important;
+                }
+            }
+        </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
 
