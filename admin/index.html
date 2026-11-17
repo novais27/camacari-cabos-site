@@ -103,12 +103,12 @@
                 </select>
             </div>
 
-            <button onclick="clonarLayoutSobreParaAtual()" class="bg-indigo-600/30 hover:bg-indigo-600 border border-indigo-500/40 text-indigo-200 hover:text-white text-[11px] font-semibold px-2.5 py-1.5 rounded-lg transition" title="Aplica o cabeçalho e rodapé da página Sobre nesta página ajustando a aba ativa">
-                <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Padronizar pelo "Sobre"
+            <button onclick="sincronizarTopoTodasPaginas()" id="btn-sync-topo" class="bg-indigo-600 hover:bg-indigo-500 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg transition shadow" title="Aplica a faixa de endereço/telefone + Menu de 7 abas em todas as páginas">
+                <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Sincronizar Topo/Rodapé (Todas as 7 Páginas)
             </button>
 
             <button onclick="otimizarMobileTodasPaginas()" id="btn-mobile-opt" class="bg-amber-500/20 hover:bg-amber-500 border border-amber-400/50 text-amber-300 hover:text-slate-950 text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition" title="Ajusta automaticamente menu, fontes e espaçamentos para celular em todas as 7 páginas">
-                <i class="fa-solid fa-mobile-screen-button mr-1"></i> Otimizar Mobile (Todas as Páginas)
+                <i class="fa-solid fa-mobile-screen-button mr-1"></i> Otimizar Mobile
             </button>
 
             <button onclick="alternarPreviewMobile()" id="btn-preview-mobile" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] font-semibold px-2.5 py-1.5 rounded-lg transition" title="Simular tela de celular aqui no Studio">
@@ -151,12 +151,71 @@
         let paginaAtual = "index.html";
         let modoPreviewMobile = false;
 
-        // Bloco CSS Responsivo Inteligente que corrige cabeçalho, menu, fontes e espaçamentos no celular
+        // Gera o Cabeçalho Oficial Completo (Barra de Endereço/Telefones + Menu de 7 Abas com destaque dinâmico)
+        function gerarHeaderUnificado(arquivoAtivo) {
+            const cls = (arq) => arq === arquivoAtivo
+                ? "text-amber-400 font-bold border-b-2 border-amber-400 pb-1"
+                : "text-slate-200 hover:text-amber-400 transition font-medium";
+
+            return `
+    <header class="bg-blue-950 text-white sticky top-0 z-50 shadow-lg border-b border-blue-900">
+        <!-- Barra Superior de Endereço e Telefones (Idêntica à de Produtos) -->
+        <div id="camacari-top-bar" class="bg-slate-950 text-slate-300 text-xs py-2 px-6 border-b border-slate-800/80">
+            <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+                <div class="flex flex-wrap items-center gap-2">
+                    <span><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i>Rua Centro, 249, Camaçari - BA (CEP 42800-029)</span>
+                    <span class="hidden sm:inline text-slate-600">|</span>
+                    <span class="hidden sm:inline text-slate-400">Atendendo todo o Polo Industrial e Região Metropolitana</span>
+                </div>
+                <div class="flex items-center gap-4 font-semibold">
+                    <a href="tel:557121364416" class="hover:text-white transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-phone text-amber-500"></i> (71) 2136-4416
+                    </a>
+                    <a href="https://wa.me/5571996660988" target="_blank" class="text-amber-400 hover:text-amber-300 font-bold transition flex items-center gap-1.5">
+                        <i class="fa-brands fa-whatsapp text-amber-500 text-sm"></i> (71) 99666-0988
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra Principal com Logo, 7 Abas e Botão de Cotação -->
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.png" alt="Camaçari Cabos" class="h-10 object-contain bg-white p-1 rounded">
+                <div>
+                    <span class="text-xl font-black tracking-tight text-white block leading-none">CAMAÇARI CABOS</span>
+                    <span class="text-[11px] text-amber-400 font-semibold tracking-widest uppercase">Materiais Elétricos • Desde 2014</span>
+                </div>
+            </a>
+            <nav class="flex flex-wrap items-center gap-5 text-xs md:text-sm">
+                <a href="index.html" class="${cls('index.html')}">Início</a>
+                <a href="produtos.html" class="${cls('produtos.html')}">Produtos</a>
+                <a href="industrial.html" class="${cls('industrial.html')}">Linha Industrial</a>
+                <a href="residencial.html" class="${cls('residencial.html')}">Linha Residencial</a>
+                <a href="projetos.html" class="${cls('projetos.html')}">Projetos</a>
+                <a href="blog.html" class="${cls('blog.html')}">Blog</a>
+                <a href="sobre.html" class="${cls('sobre.html')}">Sobre Nós</a>
+            </nav>
+            <a href="https://wa.me/5571996660988?text=Olá, gostaria de solicitar uma cotação rápida" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition shadow-md flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-base"></i> Cotação Rápida
+            </a>
+        </div>
+    </header>`;
+        }
+
+        // Bloco CSS Responsivo Inteligente
         const CSS_OTIMIZACAO_MOBILE = `
         <style id="camacari-mobile-fix">
             @media (max-width: 768px) {
-                /* Cabeçalho compacto no celular */
-                header > div {
+                #camacari-top-bar {
+                    padding: 0.35rem 0.75rem !important;
+                    font-size: 0.65rem !important;
+                }
+                #camacari-top-bar > div {
+                    justify-content: center !important;
+                    gap: 0.35rem !important;
+                }
+                header > div:last-child {
                     padding: 0.65rem 1rem !important;
                     gap: 0.5rem !important;
                 }
@@ -169,13 +228,11 @@
                 header a span.text-\\[11px\\] {
                     font-size: 0.6rem !important;
                 }
-                /* Botão de WhatsApp compacto no topo */
-                header > div > a:last-child {
+                header > div:last-child > a:last-child {
                     padding: 0.45rem 0.75rem !important;
                     font-size: 0.65rem !important;
                     border-radius: 0.5rem !important;
                 }
-                /* Transforma as 7 abas em barra horizontal deslizante (linha única sem quebrar) */
                 header nav {
                     order: 3 !important;
                     width: 100% !important;
@@ -195,12 +252,8 @@
                     font-size: 0.78rem !important;
                     flex-shrink: 0 !important;
                 }
-                /* Ajuste proporcional de banners, títulos e espaçamentos internos */
                 section.py-20, section.py-16, section.py-14 {
-                    padding-top: 2.25rem !important;
-                    padding-bottom: 2.25rem !important;
-                    padding-left: 1rem !important;
-                    padding-right: 1rem !important;
+                    padding: 2.25rem 1rem !important;
                 }
                 h1.text-3xl, h1.text-4xl, h1.md\\:text-5xl {
                     font-size: 1.65rem !important;
@@ -476,92 +529,71 @@
             fecharModalMidia();
         }
 
-        // Clona o Cabeçalho e Rodapé do Sobre.html e move o destaque amarelo para a página aberta
-        async function clonarLayoutSobreParaAtual() {
-            if (!confirm("Isso vai aplicar o Cabeçalho e Rodapé da página 'sobre.html' na página atual e destacar automaticamente a aba '" + paginaAtual + "' no menu. Confirmar?")) return;
-            try {
-                const resp = await fetch("../sobre.html?t=" + Date.now());
-                const htmlSobre = await resp.text();
-                const parser = new DOMParser();
-                const docSobre = parser.parseFromString(htmlSobre, "text/html");
-
-                const docAtual = document.getElementById("site-canvas").contentWindow.document;
-
-                const headerSobre = docSobre.querySelector("header") || docSobre.querySelector("nav");
-                const headerAtual = docAtual.querySelector("header") || docAtual.querySelector("nav");
-
-                if (headerSobre && headerAtual) {
-                    const linksMenu = headerSobre.querySelectorAll("nav a");
-                    linksMenu.forEach(link => {
-                        const href = (link.getAttribute("href") || "").trim();
-                        if (href === paginaAtual) {
-                            link.className = "text-amber-400 font-bold border-b-2 border-amber-400 pb-1";
-                        } else {
-                            link.className = "text-slate-200 hover:text-amber-400 transition font-medium";
-                        }
-                    });
-
-                    headerAtual.outerHTML = headerSobre.outerHTML;
-                }
-
-                const footerSobre = docSobre.querySelector("footer");
-                const footerAtual = docAtual.querySelector("footer");
-                if (footerSobre && footerAtual) {
-                    footerAtual.outerHTML = footerSobre.outerHTML;
-                }
-
-                // Garante também a otimização mobile na página atual
-                if (!docAtual.getElementById("camacari-mobile-fix")) {
-                    docAtual.head.insertAdjacentHTML("beforeend", CSS_OTIMIZACAO_MOBILE);
-                }
-
-                docAtual.body.className = docSobre.body.className;
-                alert(`✅ Topo e rodapé padronizados + Mobile ajustado! Clique em 'Publicar Agora (15s)' para salvar.`);
-            } catch (e) {
-                alert("Erro ao padronizar com sobre.html: " + e.message);
-            }
-        }
-
-        // Aplica a otimização Mobile automaticamente em TODAS as 7 páginas direto no GitHub
-        async function otimizarMobileTodasPaginas() {
+        // Sincroniza a Barra Superior de Endereço/Telefone + Cabeçalho de 7 Abas + Rodapé em TODAS as 7 páginas de uma vez
+        async function sincronizarTopoTodasPaginas() {
             const token = localStorage.getItem("gh_token_camacari");
             if (!token) {
                 abrirConfig();
                 return alert("⚠️ Configure primeiro o seu Token do GitHub em Configurações!");
             }
 
-            if (!confirm("Isso vai otimizar a visualização de celular (menu deslizante compacto, fontes e espaçamentos) em TODAS as 7 páginas do site automaticamente. Deseja iniciar?")) return;
+            if (!confirm("Isso vai aplicar a Barra de Endereço/Telefones no topo + Menu de 7 abas (com destaque automático da aba ativa) em TODAS as 7 páginas do site. Confirmar?")) return;
 
             const paginas = ["index.html", "produtos.html", "industrial.html", "residencial.html", "projetos.html", "blog.html", "sobre.html"];
-            const btn = document.getElementById("btn-mobile-opt");
+            const btn = document.getElementById("btn-sync-topo");
             const status = document.getElementById("status-msg");
             btn.disabled = true;
 
             try {
+                const parser = new DOMParser();
+
                 for (const pag of paginas) {
-                    status.textContent = `Otimizando mobile: ${pag}...`;
+                    status.textContent = `Padronizando topo: ${pag}...`;
                     btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-1"></i> ${pag}...`;
 
                     const resp = await fetch("../" + pag + "?t=" + Date.now());
                     if (!resp.ok) continue;
-                    let html = await resp.text();
+                    const htmlBruto = await resp.text();
+                    const doc = parser.parseFromString(htmlBruto, "text/html");
 
-                    // Remove versão anterior se existir e injeta a nova antes de </head>
-                    html = html.replace(/<style id="camacari-mobile-fix">[\s\S]*?<\/style>/g, "");
-                    html = html.replace("</head>", `${CSS_OTIMIZACAO_MOBILE}\n</head>`);
+                    // Remove barras de endereço antigas que estejam soltas fora do <header> para não duplicar
+                    Array.from(doc.body.children).forEach(el => {
+                        if (el.tagName === "DIV" && el.textContent.includes("42800-029") && !el.querySelector("main")) {
+                            el.remove();
+                        }
+                    });
 
-                    await salvarTextoGitHub(pag, html, `feat: Otimiza layout mobile em ${pag}`);
+                    // Substitui o <header> pelo Cabeçalho Oficial Unificado com a Barra Superior inclusa
+                    const headerExistente = doc.querySelector("header") || doc.querySelector("nav");
+                    const novoHeaderHtml = gerarHeaderUnificado(pag);
+                    if (headerExistente) {
+                        headerExistente.outerHTML = novoHeaderHtml;
+                    } else {
+                        doc.body.insertAdjacentHTML("afterbegin", novoHeaderHtml);
+                    }
+
+                    // Garante o CSS de responsividade mobile atualizado
+                    const styleAntigo = doc.getElementById("camacari-mobile-fix");
+                    if (styleAntigo) styleAntigo.remove();
+                    doc.head.insertAdjacentHTML("beforeend", CSS_OTIMIZACAO_MOBILE);
+
+                    const htmlFinal = "<!DOCTYPE html>\n" + doc.documentElement.outerHTML;
+                    await salvarTextoGitHub(pag, htmlFinal, `feat: Padroniza barra de topo e cabeçalho em ${pag}`);
                 }
 
                 await carregarPaginaNoCanvas(paginaAtual);
-                status.textContent = "✅ Todas as 7 páginas otimizadas para celular!";
-                alert("✅ Sucesso! Todas as 7 páginas do site foram otimizadas para celular. Aguarde ~15 segundos e atualize o site no seu smartphone (ou clique em 'Ver como Celular' na barra superior).");
+                status.textContent = "✅ Topo padronizado nas 7 páginas!";
+                alert("✅ Pronto! A barra superior com endereço/telefones e o menu de 7 abas foram padronizados em todas as páginas do site. Em ~15 segundos já estará atualizado na Vercel.");
             } catch (err) {
-                alert("❌ Erro durante a otimização: " + err.message);
+                alert("❌ Erro ao sincronizar páginas: " + err.message);
             } finally {
                 btn.disabled = false;
-                btn.innerHTML = '<i class="fa-solid fa-mobile-screen-button mr-1"></i> Otimizar Mobile (Todas as Páginas)';
+                btn.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Sincronizar Topo/Rodapé (Todas as 7 Páginas)';
             }
+        }
+
+        async function otimizarMobileTodasPaginas() {
+            return sincronizarTopoTodasPaginas();
         }
 
         async function publicarNoGitHub() {
