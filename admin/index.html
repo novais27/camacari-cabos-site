@@ -96,16 +96,16 @@
                 <i class="fa-regular fa-file-code text-blue-400 text-xs"></i>
                 <select id="seletor-pagina" onchange="carregarPaginaNoCanvas(this.value)" class="bg-transparent text-white text-xs font-bold focus:outline-none cursor-pointer">
                     <option value="index.html" class="bg-slate-900">Página Inicial (index.html)</option>
-                    <option value="sobre.html" class="bg-slate-900">Sobre a Empresa (sobre.html)</option>
                     <option value="produtos.html" class="bg-slate-900">Catálogo de Produtos (produtos.html)</option>
-                    <option value="blog.html" class="bg-slate-900">Blog Técnico (blog.html)</option>
                     <option value="industrial.html" class="bg-slate-900">Linha Industrial (industrial.html)</option>
                     <option value="residencial.html" class="bg-slate-900">Linha Residencial (residencial.html)</option>
                     <option value="projetos.html" class="bg-slate-900">Projetos (projetos.html)</option>
+                    <option value="blog.html" class="bg-slate-900">Blog Técnico (blog.html)</option>
+                    <option value="sobre.html" class="bg-slate-900">Sobre a Empresa (sobre.html)</option>
                 </select>
             </div>
 
-            <button onclick="clonarLayoutSobreParaAtual()" class="bg-indigo-600/30 hover:bg-indigo-600 border border-indigo-500/40 text-indigo-200 hover:text-white text-[11px] font-semibold px-3 py-1.5 rounded-lg transition" title="Aplica o cabeçalho e rodapé da página Sobre nesta página">
+            <button onclick="clonarLayoutSobreParaAtual()" class="bg-indigo-600/30 hover:bg-indigo-600 border border-indigo-500/40 text-indigo-200 hover:text-white text-[11px] font-semibold px-3 py-1.5 rounded-lg transition" title="Aplica o cabeçalho e rodapé da página Sobre nesta página ajustando a aba ativa">
                 <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Padronizar Topo/Rodapé pelo "Sobre"
             </button>
         </div>
@@ -239,7 +239,6 @@
         function ativarModoVisualNoIframe(doc) {
             if (!doc || !doc.body) return;
 
-            // Injeta estilo visual de seleção e arraste no iframe
             let style = doc.getElementById("studio-editor-style");
             if (!style) {
                 style = doc.createElement("style");
@@ -261,13 +260,11 @@
                 doc.head.appendChild(style);
             }
 
-            // Permite edição de texto direta em toda a página
             doc.body.setAttribute("contenteditable", "true");
 
-            // Intercepta cliques para selecionar elementos, impedir navegação acidental e abrir modal de imagens
             doc.body.addEventListener("click", (e) => {
                 const link = e.target.closest("a");
-                if (link) e.preventDefault(); // Evita sair da página ao clicar em menus para editar o texto deles
+                if (link) e.preventDefault();
 
                 if (elementoSelecionado) {
                     elementoSelecionado.removeAttribute("data-studio-selected");
@@ -280,7 +277,6 @@
                 }
             });
 
-            // Habilita arrastar e soltar imagens livremente para outros blocos
             habilitarDragAndDropImagens(doc);
         }
 
@@ -370,7 +366,6 @@
             const fileInput = document.getElementById("img-file-input");
             const btn = document.getElementById("btn-aplicar-img");
 
-            // Se o usuário escolheu subir uma foto do computador, envia direto pro GitHub
             if (fileInput.files.length > 0) {
                 const file = fileInput.files[0];
                 btn.textContent = "Enviando foto...";
@@ -397,9 +392,9 @@
             fecharModalMidia();
         }
 
-        // Clona o Cabeçalho (<header>/<nav>) e Rodapé (<footer>) da página Sobre.html para a página aberta
+        // Clona o Cabeçalho e Rodapé do Sobre.html e move o destaque amarelo para a página aberta
         async function clonarLayoutSobreParaAtual() {
-            if (!confirm("Isso vai aplicar o mesmo Cabeçalho, Estilos e Rodapé da página 'sobre.html' na página atual, preservando o conteúdo central. Confirmar?")) return;
+            if (!confirm("Isso vai aplicar o Cabeçalho e Rodapé da página 'sobre.html' na página atual e destacar automaticamente a aba '" + paginaAtual + "' no menu. Confirmar?")) return;
             try {
                 const resp = await fetch("../sobre.html?t=" + Date.now());
                 const htmlSobre = await resp.text();
@@ -410,7 +405,19 @@
 
                 const headerSobre = docSobre.querySelector("header") || docSobre.querySelector("nav");
                 const headerAtual = docAtual.querySelector("header") || docAtual.querySelector("nav");
+
                 if (headerSobre && headerAtual) {
+                    // Atualiza as classes dos links do menu para destacar apenas a página atual
+                    const linksMenu = headerSobre.querySelectorAll("nav a");
+                    linksMenu.forEach(link => {
+                        const href = (link.getAttribute("href") || "").trim();
+                        if (href === paginaAtual) {
+                            link.className = "text-amber-400 font-bold border-b-2 border-amber-400 pb-1";
+                        } else {
+                            link.className = "text-slate-200 hover:text-amber-400 transition font-medium";
+                        }
+                    });
+
                     headerAtual.outerHTML = headerSobre.outerHTML;
                 }
 
@@ -421,7 +428,7 @@
                 }
 
                 docAtual.body.className = docSobre.body.className;
-                alert("✅ Cabeçalho, cores de fundo e rodapé padronizados com a página Sobre! Clique em 'Publicar Agora' para salvar.");
+                alert(`✅ Topo e rodapé padronizados! A aba "${paginaAtual}" agora está destacada corretamente no menu. Clique em 'Publicar Agora (15s)' para salvar.`);
             } catch (e) {
                 alert("Erro ao padronizar com sobre.html: " + e.message);
             }
@@ -430,7 +437,6 @@
         // Limpa marcações temporárias do editor e envia o HTML final para o GitHub em 1 segundo
         async function publicarNoGitHub() {
             const token = localStorage.getItem("gh_token_camacari");
-            const repo = localStorage.getItem("gh_repo_camacari") || "novais27/camacari-cabos-site";
             if (!token) {
                 abrirConfig();
                 return alert("⚠️ Cole primeiro o seu Token do GitHub (ghp_...) em Configurações para publicar sem fila!");
@@ -473,7 +479,6 @@
             const repo = localStorage.getItem("gh_repo_camacari") || "novais27/camacari-cabos-site";
             const url = `https://api.github.com/repos/${repo}/contents/${caminhoArquivo}`;
 
-            // Busca o SHA atual do arquivo se ele já existir
             let sha = null;
             const getResp = await fetch(url, {
                 headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" }
@@ -483,7 +488,6 @@
                 sha = dados.sha;
             }
 
-            // Converte UTF-8 para Base64 com suporte a acentos
             const base64Content = btoa(unescape(encodeURIComponent(conteudoTexto)));
 
             const putResp = await fetch(url, {
